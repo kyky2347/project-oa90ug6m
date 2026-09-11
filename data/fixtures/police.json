@@ -1,0 +1,28 @@
+[
+  {
+    "id": 135116553,
+    "month": "2026-05",
+    "category": "anti-social-behaviour",
+    "location": {
+      "latitude": "51.389855",
+      "street": {
+        "id": 2003599,
+        "name": "On or near Cowley Avenue"
+      },
+      "longitude": "-0.510016"
+    }
+  },
+  {
+    "id": 135112230,
+    "month": "2026-05",
+    "category": "anti-social-behaviour",
+    "location": {
+      "latitude": "51.406625",
+      "street": {
+        "id": 2006695,
+        "name": "On or near Avenue Parade"
+      },
+      "longitude": "-0.406108"
+    }
+  }
+]

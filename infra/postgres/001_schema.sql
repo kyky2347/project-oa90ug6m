@@ -111,3 +111,5 @@ CREATE TABLE IF NOT EXISTS h3_transport_time_profile (
 CREATE TABLE IF NOT EXISTS business_profiles (
  id text PRIMARY KEY, name text NOT NULL, weights jsonb NOT NULL, complements jsonb NOT NULL
 );
+
+CREATE INDEX IF NOT EXISTS pois_geography_idx ON pois USING gist ((geom::geography));
