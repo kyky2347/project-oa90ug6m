@@ -1,1 +1,12 @@
-{"name":"pulse","private":true,"packageManager":"pnpm@10.11.0","scripts":{"dev":"pnpm --filter @pulse/web dev","build":"pnpm --filter @pulse/web build","typecheck":"pnpm --filter @pulse/web typecheck","lint":"pnpm --filter @pulse/web lint","test":"pnpm --filter @pulse/web test"}}
+{
+  "name": "pulse",
+  "private": true,
+  "packageManager": "pnpm@11.19.0",
+  "scripts": {
+    "dev": "pnpm --filter @pulse/web dev",
+    "build": "pnpm --filter @pulse/web build",
+    "typecheck": "pnpm --filter @pulse/web typecheck",
+    "lint": "pnpm --filter @pulse/web lint",
+    "test": "pnpm --filter @pulse/web test"
+  }
+}
