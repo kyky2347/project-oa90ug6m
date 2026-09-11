@@ -255,6 +255,10 @@ def build_features(snapshots=None, reference_time=None):
                             ),
                             data,
                         )
+        # Bulk appends introduce a new version outside existing histogram ranges.
+        # Refresh planner statistics before joins in the activation gate.
+        for table in ("h3_features", "h3_component_scores", "h3_opportunity_scores"):
+            execute(f"ANALYZE {table}")
         qa = validate_version(version)
         execute(
             "UPDATE feature_versions SET status='validated',qa=CAST(:qa AS jsonb) WHERE id=:v",

@@ -79,8 +79,8 @@ def refresh_pipeline(source="all", force=False, job_id=None):
                     if adapter.critical:
                         raise
             after = active_snapshots()
-            active = rows("SELECT id FROM feature_versions WHERE status='active'")
-            if before != after or not active or force:
+            active = rows("SELECT id,snapshots FROM feature_versions WHERE status='active'")
+            if before != after or not active or active[0]["snapshots"] != after or force:
                 v = build_features(after)
                 activate_version(v)
             else:
