@@ -10,6 +10,26 @@ PULSE identifies areas worth investigating. It does not guarantee commercial suc
 
 ## Start locally
 
+For the complete app, only Docker with Compose is required (OrbStack or Docker Desktop on macOS). From the repository root:
+
+```sh
+make start
+```
+
+The launcher starts the configured Docker app on macOS, builds missing images, starts PostGIS and Redis, initializes real data if no active version exists, then starts the API, website and daily refresh worker. It checks the website and API before opening [PULSE](http://localhost:3000). Services stay running after you close the terminal. Existing verified data is reused; first-time acquisition can take a while. Use `make stop` to stop services while keeping all data, or `./scripts/pulse --build` to rebuild images after code changes.
+
+To make `pulse` available from any directory, install this shortcut once (ensure `~/.local/bin` is on your shell's PATH):
+
+```sh
+mkdir -p "$HOME/.local/bin"
+ln -s "$PWD/scripts/pulse" "$HOME/.local/bin/pulse"
+pulse
+```
+
+Use `pulse stop`, `pulse status`, `pulse logs`, or `pulse --no-open` as needed.
+
+### Development with hot reload
+
 Requires Docker, Node 22+, pnpm 11.19.0 and uv/Python 3.12. No cloud account, API key, file upload or proprietary data is required.
 
 ```sh

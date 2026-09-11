@@ -1,4 +1,8 @@
-.PHONY: install infra bootstrap dev refresh status validate test integration build worker docker-up
+.PHONY: start stop install infra bootstrap dev refresh status validate test integration build worker docker-up
+start:
+	./scripts/pulse
+stop:
+	./scripts/pulse stop
 install:
 	uv sync --frozen
 	pnpm install --frozen-lockfile

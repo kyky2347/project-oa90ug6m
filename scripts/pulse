@@ -1,0 +1,133 @@
+#!/usr/bin/env bash
+# One-command local stack; compatible with macOS's bundled Bash 3.2.
+set -euo pipefail
+
+# Resolve the ~/.local/bin/pulse symlink, including paths containing spaces.
+script_path="${BASH_SOURCE[0]}"
+while [ -L "$script_path" ]; do
+  script_dir="$(cd -P "$(dirname "$script_path")" && pwd)"
+  script_path="$(readlink "$script_path")"
+  case "$script_path" in /*) ;; *) script_path="$script_dir/$script_path" ;; esac
+done
+project_dir="$(cd -P "$(dirname "$script_path")/.." && pwd)"
+cd "$project_dir"
+
+usage() {
+  cat <<'HELP'
+用法：pulse [start|stop|status|logs] [--build] [--no-open]
+  pulse             启动全部服务，检查数据，然后打开浏览器
+  pulse stop        停止 PULSE 服务，保留数据库和已下载数据
+  pulse status      查看服务状态
+  pulse logs        实时查看服务日志（Ctrl-C 退出日志）
+  pulse --build     重新构建应用镜像后启动
+  pulse --no-open   启动但不打开浏览器
+HELP
+}
+
+action=start
+rebuild=0
+open_browser=1
+for arg in "$@"; do
+  case "$arg" in
+    start|stop|status|logs) action="$arg" ;;
+    --build) rebuild=1 ;;
+    --no-open) open_browser=0 ;;
+    -h|--help) usage; exit 0 ;;
+    *) printf '未知参数：%s\n' "$arg" >&2; usage >&2; exit 2 ;;
+  esac
+done
+
+fail() { printf '\nPULSE：%s\n' "$*" >&2; exit 1; }
+command -v docker >/dev/null 2>&1 || fail '未找到 Docker，请先安装 OrbStack 或 Docker Desktop。'
+docker compose version >/dev/null 2>&1 || fail '未找到 Docker Compose 插件。'
+
+if ! docker info >/dev/null 2>&1; then
+  [ "$action" = start ] || fail 'Docker 尚未启动；运行 pulse 可自动启动。'
+  docker_context="$(docker context show)"
+  if [ "$(uname -s)" = Darwin ]; then
+    case "$docker_context" in
+      orbstack)
+        printf '正在启动 OrbStack…\n'
+        open -g -a OrbStack || fail '无法打开 OrbStack。'
+        ;;
+      desktop-linux|default)
+        printf '正在启动 Docker Desktop…\n'
+        open -g -a Docker || fail '无法打开 Docker Desktop；请检查当前 Docker context。'
+        ;;
+      *) fail "Docker context '$docker_context' 不可用，请先启动对应的 Docker 引擎。" ;;
+    esac
+  else
+    fail 'Docker 引擎尚未启动，请先启动 Docker 服务。'
+  fi
+  deadline=$((SECONDS + 120))
+  until docker info >/dev/null 2>&1; do
+    [ "$SECONDS" -lt "$deadline" ] || fail '等待 Docker 超时，请检查 Docker 应用后重试 pulse。'
+    sleep 2
+  done
+fi
+
+export PULSE_UID="$(id -u)"
+export PULSE_GID="$(id -g)"
+compose=(docker compose --project-name pulse --project-directory "$project_dir" -f "$project_dir/docker-compose.yml" --profile app --profile refresh)
+
+case "$action" in
+  stop)
+    "${compose[@]}" stop
+    printf '\nPULSE 已停止，数据已保留。再次输入 pulse 即可启动。\n'
+    exit 0
+    ;;
+  status) "${compose[@]}" ps --all; exit 0 ;;
+  logs) "${compose[@]}" logs --follow --tail 100; exit 0 ;;
+esac
+
+command -v curl >/dev/null 2>&1 || fail '未找到 curl，无法检查应用是否就绪。'
+trap 'printf "\nPULSE 启动未完成，已有数据已保留。查看上方错误或运行 pulse logs 排查，然后重试 pulse。\n" >&2' ERR
+mkdir -p data/raw data/cache data/manifests
+
+printf '\n[1/4] 检查应用镜像…\n'
+build_services=()
+for service in api web worker; do
+  if [ "$rebuild" -eq 1 ] || ! docker image inspect "pulse-$service" >/dev/null 2>&1; then
+    build_services+=("$service")
+  fi
+done
+if [ "${#build_services[@]}" -gt 0 ]; then
+  printf '正在构建镜像，首次启动需要下载依赖，请稍候…\n'
+  "${compose[@]}" build "${build_services[@]}"
+fi
+
+printf '\n[2/4] 启动数据库和缓存…\n'
+"${compose[@]}" up -d --wait --wait-timeout 120 postgres redis
+"${compose[@]}" run --rm --no-deps api /app/.venv/bin/pulse-data migrate
+active_version="$("${compose[@]}" exec -T postgres psql -U pulse -d pulse -Atqc "SELECT id FROM feature_versions WHERE status='active'")"
+
+printf '\n[3/4] 检查真实数据…\n'
+if [ -z "$active_version" ]; then
+  # Avoid racing a previously started worker on a warehouse awaiting bootstrap.
+  "${compose[@]}" stop worker
+  printf '首次启动：正在下载、验证真实公开数据并建立模型。这一步可能需要较长时间，请保持终端打开。\n'
+  "${compose[@]}" run --rm --no-deps api /app/.venv/bin/pulse-data bootstrap
+  active_version="$("${compose[@]}" exec -T postgres psql -U pulse -d pulse -Atqc "SELECT id FROM feature_versions WHERE status='active'")"
+  [ -n "$active_version" ] || fail '数据初始化尚未生成可用版本，请运行 pulse logs 查看详情。'
+else
+  printf '复用已验证的数据版本：%s\n' "$active_version"
+fi
+
+printf '\n[4/4] 启动 API、网页和后台更新服务…\n'
+"${compose[@]}" up -d --wait --wait-timeout 120 api web worker
+deadline=$((SECONDS + 120))
+until health="$(curl --fail --silent --max-time 5 http://127.0.0.1:3000/api/health)" \
+  && printf '%s' "$health" | grep -Eq '"status"[[:space:]]*:[[:space:]]*"healthy"' \
+  && curl --fail --silent --max-time 5 --output /dev/null http://127.0.0.1:3000; do
+  [ "$SECONDS" -lt "$deadline" ] || fail '服务在 120 秒内未就绪。请运行 pulse logs 检查端口占用或服务错误。'
+  sleep 2
+done
+
+printf '\nPULSE 已完整启动 ✓\n网页：http://localhost:3000\nAPI：http://localhost:8000/docs\n服务在后台运行，可以关闭终端。停止服务：pulse stop\n'
+if [ "$open_browser" -eq 1 ]; then
+  if [ "$(uname -s)" = Darwin ]; then
+    open http://localhost:3000 || printf '请在浏览器打开 http://localhost:3000\n'
+  elif command -v xdg-open >/dev/null 2>&1; then
+    xdg-open http://localhost:3000 >/dev/null 2>&1 || true
+  fi
+fi

@@ -1,5 +1,11 @@
 # Run and deploy
 
+## One-command local app
+
+Run `make start` from the repository, or `pulse` from any directory after installing the shortcut described in the README. Only Docker with Compose is needed. The launcher can open OrbStack or Docker Desktop on macOS, builds missing application images, waits for PostGIS/Redis, applies the schema, and bootstraps real data only when there is no active feature version. It then starts the API, website and daily worker, checks the frontend/API health, and opens http://localhost:3000. Existing active data is reused; the worker performs cadence-aware refreshes in the background.
+
+`pulse stop` (or `make stop`) stops this project's containers without removing volumes or downloaded files. `pulse status` lists services; `pulse logs` follows their logs. `pulse --build` rebuilds application images after code changes. `pulse --no-open` skips opening the browser. Startup errors leave existing data intact and can be retried. Keep the terminal open through an initial bootstrap; after the success message, all five services run in the background.
+
 ## Local development
 
 Prerequisites: Docker Engine/Desktop, Node 22+, pnpm 11.19.0 and uv with Python 3.12. From the repository root:
