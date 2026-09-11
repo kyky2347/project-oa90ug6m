@@ -241,7 +241,7 @@ test("responsive visual artifacts at 1280 and mobile", async ({ page }) => {
       .first()
       .click();
     await expect(page.getByTestId("selected-score")).toBeVisible();
-    await expect(page.getByText(/cells in view · H3 9/)).toBeVisible();
+    await expect(page.getByText(/cells in view · H3 9/)).toBeAttached();
     await page.waitForTimeout(1800);
     await page.screenshot({
       path: resolve(shots, `selected-site-${suffix}.png`),

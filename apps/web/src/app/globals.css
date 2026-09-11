@@ -2453,8 +2453,8 @@ input {
     background: linear-gradient(
       0deg,
       #0d1215 0%,
-      transparent 30%,
-      transparent 44%,
+      transparent 26%,
+      #0d1215c9 48%,
       #0d1215 72%
     );
   }
@@ -2619,8 +2619,8 @@ input {
     display: none;
   }
   .maplibregl-ctrl-attrib {
-    font-size: 6px !important;
-    max-width: 180px;
+    font-size: 7px !important;
+    max-width: calc(100vw - 34px);
   }
   .detail-panel {
     top: 185px;

@@ -393,7 +393,8 @@ export const CityMap = forwardRef<MapHandle, Props>(function CityMap(
         filled: true,
         getHexagon: (c) => c.h3,
         coverage: hero ? 0.68 : 0.68,
-        highPrecision: true,
+        // Instanced columns for same-resolution London cells; exact polygons in debug.
+        highPrecision: debug ? true : "auto",
         getElevation: (c) =>
           Math.max(8, Math.pow(Math.max(0, getValue(c) - 28), 1.6) * 0.9),
         getFillColor: (c) =>
