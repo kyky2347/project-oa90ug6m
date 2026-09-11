@@ -1,3 +1,4 @@
+name: pulse
 services:
   postgres:
     image: postgis/postgis:16-3.5

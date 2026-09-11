@@ -14,13 +14,16 @@ cd "$project_dir"
 
 usage() {
   cat <<'HELP'
-用法：pulse [start|stop|status|logs] [--build] [--no-open]
-  pulse             启动全部服务，检查数据，然后打开浏览器
-  pulse stop        停止 PULSE 服务，保留数据库和已下载数据
-  pulse status      查看服务状态
-  pulse logs        实时查看服务日志（Ctrl-C 退出日志）
-  pulse --build     重新构建应用镜像后启动
-  pulse --no-open   启动但不打开浏览器
+Usage / 用法：pulse [start|stop|status|logs|data-status|validate|refresh] [--build] [--no-open]
+  pulse             Start all services and open the app / 启动全部服务并打开网页
+  pulse stop        Stop services, keep data / 停止服务，保留数据
+  pulse status      Show service status / 查看服务状态
+  pulse logs        Follow logs (Ctrl-C exits logs) / 实时日志
+  pulse data-status Show sources and active version / 查看数据版本
+  pulse validate    Validate active data / 校验活动数据
+  pulse refresh     Refresh due sources safely / 安全更新来源
+  pulse --build     Rebuild images and start / 重建镜像后启动
+  pulse --no-open   Start without opening browser / 启动但不打开浏览器
 HELP
 }
 
@@ -29,39 +32,39 @@ rebuild=0
 open_browser=1
 for arg in "$@"; do
   case "$arg" in
-    start|stop|status|logs) action="$arg" ;;
+    start|stop|status|logs|data-status|validate|refresh) action="$arg" ;;
     --build) rebuild=1 ;;
     --no-open) open_browser=0 ;;
     -h|--help) usage; exit 0 ;;
-    *) printf '未知参数：%s\n' "$arg" >&2; usage >&2; exit 2 ;;
+    *) printf 'Unknown argument / 未知参数：%s\n' "$arg" >&2; usage >&2; exit 2 ;;
   esac
 done
 
 fail() { printf '\nPULSE：%s\n' "$*" >&2; exit 1; }
-command -v docker >/dev/null 2>&1 || fail '未找到 Docker，请先安装 OrbStack 或 Docker Desktop。'
-docker compose version >/dev/null 2>&1 || fail '未找到 Docker Compose 插件。'
+command -v docker >/dev/null 2>&1 || fail 'Docker not found. Install OrbStack or Docker Desktop. / 未找到 Docker。'
+docker compose version >/dev/null 2>&1 || fail 'Docker Compose plugin not found. / 未找到 Compose 插件。'
 
 if ! docker info >/dev/null 2>&1; then
-  [ "$action" = start ] || fail 'Docker 尚未启动；运行 pulse 可自动启动。'
+  [ "$action" = start ] || fail 'Docker is stopped; run pulse to start. / Docker 未启动，请运行 pulse。'
   docker_context="$(docker context show)"
   if [ "$(uname -s)" = Darwin ]; then
     case "$docker_context" in
       orbstack)
-        printf '正在启动 OrbStack…\n'
-        open -g -a OrbStack || fail '无法打开 OrbStack。'
+        printf 'Starting OrbStack / 正在启动 OrbStack…\n'
+        open -g -a OrbStack || fail 'Could not open OrbStack. / 无法打开 OrbStack。'
         ;;
       desktop-linux|default)
-        printf '正在启动 Docker Desktop…\n'
-        open -g -a Docker || fail '无法打开 Docker Desktop；请检查当前 Docker context。'
+        printf 'Starting Docker Desktop / 正在启动 Docker Desktop…\n'
+        open -g -a Docker || fail 'Could not open Docker Desktop; check the current Docker context. / 请检查 Docker context。'
         ;;
-      *) fail "Docker context '$docker_context' 不可用，请先启动对应的 Docker 引擎。" ;;
+      *) fail "Docker context '$docker_context' is unavailable; start its Docker engine. / 请先启动对应的 Docker 引擎。" ;;
     esac
   else
-    fail 'Docker 引擎尚未启动，请先启动 Docker 服务。'
+    fail 'Docker engine is not running; start the Docker service first. / 请先启动 Docker。'
   fi
   deadline=$((SECONDS + 120))
   until docker info >/dev/null 2>&1; do
-    [ "$SECONDS" -lt "$deadline" ] || fail '等待 Docker 超时，请检查 Docker 应用后重试 pulse。'
+    [ "$SECONDS" -lt "$deadline" ] || fail 'Docker startup timed out. Check Docker and retry pulse. / 等待 Docker 超时，请检查后重试。'
     sleep 2
   done
 fi
@@ -73,18 +76,24 @@ compose=(docker compose --project-name pulse --project-directory "$project_dir" 
 case "$action" in
   stop)
     "${compose[@]}" stop
-    printf '\nPULSE 已停止，数据已保留。再次输入 pulse 即可启动。\n'
+    printf '\nPULSE stopped; data retained. Run pulse to start again. / 已停止，数据已保留。\n'
     exit 0
     ;;
   status) "${compose[@]}" ps --all; exit 0 ;;
   logs) "${compose[@]}" logs --follow --tail 100; exit 0 ;;
+  data-status|validate|refresh)
+    data_command="$action"
+    [ "$data_command" != data-status ] || data_command=status
+    "${compose[@]}" run --rm --no-deps api /app/.venv/bin/pulse-data "$data_command"
+    exit 0
+    ;;
 esac
 
-command -v curl >/dev/null 2>&1 || fail '未找到 curl，无法检查应用是否就绪。'
-trap 'printf "\nPULSE 启动未完成，已有数据已保留。查看上方错误或运行 pulse logs 排查，然后重试 pulse。\n" >&2' ERR
+command -v curl >/dev/null 2>&1 || fail 'curl not found; cannot check application health. / 未找到 curl。'
+trap 'printf "\nPULSE startup incomplete; existing data retained. Check errors above or run pulse logs, then retry. / 启动未完成，数据已保留。\n" >&2' ERR
 mkdir -p data/raw data/cache data/manifests
 
-printf '\n[1/4] 检查应用镜像…\n'
+printf '\n[1/4] Check images / 检查应用镜像…\n'
 build_services=()
 for service in api web worker; do
   if [ "$rebuild" -eq 1 ] || ! docker image inspect "pulse-$service" >/dev/null 2>&1; then
@@ -92,41 +101,41 @@ for service in api web worker; do
   fi
 done
 if [ "${#build_services[@]}" -gt 0 ]; then
-  printf '正在构建镜像，首次启动需要下载依赖，请稍候…\n'
+  printf 'Building images and downloading dependencies; please wait. / 正在构建镜像并下载依赖…\n'
   "${compose[@]}" build "${build_services[@]}"
 fi
 
-printf '\n[2/4] 启动数据库和缓存…\n'
+printf '\n[2/4] Start database and cache / 启动数据库和缓存…\n'
 "${compose[@]}" up -d --wait --wait-timeout 120 postgres redis
 "${compose[@]}" run --rm --no-deps api /app/.venv/bin/pulse-data migrate
 active_version="$("${compose[@]}" exec -T postgres psql -U pulse -d pulse -Atqc "SELECT id FROM feature_versions WHERE status='active'")"
 
-printf '\n[3/4] 检查真实数据…\n'
+printf '\n[3/4] Check verified data / 检查真实数据…\n'
 if [ -z "$active_version" ]; then
   # Avoid racing a previously started worker on a warehouse awaiting bootstrap.
   "${compose[@]}" stop worker
-  printf '首次启动：正在下载、验证真实公开数据并建立模型。这一步可能需要较长时间，请保持终端打开。\n'
+  printf 'First run: downloading and validating public data, then building models. This can take a while; keep the terminal open. / 首次下载建模，请保持终端打开。\n'
   "${compose[@]}" run --rm --no-deps api /app/.venv/bin/pulse-data bootstrap
   active_version="$("${compose[@]}" exec -T postgres psql -U pulse -d pulse -Atqc "SELECT id FROM feature_versions WHERE status='active'")"
-  [ -n "$active_version" ] || fail '数据初始化尚未生成可用版本，请运行 pulse logs 查看详情。'
+  [ -n "$active_version" ] || fail 'Bootstrap did not produce an active version; inspect pulse logs. / 数据尚未就绪，请查看日志。'
 else
-  printf '复用已验证的数据版本：%s\n' "$active_version"
+  printf 'Using verified version / 复用已验证版本：%s\n' "$active_version"
 fi
 
-printf '\n[4/4] 启动 API、网页和后台更新服务…\n'
+printf '\n[4/4] Start API, website and refresh worker / 启动完整应用…\n'
 "${compose[@]}" up -d --wait --wait-timeout 120 api web worker
 deadline=$((SECONDS + 120))
 until health="$(curl --fail --silent --max-time 5 http://127.0.0.1:3000/api/health)" \
   && printf '%s' "$health" | grep -Eq '"status"[[:space:]]*:[[:space:]]*"healthy"' \
   && curl --fail --silent --max-time 5 --output /dev/null http://127.0.0.1:3000; do
-  [ "$SECONDS" -lt "$deadline" ] || fail '服务在 120 秒内未就绪。请运行 pulse logs 检查端口占用或服务错误。'
+  [ "$SECONDS" -lt "$deadline" ] || fail 'Application not ready within 120 seconds. Run pulse logs and check ports. / 服务未就绪，请检查日志与端口。'
   sleep 2
 done
 
-printf '\nPULSE 已完整启动 ✓\n网页：http://localhost:3000\nAPI：http://localhost:8000/docs\n服务在后台运行，可以关闭终端。停止服务：pulse stop\n'
+printf '\nPULSE is ready / 已完整启动 ✓\nWeb / 网页：http://localhost:3000\nAPI：http://localhost:8000/docs\nServices run in the background; you can close this terminal. Stop with: pulse stop / 关闭终端不影响运行。\n'
 if [ "$open_browser" -eq 1 ]; then
   if [ "$(uname -s)" = Darwin ]; then
-    open http://localhost:3000 || printf '请在浏览器打开 http://localhost:3000\n'
+    open http://localhost:3000 || printf 'Open in your browser / 请在浏览器打开 http://localhost:3000\n'
   elif command -v xdg-open >/dev/null 2>&1; then
     xdg-open http://localhost:3000 >/dev/null 2>&1 || true
   fi

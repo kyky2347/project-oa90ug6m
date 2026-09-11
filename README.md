@@ -1,125 +1,159 @@
-# PULSE · Urban Opportunity Intelligence
+<div align="center">
+
+# PULSE
+
+### Urban Opportunity Intelligence
 
 **The city already knows where your next store should be. Ask the map.**
 
-London commercial location screening from real, automatically acquired public data. Explore 3D H3 opportunities for coffee shops, bakeries, restaurants, gyms, convenience stores and coworking spaces. Inspect the evidence, adjust the profile, compare two areas and investigate a shortlist.
+London location intelligence, built from real public data and explainable spatial models.
 
-![PULSE London landing](docs/screenshots/landing-1440.png)
+[![Verify PULSE](https://github.com/kyky2347/project-oa90ug6m/actions/workflows/ci.yml/badge.svg)](https://github.com/kyky2347/project-oa90ug6m/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/code-MIT-d8eea0?labelColor=121a1d)](LICENSE)
+[![London edition](https://img.shields.io/badge/edition-London%20%C2%B7%20v0.1.0-d8eea0?labelColor=121a1d)](https://github.com/kyky2347/project-oa90ug6m/releases)
 
-PULSE identifies areas worth investigating. It does not guarantee commercial success.
+[Product tour](docs/product-tour.md) · [Run locally](#run-locally) · [How it works](#from-public-data-to-a-location-hypothesis) · [Documentation](docs/README.md) · [简体中文](README.zh-CN.md)
 
-## Start locally
+</div>
 
-For the complete app, only Docker with Compose is required (OrbStack or Docker Desktop on macOS). From the repository root:
+![PULSE landing: the London opportunity landscape rendered from verified H3 scores](docs/screenshots/landing-1440.png)
 
-```sh
-make start
-```
+PULSE helps you decide **which areas deserve a closer look before opening a business**. Choose a coffee shop, bakery, restaurant, gym, convenience store or coworking space; explore the city; inspect the evidence; and compare a shortlist.
 
-The launcher starts the configured Docker app on macOS, builds missing images, starts PostGIS and Redis, initializes real data if no active version exists, then starts the API, website and daily refresh worker. It checks the website and API before opening [PULSE](http://localhost:3000). Services stay running after you close the terminal. Existing verified data is reused; first-time acquisition can take a while. Use `make stop` to stop services while keeping all data, or `./scripts/pulse --build` to rebuild images after code changes.
+The central question is whether an area's mapped supply looks low relative to the demand and context observed in similar areas. PULSE turns that question into a spatial model, six inspectable score components and an interactive investigation workflow. It supports location screening; it does not predict revenue or guarantee commercial success.
 
-To make `pulse` available from any directory, install this shortcut once (ensure `~/.local/bin` is on your shell's PATH):
+## See the product
 
-```sh
-mkdir -p "$HOME/.local/bin"
-ln -s "$PWD/scripts/pulse" "$HOME/.local/bin/pulse"
-pulse
-```
+![A selected London area with its opportunity score, confidence and component evidence](docs/screenshots/selected-site-1440.png)
 
-Use `pulse stop`, `pulse status`, `pulse logs`, or `pulse --no-open` as needed.
+**Start with a signal. Finish with the evidence.** The map leads into an area dossier with source dates, confidence, weighted contributions, mapped venues and catchment context. Business profiles and custom weights change the question being asked; the backend remains the single scoring authority.
 
-### Development with hot reload
+|                                                            Compare two areas                                                            |                                                      Explore transport patterns                                                      |
+| :-------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------: |
+| [![Site Battle with component comparisons and export](docs/screenshots/site-battle-1440.png)](docs/product-tour.md#3-compare-two-areas) | [![City Pulse typical-day transport playback](docs/screenshots/city-pulse-1440.png)](docs/product-tour.md#4-examine-the-typical-day) |
+|                                          Component tradeoffs, confidence and CSV/JSON export.                                           |                                         Weekday, Saturday and Sunday quarter-hour profiles.                                          |
 
-Requires Docker, Node 22+, pnpm 11.19.0 and uv/Python 3.12. No cloud account, API key, file upload or proprietary data is required.
+[Take the full product tour →](docs/product-tour.md) Includes catchments, source health, methodology and mobile views. These are captures of the running application using the recorded London dataset. The interactive application runs locally; a hosted analytics backend is not provided.
 
-```sh
-cp .env.example .env
-make install
-make bootstrap
-make dev
-```
+The interface supports **English and Simplified Chinese**. Switch with **EN / 中文** in the header; the preference persists without changing scores or investigation state. [中文界面与说明 →](README.zh-CN.md)
 
-Open [PULSE](http://localhost:3000) and [API documentation](http://localhost:8000/docs). Bootstrap acquires the real sources, validates them and activates the London model; initial download time depends on the publishers. Raw files are retained locally and ignored by Git. Rerunning bootstrap preserves and reuses verified snapshots.
+## What makes PULSE distinctive
 
-```sh
-make status       # active version and source snapshots
-make refresh      # cadence-aware source checks and safe activation
-make worker       # optional daily local refresh loop
-make test         # offline parser/scoring/frontend tests + lint/types
-make integration  # actual PostGIS and API tests after bootstrap
-make build        # Next production build
-make docker-up    # complete API + web + PostGIS + Redis stack
-```
+| Design choice                  | Why it matters                                                                                                                                                          |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Modelled white space**       | Poisson / Negative Binomial models compare expected supply with mapped supply, accounting for count variance. An empty area alone is not evidence of opportunity.       |
+| **Spatial validation**         | Four geographic folds, an 800m exclusion buffer and training-only preprocessing reduce leakage from neighbouring areas. Every model is compared with a simple baseline. |
+| **Confidence-adjusted scores** | Data quality draws uncertain scores toward a neutral 50. Confidence is inspectable and is a quality index, not a probability of success.                                |
+| **One evidence chain**         | Source receipts → immutable snapshots → H3 features → model versions → canonical API scores → interface explanations.                                                   |
+| **Safe refreshes**             | A candidate must pass geometry, coverage, conservation and score-drift gates before atomic activation. A failed refresh retains the working version.                    |
 
-For full browser regression, run the app, then:
+## Run locally
+
+Install **Git and Docker with Compose**. On macOS, use OrbStack or Docker Desktop; on Linux, start Docker Engine first. On Windows, use a WSL2 terminal with Docker integration. macOS has been exercised locally and Linux is covered by CI; Windows/WSL2 has not been verified.
 
 ```sh
-PULSE_E2E_REAL=1 pnpm --filter @pulse/web exec playwright test --project=real-london
+git clone https://github.com/kyky2347/project-oa90ug6m.git pulse
+cd pulse
+./scripts/pulse
 ```
 
-## The experience
+The launcher builds missing images, starts PostGIS and Redis, acquires and validates real data when the warehouse is empty, then starts the API, web app and daily refresh worker. It waits for application health before opening **[localhost:3000](http://localhost:3000)**. API documentation is at **[localhost:8000/docs](http://localhost:8000/docs)**.
 
-- A cinematic London map with extruded H3 cells, hover, camera focus, 2D/3D, zoom and component layers.
-- Six **PULSE default business profiles**, editable weights, confidence filtering and deterministic top opportunities.
-- Site evidence: six scores, reconciled contribution waterfall, expected versus mapped supply, surrounding venues, transport, cost pressure, dates and confidence factors.
-- Site Battle with current-weight totals, component comparisons, tradeoff explanations and CSV/JSON export.
-- City Pulse from official TfL quarter-hour typical-day estimates, with weekday, Saturday and Sunday playback. Only transport influence changes over time.
-- Explicit radial walking-time proxies at 5/10/15 minutes, population, mapped competition, complementary venues, operational/cost context and score distributions.
-- Separate competitive-gravity and complementary-venue layers. Persistent device shortlist and shareable location/view links.
-- Data Health, Methodology and About pages, responsive layouts and accessible controls.
+The first run needs internet access and can take a while, especially for Police data and container downloads. Keep the terminal open until startup succeeds. Later runs reuse verified data and run services in the background. No account, proprietary dataset, manual upload or AI API key is required.
 
-![PULSE 3D London map and selected-site evidence](docs/screenshots/selected-site-1440.png)
+```sh
+./scripts/pulse stop         # stop services; keep all data
+./scripts/pulse status       # inspect the five services
+./scripts/pulse data-status  # active model and source snapshots
+./scripts/pulse validate     # check the active warehouse
+./scripts/pulse refresh      # check due sources and safely update
+./scripts/pulse logs         # follow logs; Ctrl-C leaves services running
+./scripts/pulse --build      # rebuild application images after code changes
+```
 
-## Actual London data
+Prefer downloading a ZIP? Use the [versioned release](https://github.com/kyky2347/project-oa90ug6m/releases), extract it and run `bash scripts/pulse` from its root. See [setup, global `pulse` shortcut and troubleshooting](docs/quickstart.md), [development](CONTRIBUTING.md) and [reproduction boundaries](docs/reproducibility.md).
 
-Seven verified adapters: ONS/GLA LSOA2021 geography, ONS mid-2024 population and Census2021 households, Geofabrik/OpenStreetMap September2026 extract, TfL NUMBAT2025 released in 2026, Police May–July2026 incidents, VOA/HMRC2026 rateable-value bands and GLA high-street boundaries.
+## The recorded London edition
 
-The warehouse covers all **33 London boroughs**, **4,994 LSOAs**, **2,579 H3-8 cells** and **17,340 H3-9 cells**. Twelve count models produce 119,514 business/cell opportunity scores. Exact source IDs, timestamps, licences, checksums and model metrics are in [verified sources](docs/data-sources.md) and [release-data.json](docs/release-data.json).
+The following describes the **11 September 2026 verification run**, not a continuously updated claim about today's data. Fresh builds discover publisher releases and may produce different versions and rankings.
 
-No synthetic data enters production. Small real excerpts and explicitly test-only values exercise parser and UI contracts.
+| Coverage                                 | Recorded result |
+| ---------------------------------------- | --------------: |
+| London boroughs / LSOAs                  |      33 / 4,994 |
+| H3 resolution 8 / resolution 9 cells     |  2,579 / 17,340 |
+| Business profiles / fitted supply models |          6 / 12 |
+| Business–cell opportunity scores         |         119,514 |
+| Verified source adapters                 |               7 |
 
-## How the model works
+| Source                    | Evidence used                              | Interpretation                                        |
+| ------------------------- | ------------------------------------------ | ----------------------------------------------------- |
+| ONS / Nomis               | Mid-2024 residents; Census 2021 households | Resident demand proxies                               |
+| ONS / GLA geography       | 2021 LSOA boundaries                       | Common spatial allocation                             |
+| OpenStreetMap / Geofabrik | 10 September 2026 extract                  | Mapped venues and surroundings                        |
+| TfL NUMBAT                | Typical autumn 2025, released in 2026      | Historical typical-day transport flows                |
+| UK Police                 | May–July 2026 incidents                    | Aggregated operational context; approximate locations |
+| VOA / HMRC                | 31 March 2026 rating-stock bands           | Borough cost pressure; **not rent**                   |
+| GLA high streets          | Retrieved 11 September 2026                | High-street context; reference date unknown           |
+
+Exact URLs, dates, checksums and model metrics: [source catalogue](docs/data-sources.md), [release manifest](docs/release-data.json) and [snapshot receipts](data/manifests). Raw downloads and the database are acquired locally and are excluded from Git.
+
+## From public data to a location hypothesis
 
 ```mermaid
 flowchart LR
-  A[Official source discovery] --> B[Guarded downloads and checksums]
-  B --> C[Versioned PostGIS snapshots]
-  C --> D[H3 area allocation and spatial features]
-  D --> E[Spatially validated supply models]
-  E --> F[Six components and confidence shrinkage]
-  F --> G[Validation gates and atomic activation]
-  G --> H[FastAPI and Redis]
-  H --> I[MapLibre and deck.gl]
+  A[Public sources] --> B[Verified snapshots]
+  B --> C[PostGIS + H3 features]
+  C --> D[Spatial supply models]
+  D --> E[Components + confidence]
+  E --> F[Validation + activation]
+  F --> G[FastAPI]
+  G --> H[Interactive investigation]
 ```
 
-`Opportunity = 50 + confidence × (Σ weight × component − 50)`.
-
-White space compares model-expected supply with mapped supply using a variance-standardised residual. Poisson/Negative Binomial models use four geographic folds with an 800m exclusion buffer and training-only preprocessing. Explanations are deterministic decompositions of the actual calculation. Confidence is a data-quality index, not a probability of success.
-
-## Repository
+The canonical score is:
 
 ```text
-apps/web          Next.js, TypeScript, Tailwind, shadcn, MapLibre/deck.gl
-apps/api          FastAPI, query validation, caching and spatial evidence
-pipeline/sources  Discovery, download contracts and seven source adapters
-pipeline/features H3, area allocation, features and activation gates
-pipeline/models   Interpretable count models and spatial validation
-packages/scoring  Canonical profiles, normalisation and score explanations
-infra/postgres    PostGIS schema and indexes
-scripts           Launch, fixtures, replay, reporting and real benchmarks
-tests             Python unit, parser and real-warehouse integration tests
-data/manifests    Download provenance and refresh reports
-docs              Methodology, runbooks and verification evidence
+Opportunity = 50 + confidence × (Σ weight × component − 50)
 ```
 
-## Verification and limits
+The six components are **Demand Potential, Access, White Space, Ecosystem, Cost Efficiency and Operational Context**. Weights sum to one. Confidence ranges from zero to one. Explanations decompose the actual weighted calculation; no external language model generates analytical claims.
 
-Actual timings, test outcomes and browser screenshots are in [the completion report](docs/completion-report.md) and [performance measurements](docs/performance.md). CI validates offline fixtures, the PostGIS schema, frontend logic, a production build and a browser smoke test; full London journeys use the local bootstrapped warehouse.
+The model learns patterns in mapped supply. Its validation measures held-out supply prediction, not business success. Eleven of the twelve recorded models improve on their mean-supply baseline by spatial CV MAE; the detailed coworking model does not. [Inspect every model and its baseline](docs/completion-report.md#active-supply-models).
 
-Mapped supply is incomplete; demand is a proxy; rateable value is not rent; police locations are approximate; catchments are radial, not street-network isochrones. H3 cells may contain water, parks and mixed land uses. The detailed coworking model did not outperform its simple spatial-validation baseline. [Read all limitations](docs/methodology-limitations.md).
+## Engineering and verification
 
-## Documentation
+| Layer             | Implementation                                                  |
+| ----------------- | --------------------------------------------------------------- |
+| Product           | Next.js, React, TypeScript, MapLibre, deck.gl, Tailwind, shadcn |
+| API               | FastAPI, Pydantic, version-aware Redis caching                  |
+| Spatial warehouse | PostgreSQL 16, PostGIS, H3 resolutions 8 and 9                  |
+| Data and models   | Python, GeoPandas, osmium, statsmodels, scikit-learn            |
+| Delivery          | Locked uv/pnpm dependencies, Docker Compose, GitHub Actions     |
 
-[Architecture](docs/architecture.md) · [Data model](docs/data-model.md) · [H3](docs/h3.md) · [Scoring](docs/scoring.md) · [White space](docs/white-space-model.md) · [Confidence](docs/confidence.md) · [Caching](docs/caching.md) · [Refresh and recovery](docs/data-refresh.md) · [Deployment](docs/deployment.md) · [Data licences](docs/data-licenses.md)
+The recorded verification includes **56 Python tests** (35 offline and 21 real-warehouse cases), **7 frontend tests**, **4 real-London browser tests** and **1 browser smoke test**, plus lint, type checks and production builds. The bilingual public release adds 7 language tests and Chinese browser coverage; see [public release checks](docs/public-release-checks.md). [Current CI](https://github.com/kyky2347/project-oa90ug6m/actions/workflows/ci.yml) runs from a clean checkout with small fixtures; full London integration remains a separate data-dependent check.
 
-Code: MIT. Data: original publisher terms. © OpenStreetMap contributors. Contains public sector information licensed under the Open Government Licence v3.0. TfL data subject to its transport data terms.
+Measured locally with warm database pages and 15 warm response-cache requests, the city overview had a **28.21ms p95** and site detail **3.47ms p95**. These are development-machine observations. Software WebGL playback averaged 6.12 animation-frame callbacks/second, so this release does not claim smooth 60fps on all hardware. [Measurement conditions and raw results](docs/performance.md).
+
+```text
+apps/web          Product interface and browser tests
+apps/api          Canonical scoring API and spatial evidence
+pipeline/sources  Seven adapters, download contracts and provenance
+pipeline/features H3 allocation, features and activation gates
+pipeline/models   Count models and spatial validation
+packages/scoring  Shared canonical scoring implementation
+infra/postgres    Schema, spatial indexes and database checks
+tests             Source fixtures, invariants and integration tests
+docs              Product tour, methodology and recorded evidence
+```
+
+## Scope and responsible interpretation
+
+London only. PULSE screens areas; it does not identify available premises, estimate lease terms or forecast sales. OSM coverage is incomplete. Residents are not customers, rateable value is not rent, and TfL typical-day estimates are not live footfall. Catchments are radial distance proxies and can cross rivers or railways. Police locations are approximate. Protected demographic attributes are not used in scoring.
+
+These limits are part of the interface and [methodology](docs/methodology-limitations.md). Production hosting additionally needs appropriate access controls, TLS, backups and monitoring; see [deployment](docs/deployment.md).
+
+## Explore further
+
+[Documentation index](docs/README.md) · [Product tour](docs/product-tour.md) · [Reproduce a run](docs/reproducibility.md) · [Contribute](CONTRIBUTING.md) · [Changelog](CHANGELOG.md) · [Security](SECURITY.md)
+
+Code is [MIT licensed](LICENSE). Data retains its [publisher's terms](docs/data-licenses.md). © OpenStreetMap contributors. Contains public sector information licensed under the Open Government Licence v3.0. TfL data is subject to its transport data terms.

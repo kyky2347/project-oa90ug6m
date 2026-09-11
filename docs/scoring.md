@@ -2,14 +2,14 @@
 
 All six components lie on a within-London 0–100 scale, separately for each H3 resolution. Winsorise finite feature values at the 1st and 99th percentiles, apply signed log1p where applicable, and use average-tie percentile ranks. Constant features and missing values are neutral 50. Missing sources separately reduce confidence. Ranks are relative signals, not calibrated commercial outcomes.
 
-| Profile | Demand | Access | White space | Ecosystem | Cost | Operational |
-|---|---:|---:|---:|---:|---:|---:|
-| Coffee | 27 | 18 | 25 | 13 | 12 | 5 |
-| Bakery | 29 | 16 | 24 | 14 | 12 | 5 |
-| Restaurant | 26 | 17 | 22 | 18 | 12 | 5 |
-| Gym | 24 | 15 | 26 | 10 | 20 | 5 |
-| Convenience | 30 | 18 | 25 | 8 | 14 | 5 |
-| Coworking | 25 | 22 | 20 | 17 | 11 | 5 |
+| Profile     | Demand | Access | White space | Ecosystem | Cost | Operational |
+| ----------- | -----: | -----: | ----------: | --------: | ---: | ----------: |
+| Coffee      |     27 |     18 |          25 |        13 |   12 |           5 |
+| Bakery      |     29 |     16 |          24 |        14 |   12 |           5 |
+| Restaurant  |     26 |     17 |          22 |        18 |   12 |           5 |
+| Gym         |     24 |     15 |          26 |        10 |   20 |           5 |
+| Convenience |     30 |     18 |          25 |         8 |   14 |           5 |
+| Coworking   |     25 |     22 |          20 |        17 |   11 |           5 |
 
 These are **PULSE default business profiles**, not empirically proven optimal weights. API accepts exactly six finite, non-negative weights, each at most 100, with positive total; divides by their sum and hashes the normalised values. The frontend never recomputes canonical scores.
 

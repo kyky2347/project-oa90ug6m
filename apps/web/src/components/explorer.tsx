@@ -1,4 +1,5 @@
 "use client";
+import { useI18n } from "@/lib/i18n";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -58,6 +59,8 @@ const CityMap = dynamic(() => import("./city-map").then((m) => m.CityMap), {
   ssr: false,
 });
 export function Explorer({ initialSite }: { initialSite?: string }) {
+  const { t, number } = useI18n();
+
   const state = usePulseStore();
   const [resolution, setResolution] = useState(8),
     [bbox, setBbox] = useState<string>(),
@@ -214,30 +217,30 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
     >
       <aside className={cn("explore-sidebar", mobilePanel && "mobile-open")}>
         <div className="sidebar-title">
-          <div className="eyebrow">LONDON OPPORTUNITY MODEL</div>
+          <div className="eyebrow">{t("LONDON OPPORTUNITY MODEL")}</div>
           <h1>
-            Find your
+            {t("Find your")}
             <br />
-            <span>next address.</span>
+            <span>{t("next address.")}</span>
           </h1>
-          <p>A city of possibilities. A clearer place to start.</p>
+          <p>{t("A city of possibilities. A clearer place to start.")}</p>
           <Button
             className="mobile-close"
             variant="ghost"
             size="icon-sm"
-            aria-label="Close filters"
+            aria-label={t("Close filters")}
             onClick={() => setMobilePanel(false)}
           >
             <X />
           </Button>
         </div>
         <div className="business-picker">
-          <label htmlFor="business">I’M EXPLORING FOR</label>
+          <label htmlFor="business">{t("I’M EXPLORING FOR")}</label>
           <div>
             <Coffee size={18} />
             <select
               id="business"
-              aria-label="Business type"
+              aria-label={t("Business type")}
               value={state.business}
               onChange={(e) => {
                 state.set({
@@ -249,7 +252,7 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
             >
               {businesses.map((b) => (
                 <option value={b.id} key={b.id}>
-                  {b.name}
+                  {t(b.name)}
                 </option>
               ))}
             </select>
@@ -263,16 +266,16 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
             onValueChange={(v) => {
               if (v) state.set({ panel: v as typeof state.panel });
             }}
-            aria-label="Explore tools"
+            aria-label={t("Explore tools")}
           >
             <ToggleGroupItem value="rankings">
               <Sparkles />
-              Top sites
+              {t("Top sites")}
             </ToggleGroupItem>
-            <ToggleGroupItem value="weights" aria-label="Weights">
+            <ToggleGroupItem value="weights" aria-label={t("Weights")}>
               <SlidersHorizontal />
             </ToggleGroupItem>
-            <ToggleGroupItem value="shortlist" aria-label="Shortlist">
+            <ToggleGroupItem value="shortlist" aria-label={t("Shortlist")}>
               <Bookmark />
               {state.shortlist.length > 0 && state.shortlist.length}
             </ToggleGroupItem>
@@ -281,26 +284,30 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
         {state.panel === "rankings" && (
           <>
             <div className="rankings-heading">
-              <span>TOP OPPORTUNITIES</span>
+              <span>{t("TOP OPPORTUNITIES")}</span>
               <Badge variant="outline">
-                {rankings.data?.sites.length || "—"} areas
+                {rankings.data?.sites.length || "—"}
+                {t(" areas")}
               </Badge>
             </div>
-            <div className="rankings-list" aria-label="Top opportunities">
+            <div className="rankings-list" aria-label={t("Top opportunities")}>
               {rankings.isPending &&
                 [1, 2, 3, 4, 5].map((i) => (
                   <Skeleton key={i} className="m-4 h-16" />
                 ))}
               {rankings.error && (
                 <Alert variant="destructive">
-                  <AlertTitle>City model unavailable</AlertTitle>
-                  <AlertDescription>{rankings.error.message}</AlertDescription>
+                  <AlertTitle>{t("City model unavailable")}</AlertTitle>
+                  <AlertDescription>
+                    {t(rankings.error.message)}
+                  </AlertDescription>
                 </Alert>
               )}
               {rankings.data?.sites.length === 0 && (
                 <p className="no-results">
-                  No areas meet this confidence threshold. Lower it below to
-                  explore more of London.
+                  {t(
+                    "No areas meet this confidence threshold. Lower it below to explore more of London.",
+                  )}
                 </p>
               )}
               {rankings.data?.sites.map((c, i) => (
@@ -311,15 +318,18 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
                     state.selected === c.h3 && "selected",
                   )}
                   onClick={() => select(c)}
-                  aria-label={`Inspect ${c.label}`}
+                  aria-label={t(`Inspect ${c.label}`)}
                 >
                   <span className="rank-number">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <span className="rank-location">
-                    <strong>{c.label}</strong>
+                    <strong>{t(c.label)}</strong>
                     <small>{c.borough}</small>
-                    <span>{Math.round(c.confidence * 100)}% confidence</span>
+                    <span>
+                      {Math.round(c.confidence * 100)}
+                      {t("% confidence")}
+                    </span>
                   </span>
                   <span className="rank-score">
                     {Math.round(c.score)}
@@ -329,11 +339,11 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
               ))}
             </div>
             <div className="ranking-footer">
-              <span>London-wide · H3 resolution 8</span>
+              <span>{t("London-wide · H3 resolution 8")}</span>
               <Button
                 size="icon-xs"
                 variant="ghost"
-                aria-label="Fly to next opportunity"
+                aria-label={t("Fly to next opportunity")}
                 onClick={() => {
                   const sites = rankings.data?.sites || [];
                   const i = sites.findIndex((c) => c.h3 === state.selected);
@@ -350,33 +360,34 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
         )}
         {state.panel === "shortlist" && (
           <div className="shortlist-panel">
-            <h3>Your shortlist</h3>
-            <p>Saved on this device, ready for a closer look.</p>
+            <h3>{t("Your shortlist")}</h3>
+            <p>{t("Saved on this device, ready for a closer look.")}</p>
             {!state.shortlist.length && (
               <div className="shortlist-instruction">
                 <Bookmark size={30} />
                 <p>
-                  Inspect an area on the map, then choose Shortlist to save it
-                  here.
+                  {t(
+                    "Inspect an area on the map, then choose Shortlist to save it here.",
+                  )}
                 </p>
                 <Button
                   variant="outline"
                   onClick={() => state.set({ panel: "rankings" })}
                 >
-                  Browse opportunities
+                  {t("Browse opportunities")}
                 </Button>
               </div>
             )}
             {state.shortlist.map((s) => (
               <Link
                 key={s.h3 + s.business}
-                href={`/site/${s.h3}?business=${s.business}`}
+                href={`/site/${s.h3}?business=${t(s.business)}`}
               >
                 <Bookmark size={15} />
                 <span>
-                  {s.label}
+                  {t(s.label)}
                   <small>
-                    {s.borough} · {s.business}
+                    {s.borough} · {t(s.business)}
                   </small>
                 </span>
                 <ArrowUpRight size={14} />
@@ -386,7 +397,7 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
         )}
         <div className="sidebar-filters">
           <div>
-            <span>Opportunity threshold</span>
+            <span>{t("Opportunity threshold")}</span>
             <b>{state.minimum}+</b>
           </div>
           <Slider
@@ -395,10 +406,10 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
             max={90}
             step={5}
             onValueChange={([minimum]) => state.set({ minimum })}
-            aria-label="Opportunity threshold"
+            aria-label={t("Opportunity threshold")}
           />
           <div>
-            <span>Minimum confidence</span>
+            <span>{t("Minimum confidence")}</span>
             <b>{Math.round(state.confidence * 100)}%</b>
           </div>
           <Slider
@@ -407,17 +418,19 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
             max={95}
             step={5}
             onValueChange={([c]) => state.set({ confidence: c / 100 })}
-            aria-label="Minimum confidence"
+            aria-label={t("Minimum confidence")}
           />
           <p>
             <span className="status-dot" />
-            {data.data
-              ? "Verified public-data model"
-              : "Connecting to city model"}
+            {t(
+              data.data
+                ? "Verified public-data model"
+                : "Connecting to city model",
+            )}
           </p>
         </div>
       </aside>
-      <section className="map-stage" aria-label="Explore London map">
+      <section className="map-stage" aria-label={t("Explore London map")}>
         {urlReady && (
           <CityMap
             controlsRef={map}
@@ -449,12 +462,14 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
         <div className="map-topline">
           <div className="map-location">
             <span className="status-dot" />
-            <span>GREATER LONDON</span>
+            <span>{t("GREATER LONDON")}</span>
             <i>/</i>
             <span>
-              {businesses
-                .find((b) => b.id === state.business)
-                ?.name.toUpperCase()}
+              {t(
+                businesses
+                  .find((b) => b.id === state.business)
+                  ?.name.toUpperCase(),
+              )}
             </span>
           </div>
           <div className="map-top-actions">
@@ -465,12 +480,12 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
               data-active={state.pulse}
             >
               <Activity data-icon="inline-start" />
-              City Pulse
+              {t("City Pulse")}
             </Button>
             <Button
               variant="outline"
               size="icon-sm"
-              aria-label="Copy view link"
+              aria-label={t("Copy view link")}
               onClick={share}
             >
               <Share2 />
@@ -480,13 +495,13 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
         <div className="layer-control glass">
           <Layers3 size={15} />
           <select
-            aria-label="Map layer"
+            aria-label={t("Map layer")}
             value={state.layer}
             onChange={(e) => state.set({ layer: e.target.value as Layer })}
           >
             {Object.entries(labels).map(([k, v]) => (
               <option key={k} value={k}>
-                {v}
+                {t(v)}
               </option>
             ))}
           </select>
@@ -499,10 +514,10 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
               if (v) state.set({ pitch: v === "3d" });
             }}
             size="sm"
-            aria-label="Map perspective"
+            aria-label={t("Map perspective")}
           >
-            <ToggleGroupItem value="3d">3D</ToggleGroupItem>
-            <ToggleGroupItem value="2d">2D</ToggleGroupItem>
+            <ToggleGroupItem value="3d">{t("3D")}</ToggleGroupItem>
+            <ToggleGroupItem value="2d">{t("2D")}</ToggleGroupItem>
           </ToggleGroup>
         </div>
         <Button
@@ -511,13 +526,13 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
           onClick={() => setMobilePanel(true)}
         >
           <ListFilter data-icon="inline-start" />
-          Filters & top sites
+          {t("Filters & top sites")}
         </Button>
         <div className="map-controls glass">
           <Button
             variant="ghost"
             size="icon"
-            aria-label="Zoom in"
+            aria-label={t("Zoom in")}
             onClick={() => map.current?.zoom(1)}
           >
             <Plus />
@@ -525,7 +540,7 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
           <Button
             variant="ghost"
             size="icon"
-            aria-label="Zoom out"
+            aria-label={t("Zoom out")}
             onClick={() => map.current?.zoom(-1)}
           >
             <Minus />
@@ -534,7 +549,7 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
           <Button
             variant="ghost"
             size="icon"
-            aria-label="Reset London view"
+            aria-label={t("Reset London view")}
             onClick={() => map.current?.reset()}
           >
             <LocateFixed />
@@ -542,7 +557,7 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
           <Button
             variant="ghost"
             size="icon"
-            aria-label="Reset scoring and filters"
+            aria-label={t("Reset scoring and filters")}
             onClick={() =>
               state.set({
                 weights: null,
@@ -559,41 +574,45 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
           <div className="map-instruction">
             <Hexagon size={18} />
             <p>
-              Every hexagon has a story.
-              <span>Select an area to see the evidence.</span>
+              {t("Every hexagon has a story.")}
+              <span>{t("Select an area to see the evidence.")}</span>
             </p>
           </div>
         )}
-        <div className="map-legend glass" aria-label="Map legend">
+        <div className="map-legend glass" aria-label={t("Map legend")}>
           <div>
             <span>
-              {state.pulse
-                ? "TYPICAL TRANSPORT INFLUENCE"
-                : labels[state.layer].toUpperCase()}
+              {t(
+                state.pulse
+                  ? "TYPICAL TRANSPORT INFLUENCE"
+                  : labels[state.layer].toUpperCase(),
+              )}
             </span>
             <Badge variant="outline">
-              {state.pulse ? "RELATIVE" : "0–100"}
+              {t(state.pulse ? "RELATIVE" : "0–100")}
             </Badge>
           </div>
           <div className="legend-gradient" />
           <div className="legend-values">
-            <span>{state.pulse ? "Quieter" : "Lower signal"}</span>
-            <span>{state.pulse ? "Busier" : "Stronger signal"}</span>
+            <span>{t(state.pulse ? "Quieter" : "Lower signal")}</span>
+            <span>{t(state.pulse ? "Busier" : "Stronger signal")}</span>
           </div>
           <p>
             <Hexagon size={12} />
-            {cells.length.toLocaleString()} cells in view · H3 {resolution}
+            {number(cells.length)}
+            {t(" cells in view · H3 ")}
+            {resolution}
             {data.isFetching && <span className="updating-dot" />}
           </p>
         </div>
         {data.error && (
           <div className="map-api-error">
             <Alert variant="destructive">
-              <AlertTitle>London model unavailable</AlertTitle>
+              <AlertTitle>{t("London model unavailable")}</AlertTitle>
               <AlertDescription>
-                {data.error.message}
+                {t(data.error.message)}
                 <Button variant="outline" onClick={() => data.refetch()}>
-                  Reconnect
+                  {t("Reconnect")}
                 </Button>
               </AlertDescription>
             </Alert>
@@ -602,7 +621,7 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
         {shared && (
           <div className="toast" role="status">
             <Check size={16} />
-            {shared}
+            {t(shared)}
           </div>
         )}
         {state.pulse && (
@@ -611,10 +630,10 @@ export function Explorer({ initialSite }: { initialSite?: string }) {
         <div className="map-bottomline">
           <span>
             <Compass size={12} />
-            Drag to explore · Ctrl + drag to rotate
+            {t("Drag to explore · Ctrl + drag to rotate")}
           </span>
           <Link href="/methodology">
-            Signals for investigation, not guaranteed outcomes
+            {t("Signals for investigation, not guaranteed outcomes")}
             <ArrowUpRight size={11} />
           </Link>
         </div>

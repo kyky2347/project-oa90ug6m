@@ -16,5 +16,8 @@ test-results/
 playwright-report/
 
 *.tsbuildinfo
+backups/
 apps/web/AGENTS.md
 apps/web/CLAUDE.md
+
+docs/frontend-performance-latest.json

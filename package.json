@@ -7,6 +7,11 @@
     "build": "pnpm --filter @pulse/web build",
     "typecheck": "pnpm --filter @pulse/web typecheck",
     "lint": "pnpm --filter @pulse/web lint",
-    "test": "pnpm --filter @pulse/web test"
+    "test": "pnpm --filter @pulse/web test",
+    "format:docs": "prettier --write \"*.md\" \"docs/**/*.md\" \".github/**/*.md\"",
+    "format:check": "prettier --check \"*.md\" \"docs/**/*.md\" \".github/**/*.md\""
+  },
+  "devDependencies": {
+    "prettier": "3.9.6"
   }
 }

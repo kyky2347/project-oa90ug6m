@@ -1,6 +1,6 @@
 # PULSE completion and verification report
 
-London release, 11 September 2026. The application runs at [localhost:3000](http://localhost:3000) with [FastAPI documentation](http://localhost:8000/docs). Repository: [kyky2347/PULSE](https://github.com/kyky2347/PULSE), private. No public cloud deployment is claimed.
+London release, 11 September 2026. The application runs at [localhost:3000](http://localhost:3000) with [FastAPI documentation](http://localhost:8000/docs). Repository: [kyky2347/project-oa90ug6m](https://github.com/kyky2347/project-oa90ug6m), public. No public cloud deployment is claimed.
 
 ## What was built
 
@@ -32,20 +32,20 @@ The active model covers 2,579 resolution-8 cells and 17,340 resolution-9 cells, 
 
 MAE is held-out mapped venues per cell, using four geographic folds and an 800m training exclusion buffer. Each fold fits its preprocessing, dispersion and baseline only on training observations.
 
-| Model version | Family | Spatial CV MAE | Mean-supply baseline MAE |
-|---|---|---:|---:|
-| `ldn-20260911T130817-f16e80-bakery-r8` | Poisson | 0.3006 | 0.5204 |
-| `ldn-20260911T130817-f16e80-coffee-r8` | Negative Binomial | 1.4991 | 3.4979 |
-| `ldn-20260911T130817-f16e80-convenience-r8` | Poisson | 1.1534 | 2.4398 |
-| `ldn-20260911T130817-f16e80-coworking-r8` | Poisson | 0.0911 | 0.1215 |
-| `ldn-20260911T130817-f16e80-gym-r8` | Negative Binomial | 0.8920 | 1.1526 |
-| `ldn-20260911T130817-f16e80-restaurant-r8` | Negative Binomial | 1.7754 | 4.8958 |
-| `ldn-20260911T130817-f16e80-bakery-r9` | Poisson | 0.0760 | 0.0879 |
-| `ldn-20260911T130817-f16e80-coffee-r9` | Negative Binomial | 0.4512 | 0.6684 |
-| `ldn-20260911T130817-f16e80-convenience-r9` | Negative Binomial | 0.3833 | 0.5274 |
-| `ldn-20260911T130817-f16e80-coworking-r9` | Poisson | 0.0197 | 0.0184 |
-| `ldn-20260911T130817-f16e80-gym-r9` | Negative Binomial | 0.2359 | 0.2583 |
-| `ldn-20260911T130817-f16e80-restaurant-r9` | Negative Binomial | 0.5686 | 0.8889 |
+| Model version                               | Family            | Spatial CV MAE | Mean-supply baseline MAE |
+| ------------------------------------------- | ----------------- | -------------: | -----------------------: |
+| `ldn-20260911T130817-f16e80-bakery-r8`      | Poisson           |         0.3006 |                   0.5204 |
+| `ldn-20260911T130817-f16e80-coffee-r8`      | Negative Binomial |         1.4991 |                   3.4979 |
+| `ldn-20260911T130817-f16e80-convenience-r8` | Poisson           |         1.1534 |                   2.4398 |
+| `ldn-20260911T130817-f16e80-coworking-r8`   | Poisson           |         0.0911 |                   0.1215 |
+| `ldn-20260911T130817-f16e80-gym-r8`         | Negative Binomial |         0.8920 |                   1.1526 |
+| `ldn-20260911T130817-f16e80-restaurant-r8`  | Negative Binomial |         1.7754 |                   4.8958 |
+| `ldn-20260911T130817-f16e80-bakery-r9`      | Poisson           |         0.0760 |                   0.0879 |
+| `ldn-20260911T130817-f16e80-coffee-r9`      | Negative Binomial |         0.4512 |                   0.6684 |
+| `ldn-20260911T130817-f16e80-convenience-r9` | Negative Binomial |         0.3833 |                   0.5274 |
+| `ldn-20260911T130817-f16e80-coworking-r9`   | Poisson           |         0.0197 |                   0.0184 |
+| `ldn-20260911T130817-f16e80-gym-r9`         | Negative Binomial |         0.2359 |                   0.2583 |
+| `ldn-20260911T130817-f16e80-restaurant-r9`  | Negative Binomial |         0.5686 |                   0.8889 |
 
 The detailed coworking model performs worse than its simple baseline. Its sparse mapped supply and weak predictive evidence are explicitly documented; confidence is a quality index, not a calibrated success probability.
 
@@ -54,13 +54,12 @@ The detailed coworking model performs worse than its simple baseline. Its sparse
 Fresh checkout:
 
 ```sh
-cp .env.example .env
-make install
-make bootstrap
-make dev
+git clone https://github.com/kyky2347/project-oa90ug6m.git pulse
+cd pulse
+./scripts/pulse
 ```
 
-Requirements: Docker, Node 22+, pnpm 11.19.0, uv/Python 3.12. PostGIS uses loopback 55433, Redis 56380, API 8000 and web 3000. `make docker-up` launches the containerised application after bootstrap. Do not start host development servers on ports already occupied by the Docker app.
+The complete container route requires Docker with Compose. Host development additionally needs Node 22+, pnpm 11.19.0 and uv/Python 3.12. PostGIS uses loopback 55433, Redis 56380, API 8000 and web 3000. `make docker-up` launches the containerised application after bootstrap. Do not start host development servers on ports already occupied by the Docker app.
 
 ```sh
 make refresh
@@ -80,7 +79,7 @@ Refresh failure and recovery were exercised during the build: a cancelled slow v
 - **4 real-London browser tests passed** in 2.1 minutes: all seven required journeys and shared-state restoration; mobile filters/comparison; responsive artifacts; map/playback profiling. Journey tests reported no uncaught page errors.
 - **Browser smoke passed** for warehouse-independent Methodology/About pages.
 - Python Ruff, ESLint and TypeScript checks passed. Next.js production build passed. API, web and worker Docker images built; container bootstrap succeeded; API/web health and worker job success were checked.
-- GitHub Actions executes Python checks, small attributed fixtures, PostGIS schema checks, frontend lint/types/tests/build and Chromium smoke. The final application commit `82d43fc` passed [GitHub Actions run 34603692999](https://github.com/kyky2347/PULSE/actions/runs/34603692999); the subsequent commit contains documentation and evidence only.
+- GitHub Actions executes Python checks, small attributed fixtures, PostGIS schema checks, frontend lint/types/tests/build and Chromium smoke. The public repository exposes [current verification runs](https://github.com/kyky2347/project-oa90ug6m/actions/workflows/ci.yml). The test and benchmark counts in this report describe the recorded September edition; subsequent interface changes have their own CI results.
 
 Tests are source-backed where they exercise the production warehouse. Small fixtures and explicitly labelled test-only values never feed production scores. There is no claim of every possible source change or every target device being tested.
 
@@ -102,7 +101,7 @@ Fixed during QA: numeric API query parsing, dynamic map-control references, deep
 
 ## Integrations and limits
 
-Used the in-app Browser plugin, local design/shadcn guidance, Docker and authenticated GitHub CLI. Supabase, Figma, Vercel and Sentry were not connected/callable for this task. Sites capabilities were present but do not provide this required persistent PostGIS/Python worker deployment. The complete portable container configuration is delivered; no external public backend or cloud deployment was fabricated.
+The delivered runtime is a local container stack. It does not depend on a paid model service, private data connector or cloud account. No public analytics backend is claimed. The public repository includes the product tour and complete source for local operation.
 
 OSM coverage is incomplete; resident population is not customers; TfL flow is not live footfall; crime locations are approximate; rateable value is not rent; catchments are radial and can cross barriers. Cells include mixed land uses and unavailable premises. Default profiles, distance decay and confidence factors are transparent assumptions. The model predicts mapped supply patterns, not openings, revenue or commercial success. No protected demographic inputs are used.
 

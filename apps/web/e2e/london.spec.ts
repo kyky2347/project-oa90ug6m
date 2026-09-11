@@ -338,8 +338,77 @@ test("measure map readiness and City Pulse frame scheduling", async ({
   };
   const { writeFileSync } = await import("node:fs");
   writeFileSync(
-    resolve("../../docs/frontend-performance.json"),
+    resolve("../../docs/frontend-performance-latest.json"),
     JSON.stringify(report, null, 2),
   );
   expect(intervals.every((n) => Number.isFinite(n) && n >= 0)).toBe(true);
+});
+
+test("Chinese investigation preserves canonical scores and the current selection", async ({
+  page,
+}) => {
+  const errors: string[] = [];
+  page.on("pageerror", (e) => errors.push(e.message));
+  await page.goto("/explore");
+  await page
+    .getByRole("button", { name: /^Inspect / })
+    .first()
+    .click();
+  const score = page.getByTestId("selected-score");
+  await expect(score).toBeVisible();
+  const prior = await score.innerText();
+  await page.getByRole("button", { name: "简体中文" }).click();
+  await expect(score).toHaveText(prior);
+  await expect(page.getByLabel("业态类型", { exact: true })).toHaveValue(
+    "coffee",
+  );
+  await expect(page.locator(".evidence-summary")).toContainText(
+    "该区域的主要支持因素",
+  );
+  await page.getByRole("button", { name: "分析周边范围" }).click();
+  await expect(
+    page.getByText("径向步行时间代理", { exact: true }),
+  ).toBeVisible();
+  await expect(
+    page.getByText("按每分钟 80 米的直线距离计算", { exact: false }),
+  ).toBeVisible();
+  await page.screenshot({ path: resolve(shots, "selected-site-zh-1440.png") });
+  await page.getByRole("link", { name: "选址对比", exact: true }).click();
+  await expect(page.locator(".battle-site")).toHaveCount(2);
+  await expect(page.locator(".tradeoff")).toContainText("区域 A 较强的方面");
+  await page.screenshot({
+    path: resolve(shots, "site-battle-zh-1440.png"),
+    fullPage: true,
+  });
+  await page.getByRole("link", { name: "数据健康", exact: true }).click();
+  await expect(page.getByText("观测／参考日期").first()).toBeVisible();
+  await page.goto("/");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    "这座城市",
+  );
+  await expect(page.getByTestId("city-map")).toHaveAttribute(
+    "data-map-ready",
+    "true",
+  );
+  await page.screenshot({ path: resolve(shots, "landing-zh-1440.png") });
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.screenshot({
+    path: resolve(shots, "landing-zh-mobile.png"),
+    fullPage: true,
+  });
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  await page
+    .getByRole("link", { name: "探索伦敦", exact: true })
+    .first()
+    .click();
+  await page.getByRole("button", { name: "筛选与推荐区域" }).click();
+  await expect(page.getByLabel("业态类型", { exact: true })).toHaveValue(
+    "coffee",
+  );
+  await page.screenshot({ path: resolve(shots, "explore-zh-mobile.png") });
+  expect(errors).toEqual([]);
 });

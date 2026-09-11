@@ -1,4 +1,5 @@
 "use client";
+import { useI18n } from "@/lib/i18n";
 import { useState } from "react";
 import { RotateCcw, SlidersHorizontal } from "lucide-react";
 import type { Profile, Weights } from "@/lib/types";
@@ -8,6 +9,8 @@ import { Button } from "./ui/button";
 import { Slider } from "./ui/slider";
 import { Field, FieldGroup, FieldLabel } from "./ui/field";
 export function WeightsPanel({ profile }: { profile: Profile }) {
+  const { t } = useI18n();
+
   const { weights, set } = usePulseStore();
   const [draft, setDraft] = useState<Weights>(
     weights ||
@@ -19,27 +22,29 @@ export function WeightsPanel({ profile }: { profile: Profile }) {
   return (
     <div className="weights-panel">
       <div className="section-label">
-        YOUR SCORING PROFILE
+        {t("YOUR SCORING PROFILE")}
         <SlidersHorizontal size={14} />
       </div>
       <h3>
-        A different priority.
-        <br />A different perspective.
+        {t("A different priority.")}
+        <br />
+        {t("A different perspective.")}
       </h3>
       <p>
-        Set the relative importance of each signal. PULSE normalises these
-        values to 100% before calculating the score.
+        {t(
+          "Set the relative importance of each signal. PULSE normalises these values to 100% before calculating the score.",
+        )}
       </p>
       <FieldGroup>
         {componentKeys.map((k) => (
           <Field key={k}>
             <FieldLabel htmlFor={"weight-" + k}>
-              {labels[k]}
+              {t(labels[k])}
               <span>{total ? Math.round((draft[k] / total) * 100) : 0}%</span>
             </FieldLabel>
             <Slider
               id={"weight-" + k}
-              aria-label={labels[k] + " weight"}
+              aria-label={t(labels[k] + " weight")}
               min={0}
               max={100}
               step={1}
@@ -54,7 +59,7 @@ export function WeightsPanel({ profile }: { profile: Profile }) {
         disabled={total === 0}
         onClick={() => set({ weights: draft })}
       >
-        Apply weights to London
+        {t("Apply weights to London")}
       </Button>
       <Button
         variant="ghost"
@@ -72,11 +77,12 @@ export function WeightsPanel({ profile }: { profile: Profile }) {
         }}
       >
         <RotateCcw data-icon="inline-start" />
-        Reset to profile
+        {t("Reset to profile")}
       </Button>
       <p className="small-note">
-        PULSE default business profiles are starting assumptions, not
-        scientifically proven commercial optima.
+        {t(
+          "PULSE default business profiles are starting assumptions, not scientifically proven commercial optima.",
+        )}
       </p>
     </div>
   );

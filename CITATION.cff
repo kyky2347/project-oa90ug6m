@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use PULSE, cite this software release and the original data publishers."
+type: software
+title: "PULSE: Urban Opportunity Intelligence"
+authors:
+  - name: "PULSE contributors"
+version: 0.1.0
+date-released: 2026-09-11
+license: MIT
+repository-code: "https://github.com/kyky2347/project-oa90ug6m"
+url: "https://github.com/kyky2347/project-oa90ug6m"
+abstract: "A reproducible London location-screening application combining public-data provenance, PostGIS/H3 features, spatially validated count models, confidence-adjusted scores and an English/Chinese investigation interface."

@@ -1,4 +1,5 @@
 "use client";
+import { useI18n } from "@/lib/i18n";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -14,7 +15,7 @@ import {
   ExternalLink,
   TriangleAlert,
 } from "lucide-react";
-import { number, useSources } from "@/lib/api";
+import { useSources } from "@/lib/api";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -28,18 +29,9 @@ const icons: Record<string, typeof Database> = {
   tfl: TrainFront,
   voa: Building2,
 };
-const date = (s: string | null | undefined) =>
-  s
-    ? s.length === 4
-      ? s
-      : new Date(s).toLocaleDateString("en-GB", {
-          timeZone: "UTC",
-          day: "numeric",
-          month: "short",
-          year: "numeric",
-        })
-    : "Not supplied by publisher";
 export default function DataPage() {
+  const { t, date, number } = useI18n();
+
   const q = useSources(),
     data = q.data;
   return (
@@ -47,17 +39,18 @@ export default function DataPage() {
       <div className="page-heading">
         <div>
           <div className="eyebrow">
-            <Database size={13} /> EVIDENCE, WITH A PAPER TRAIL
+            <Database size={13} />
+            {t(" EVIDENCE, WITH A PAPER TRAIL")}
           </div>
           <h1>
-            Trust begins
+            {t("Trust begins")}
             <br />
-            <span>at the source.</span>
+            <span>{t("at the source.")}</span>
           </h1>
           <p>
-            Every score starts with traceable public data. See what was
-            acquired, when it was observed, and which snapshot powers the active
-            London model.
+            {t(
+              "Every score starts with traceable public data. See what was acquired, when it was observed, and which snapshot powers the active London model.",
+            )}
           </p>
         </div>
         <Button
@@ -66,22 +59,27 @@ export default function DataPage() {
           disabled={q.isFetching}
         >
           <RefreshCw data-icon="inline-start" />
-          Check source health
+          {t("Check source health")}
         </Button>
       </div>
       <div className="content-topline">
         <span>
           <span className="status-dot" />
           {data?.sources.filter((s) => s.latest_snapshot).length || "—"}{" "}
-          VERIFIED SOURCES
+          {t("VERIFIED SOURCES")}
         </span>
-        <span>{data?.active_version?.id || "No active feature version"}</span>
-        <span>Last model build · {date(data?.active_version?.created_at)}</span>
+        <span>
+          {data?.active_version?.id || t("No active feature version")}
+        </span>
+        <span>
+          {t("Last model build · ")}
+          {date(data?.active_version?.created_at)}
+        </span>
       </div>
       {q.error && (
         <Alert variant="destructive">
-          <AlertTitle>Data service unavailable</AlertTitle>
-          <AlertDescription>{q.error.message}</AlertDescription>
+          <AlertTitle>{t("Data service unavailable")}</AlertTitle>
+          <AlertDescription>{t(q.error.message)}</AlertDescription>
         </Alert>
       )}
       <div className="source-grid">
@@ -101,62 +99,74 @@ export default function DataPage() {
                   variant={s.status === "verified" ? "secondary" : "outline"}
                 >
                   {s.status === "verified" ? <Check /> : <TriangleAlert />}
-                  {s.status === "verified"
-                    ? "Verified"
-                    : s.status === "refresh_failed"
-                      ? "Refresh failed · previous retained"
-                      : "Unavailable"}
+                  {t(
+                    s.status === "verified"
+                      ? "Verified"
+                      : s.status === "refresh_failed"
+                        ? "Refresh failed · previous retained"
+                        : "Unavailable",
+                  )}
                 </Badge>
               </div>
               <h2>
-                {s.name}
-                <small>{s.publisher}</small>
+                {t(s.name)}
+                <small>{t(s.publisher)}</small>
               </h2>
               <dl className="source-meta">
                 <div>
-                  <dt>Observation / reference date</dt>
+                  <dt>{t("Observation / reference date")}</dt>
                   <dd>{date(snapshot?.published_at)}</dd>
                 </div>
                 <div>
-                  <dt>Retrieved</dt>
+                  <dt>{t("Retrieved")}</dt>
                   <dd>{date(snapshot?.retrieved_at)}</dd>
                 </div>
                 <div>
-                  <dt>Validated warehouse rows</dt>
+                  <dt>{t("Validated warehouse rows")}</dt>
                   <dd>{number(snapshot?.row_count)}</dd>
                 </div>
                 <div>
-                  <dt>Check cadence</dt>
-                  <dd>Every {s.cadence_days} days</dd>
+                  <dt>{t("Check cadence")}</dt>
+                  <dd>
+                    {t("Every ")}
+                    {s.cadence_days}
+                    {t(" days")}
+                  </dd>
                 </div>
               </dl>
               {s.reference_stale && (
                 <Alert>
-                  <AlertTitle>Older reference period</AlertTitle>
+                  <AlertTitle>{t("Older reference period")}</AlertTitle>
                   <AlertDescription>
-                    The publisher’s observations are outside the freshness
-                    window for this source. Confidence includes source-age
-                    decay; verify recent local changes before shortlisting.
+                    {t(
+                      "The publisher’s observations are outside the freshness window for this source. Confidence includes source-age decay; verify recent local changes before shortlisting.",
+                    )}
                   </AlertDescription>
                 </Alert>
               )}
               <details>
-                <summary>Provenance & methodology notes</summary>
+                <summary>{t("Provenance & methodology notes")}</summary>
+                <p className="source-original-note">
+                  {t("Source notes (original text)")}
+                </p>
                 <p>
                   {snapshot?.metadata.notes?.join(" ") ||
-                    "Publication date is not separately supplied by this structural dataset. Retrieval time does not imply the observations are new."}
+                    t(
+                      "Publication date is not separately supplied by this structural dataset. Retrieval time does not imply the observations are new.",
+                    )}
                 </p>
                 <p>
-                  Active snapshot:{" "}
-                  <code>{used || "Not used in active model"}</code>
+                  {t("Active snapshot:")}{" "}
+                  <code>{used || t("Not used in active model")}</code>
                 </p>
                 <p>
-                  Latest verified: <code>{snapshot?.id || "None"}</code>Parser{" "}
-                  {snapshot?.parser_version || "—"}
+                  {t("Latest verified: ")}
+                  <code>{snapshot?.id || t("None")}</code>
+                  {t("Parser")} {snapshot?.parser_version || "—"}
                 </p>
                 <p>
-                  SHA-256 snapshot checksum:
-                  <code>{snapshot?.checksum || "Unavailable"}</code>
+                  {t("SHA-256 snapshot checksum:")}
+                  <code>{snapshot?.checksum || t("Unavailable")}</code>
                 </p>
                 {snapshot?.metadata.assets.slice(0, 8).map((a) => (
                   <p key={a.filename}>
@@ -169,15 +179,16 @@ export default function DataPage() {
                 ))}
                 {s.latest_attempt?.status === "failed" && (
                   <p>
-                    Latest failed attempt: {date(s.latest_attempt.retrieved_at)}
-                    . {s.latest_attempt.error}
+                    {t("Latest failed attempt: ")}
+                    {date(s.latest_attempt.retrieved_at)}.{" "}
+                    {s.latest_attempt.error}
                   </p>
                 )}
               </details>
               <div className="source-card-bottom">
-                <span>{s.license}</span>
+                <span>{t(s.license)}</span>
                 <a href={s.url} target="_blank" rel="noreferrer">
-                  Official source
+                  {t("Official source")}
                   <ArrowUpRight size={12} />
                 </a>
               </div>
@@ -188,25 +199,24 @@ export default function DataPage() {
       <div className="tradeoff">
         <FileCheck2 size={21} />
         <div>
-          <h3>Freshness has more than one date.</h3>
+          <h3>{t("Freshness has more than one date.")}</h3>
           <p>
-            Retrieval tells you when PULSE acquired a file. The reference date
-            tells you when the evidence describes the city. Annual transport
-            profiles, monthly reported incidents and structural boundaries have
-            different update cycles.
+            {t(
+              "Retrieval tells you when PULSE acquired a file. The reference date tells you when the evidence describes the city. Annual transport profiles, monthly reported incidents and structural boundaries have different update cycles.",
+            )}
           </p>
           <small>
-            A failed refresh retains the last verified snapshot. New feature
-            versions become active only after validation. Unknown source dates
-            lower the confidence index.
+            {t(
+              "A failed refresh retains the last verified snapshot. New feature versions become active only after validation. Unknown source dates lower the confidence index.",
+            )}
           </small>
         </div>
       </div>
       <p className="research-note">
-        All source data remains attributable. © OpenStreetMap contributors, ODbL
-        1.0. Contains public sector information licensed under the Open
-        Government Licence v3.0. TfL data is subject to its transport data
-        terms. <Link href="/methodology">Read the methodology →</Link>
+        {t(
+          "All source data remains attributable. © OpenStreetMap contributors, ODbL 1.0. Contains public sector information licensed under the Open Government Licence v3.0. TfL data is subject to its transport data terms. ",
+        )}
+        <Link href="/methodology">{t("Read the methodology →")}</Link>
       </p>
     </main>
   );

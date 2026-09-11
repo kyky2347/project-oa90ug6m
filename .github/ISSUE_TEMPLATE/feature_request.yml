@@ -1,0 +1,20 @@
+name: Feature or methodology proposal
+description: Propose an improvement to location investigation.
+body:
+  - type: textarea
+    id: decision
+    attributes:
+      label: What decision or workflow would this improve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behaviour and alternatives
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Data and validation
+      description: For analytical changes, describe source availability, attribution, assumptions and how the improvement could be tested.

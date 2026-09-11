@@ -1,0 +1,22 @@
+name: Bug report
+description: Report a reproducible product or pipeline problem.
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and reproduction steps
+      description: What happened, what did you expect, and how can we reproduce it?
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Revision and environment
+      description: Include the Git revision or release, OS, browser and Docker context.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Add a screenshot or redacted error. For pipeline issues, include the source and feature version. Do not include credentials, personal information, backups or full datasets.

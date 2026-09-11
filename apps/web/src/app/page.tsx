@@ -1,4 +1,5 @@
 "use client";
+import { useI18n } from "@/lib/i18n";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import {
@@ -32,6 +33,8 @@ const icons = [
   BriefcaseBusiness,
 ];
 export default function Landing() {
+  const { t } = useI18n();
+
   const business = usePulseStore((s) => s.business),
     set = usePulseStore((s) => s.set);
   const data = useMap(business, null, 8);
@@ -43,9 +46,10 @@ export default function Landing() {
         <div className="hero-map-shade" />
       </div>
       <div className="hero-coordinate">
-        <span className="crosshair">+</span>51°30′26.4″N
+        <span className="crosshair">+</span>
+        {t("51°30′26.4″N")}
         <br />
-        <span className="coord-indent">0°07′39.6″W</span>
+        <span className="coord-indent">{t("0°07′39.6″W")}</span>
       </div>
       <motion.section
         className="hero-copy"
@@ -54,54 +58,59 @@ export default function Landing() {
         transition={{ duration: 0.7 }}
       >
         <div className="eyebrow">
-          <span className="status-dot" />A NEW PERSPECTIVE ON LONDON
+          <span className="status-dot" />
+          {t("A NEW PERSPECTIVE ON LONDON")}
         </div>
         <h1>
-          The city
+          {t("The city")}
           <br />
-          already <span>knows.</span>
+          {t("already ")}
+          <span>{t("knows.")}</span>
         </h1>
         <p className="hero-subtitle">
-          Where your next store should be.
+          {t("Where your next store should be.")}
           <br />
-          Ask the map.
+          {t("Ask the map.")}
         </p>
         <p className="hero-description">
-          Turn the city’s open data into your next opportunity.
+          {t("Turn the city’s open data into your next opportunity.")}
           <br />
-          Six business profiles. Every signal explained.
+          {t("Six business profiles. Every signal explained.")}
         </p>
         <div className="hero-actions">
           <Button asChild size="lg">
             <Link href={`/explore?business=${business}`}>
-              EXPLORE LONDON
+              {t("EXPLORE LONDON")}
               <ArrowUpRight data-icon="inline-end" />
             </Link>
           </Button>
           <Link className="quiet-link" href="/methodology">
-            How it works
+            {t("How it works")}
             <ArrowUpRight size={15} />
           </Link>
         </div>
         <div className="hero-proof">
           <Compass size={13} />
           <span>
-            Real public data. No upload. No guesswork disguised as certainty.
+            {t(
+              "Real public data. No upload. No guesswork disguised as certainty.",
+            )}
           </span>
         </div>
       </motion.section>
       <div className="hero-map-caption">
         <div className="caption-line" />
-        <span>THE OPPORTUNITY LANDSCAPE</span>
+        <span>{t("THE OPPORTUNITY LANDSCAPE")}</span>
         <small>
-          {businesses.find((b) => b.id === business)?.name} · Greater London
+          {t(businesses.find((b) => b.id === business)?.name)}
+          {t(" · Greater London")}
         </small>
-        <p>Column height represents opportunity score</p>
+        <p>{t("Column height represents opportunity score")}</p>
       </div>
       <div className="hero-category">
         <div>
-          <span className="eyebrow">YOUR NEXT CHAPTER</span>
-          <p>What are you opening?</p>
+          <span className="eyebrow">{t("YOUR NEXT CHAPTER")}</span>
+          <p>{t("What are you opening?")}</p>
         </div>
         <ToggleGroup
           type="single"
@@ -109,7 +118,7 @@ export default function Landing() {
           onValueChange={(v) => {
             if (v) set({ business: v as typeof business, weights: null });
           }}
-          aria-label="Choose business type"
+          aria-label={t("Choose business type")}
           spacing={1}
         >
           {businesses.map((b, i) => {
@@ -117,7 +126,7 @@ export default function Landing() {
             return (
               <ToggleGroupItem key={b.id} value={b.id}>
                 <Icon />
-                {b.name}
+                {t(b.name)}
               </ToggleGroupItem>
             );
           })}
@@ -126,57 +135,63 @@ export default function Landing() {
       <footer className="landing-footer">
         <div>
           <span className="status-dot" />
-          {sources.data?.active_version
-            ? "VERIFIED LONDON MODEL"
-            : data.error
-              ? "CITY MODEL UNAVAILABLE"
-              : "CONNECTING TO LONDON MODEL"}
+          {t(
+            sources.data?.active_version
+              ? "VERIFIED LONDON MODEL"
+              : data.error
+                ? "CITY MODEL UNAVAILABLE"
+                : "CONNECTING TO LONDON MODEL",
+          )}
         </div>
-        <span>OpenStreetMap · ONS · TfL · GLA · UK Police · HMRC</span>
+        <span>{t("OpenStreetMap · ONS · TfL · GLA · UK Police · HMRC")}</span>
         <Link href="/about">
-          A clearer view of what’s possible
+          {t("A clearer view of what’s possible")}
           <MoveUpRight size={12} />
         </Link>
       </footer>
       <section className="landing-below">
         <div className="eyebrow">
-          <ArrowDown size={14} /> EVIDENCE BEFORE INTUITION
+          <ArrowDown size={14} />
+          {t(" EVIDENCE BEFORE INTUITION")}
         </div>
         <h2>
-          Find the places
+          {t("Find the places")}
           <br />
-          worth a closer look.
+          {t("worth a closer look.")}
         </h2>
         <div className="story-columns">
           <article>
-            <span>01 / EXPLORE</span>
-            <h3>Read the city.</h3>
+            <span>{t("01 / EXPLORE")}</span>
+            <h3>{t("Read the city.")}</h3>
             <p>
-              See how demand proxies, access, mapped supply and the commercial
-              environment fit together, one area at a time.
+              {t(
+                "See how demand proxies, access, mapped supply and the commercial environment fit together, one area at a time.",
+              )}
             </p>
           </article>
           <article>
-            <span>02 / UNDERSTAND</span>
-            <h3>Look beneath the score.</h3>
+            <span>{t("02 / UNDERSTAND")}</span>
+            <h3>{t("Look beneath the score.")}</h3>
             <p>
-              Inspect the raw evidence, source dates and model limitations
-              behind every component. Adjust the profile to reflect your
-              priorities.
+              {t(
+                "Inspect the raw evidence, source dates and model limitations behind every component. Adjust the profile to reflect your priorities.",
+              )}
             </p>
           </article>
           <article>
-            <span>03 / INVESTIGATE</span>
-            <h3>Make your next move.</h3>
+            <span>{t("03 / INVESTIGATE")}</span>
+            <h3>{t("Make your next move.")}</h3>
             <p>
-              Compare locations, explore walking-time proxies and build a
-              shortlist for an on-the-ground investigation.
+              {t(
+                "Compare locations, explore walking-time proxies and build a shortlist for an on-the-ground investigation.",
+              )}
             </p>
           </article>
         </div>
         <p className="product-disclaimer">
-          PULSE identifies areas worth investigating. It does not guarantee
-          commercial success.
+          {t(
+            "PULSE identifies areas worth investigating. It does not guarantee commercial success.",
+          )}
         </p>
       </section>
     </main>

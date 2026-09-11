@@ -1,4 +1,5 @@
 "use client";
+import { useI18n } from "@/lib/i18n";
 import {
   forwardRef,
   useEffect,
@@ -118,6 +119,7 @@ export const CityMap = forwardRef<MapHandle, Props>(function CityMap(
   },
   ref,
 ) {
+  const { t } = useI18n();
   const container = useRef<HTMLDivElement>(null),
     map = useRef<maplibregl.Map | null>(null),
     overlay = useRef<MapboxOverlay | null>(null);
@@ -517,13 +519,13 @@ export const CityMap = forwardRef<MapHandle, Props>(function CityMap(
       {!ready && !error && (
         <div className="map-connecting">
           <Hexagon size={24} />
-          <span>Connecting to the city map</span>
+          <span>{t("Connecting to the city map")}</span>
         </div>
       )}
       {error && (
         <div className="map-error">
           <AlertTriangle size={16} />
-          {error}
+          {t(error)}
         </div>
       )}
       {tooltip && !hero && (
@@ -537,7 +539,9 @@ export const CityMap = forwardRef<MapHandle, Props>(function CityMap(
             top: Math.max(20, tooltip.y - 96),
           }}
         >
-          <small>{pulse ? "Typical transport influence" : labels[layer]}</small>
+          <small>
+            {t(pulse ? "Typical transport influence" : labels[layer])}
+          </small>
           <strong>
             {Math.round(
               pulse
@@ -554,7 +558,10 @@ export const CityMap = forwardRef<MapHandle, Props>(function CityMap(
             <span>/100</span>
           </strong>
           <p>{tooltip.cell.label}</p>
-          <span>{tooltip.cell.borough} · Click to investigate</span>
+          <span>
+            {tooltip.cell.borough}
+            {t(" · Click to investigate")}
+          </span>
         </div>
       )}
     </div>

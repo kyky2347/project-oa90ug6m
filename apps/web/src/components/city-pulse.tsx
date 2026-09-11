@@ -1,4 +1,5 @@
 "use client";
+import { useI18n } from "@/lib/i18n";
 import { useEffect, useMemo, useState } from "react";
 import {
   Area,
@@ -15,6 +16,8 @@ import { Button } from "./ui/button";
 import { Slider } from "./ui/slider";
 import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group";
 export function CityPulse({ data, error }: { data?: Pulse; error?: string }) {
+  const { t, number } = useI18n();
+
   const { time, day, set } = usePulseStore();
   const [playing, setPlaying] = useState(false);
   const chart = useMemo(
@@ -33,17 +36,17 @@ export function CityPulse({ data, error }: { data?: Pulse; error?: string }) {
     return () => clearInterval(id);
   }, [playing, set]);
   return (
-    <section className="pulse-dock glass" aria-label="City Pulse">
+    <section className="pulse-dock glass" aria-label={t("City Pulse")}>
       <div className="pulse-top">
         <div>
           <Activity size={18} />
-          <h2>City Pulse</h2>
-          <span>Typical transport demand profile</span>
+          <h2>{t("City Pulse")}</h2>
+          <span>{t("Typical transport demand profile")}</span>
         </div>
         <Button
           variant="ghost"
           size="icon-sm"
-          aria-label="Close City Pulse"
+          aria-label={t("Close City Pulse")}
           onClick={() => set({ pulse: false })}
         >
           <X />
@@ -57,10 +60,13 @@ export function CityPulse({ data, error }: { data?: Pulse; error?: string }) {
                 .toString()
                 .padStart(2, "0")}:${(time % 4) * 15 || "00"}`}
           </strong>
-          <span>TYPICAL {day.toUpperCase()}</span>
+          <span>
+            {t("TYPICAL ")}
+            {t(day.toUpperCase())}
+          </span>
           <Button
             size="icon"
-            aria-label={playing ? "Pause timeline" : "Play timeline"}
+            aria-label={t(playing ? "Pause timeline" : "Play timeline")}
             disabled={!data}
             onClick={() => setPlaying(!playing)}
           >
@@ -91,8 +97,7 @@ export function CityPulse({ data, error }: { data?: Pulse; error?: string }) {
                   active && payload?.[0] ? (
                     <div className="chart-tooltip">
                       {payload[0].payload.time} ·{" "}
-                      {Math.round(Number(payload[0].value)).toLocaleString()}{" "}
-                      influence units
+                      {number(Number(payload[0].value))} {t("influence units")}
                     </div>
                   ) : null
                 }
@@ -105,7 +110,7 @@ export function CityPulse({ data, error }: { data?: Pulse; error?: string }) {
             max={94}
             step={1}
             onValueChange={([t]) => set({ time: t })}
-            aria-label="Time of day"
+            aria-label={t("Time of day")}
           />
           <div className="time-ticks">
             <span>06:00</span>
@@ -122,15 +127,17 @@ export function CityPulse({ data, error }: { data?: Pulse; error?: string }) {
           onValueChange={(v) => {
             if (v) set({ day: v });
           }}
-          aria-label="Day profile"
+          aria-label={t("Day profile")}
         >
-          <ToggleGroupItem value="weekday">Weekday</ToggleGroupItem>
-          <ToggleGroupItem value="saturday">Sat</ToggleGroupItem>
-          <ToggleGroupItem value="sunday">Sun</ToggleGroupItem>
+          <ToggleGroupItem value="weekday">{t("Weekday")}</ToggleGroupItem>
+          <ToggleGroupItem value="saturday">{t("Sat")}</ToggleGroupItem>
+          <ToggleGroupItem value="sunday">{t("Sun")}</ToggleGroupItem>
         </ToggleGroup>
         <p>
-          {error ||
-            "TfL NUMBAT · historical typical-day estimates. Only transport intensity changes with time."}
+          {t(
+            error ||
+              "TfL NUMBAT · historical typical-day estimates. Only transport intensity changes with time.",
+          )}
         </p>
       </div>
     </section>

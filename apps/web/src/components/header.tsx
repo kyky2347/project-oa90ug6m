@@ -1,11 +1,15 @@
 "use client";
+import { useI18n } from "@/lib/i18n";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, Globe2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { LanguageSwitch } from "./language-switch";
 export function Logo() {
+  const { t } = useI18n();
+
   return (
-    <Link href="/" className="brand" aria-label="PULSE home">
+    <Link href="/" className="brand" aria-label={t("PULSE home")}>
       <svg
         width="30"
         height="34"
@@ -26,42 +30,46 @@ export function Logo() {
         />
       </svg>
       <span>
-        PULSE<small>URBAN OPPORTUNITY INTELLIGENCE</small>
+        {t("PULSE")}
+        <small>{t("URBAN OPPORTUNITY INTELLIGENCE")}</small>
       </span>
     </Link>
   );
 }
 export function Header() {
+  const { t } = useI18n();
+
   const path = usePathname();
   return (
     <header className="header">
       <Logo />
-      <nav aria-label="Main navigation">
+      <nav aria-label={t("Main navigation")}>
         <Link className={cn(path === "/explore" && "current")} href="/explore">
-          Explore London
+          {t("Explore London")}
         </Link>
         <Link className={cn(path === "/compare" && "current")} href="/compare">
-          Site Battle
+          {t("Site Battle")}
         </Link>
         <Link
           className={cn(path === "/methodology" && "current")}
           href="/methodology"
         >
-          Methodology
+          {t("Methodology")}
         </Link>
         <Link className={cn(path === "/data" && "current")} href="/data">
-          Data health
+          {t("Data health")}
           <span className="nav-dot" />
         </Link>
       </nav>
+      <LanguageSwitch />
       <div className="header-right">
         <Globe2 size={14} />
-        <span>London, UK</span>
-        <span className="edition">V.01</span>
+        <span>{t("London, UK")}</span>
+        <span className="edition">{t("V.01")}</span>
       </div>
       {path === "/" && (
         <Link className="header-cta" href="/explore">
-          Open the map
+          {t("Open the map")}
           <ArrowUpRight size={16} />
         </Link>
       )}

@@ -34,8 +34,52 @@
   --border: #293135;
   --warning: #e0ad8a;
   --font-body: "Manrope Variable", sans-serif;
-  --font-display: "Space Grotesk Variable", sans-serif;
+  --font-display:
+    "Space Grotesk Variable", "PingFang SC", "Microsoft YaHei", sans-serif;
   --header: 76px;
+}
+
+.language-switch {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 3px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  gap: 2px;
+}
+.language-switch button {
+  min-width: 38px;
+  min-height: 30px;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+  color: var(--muted-foreground);
+  font-size: 11px;
+}
+.language-switch button[aria-pressed="true"] {
+  background: var(--secondary);
+  color: var(--primary);
+}
+.language-switch button:hover {
+  color: var(--foreground);
+}
+html[lang="zh-CN"] {
+  --font-body: "Manrope Variable", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+html[lang="zh-CN"] .eyebrow,
+html[lang="zh-CN"] .section-label {
+  letter-spacing: 1px;
+}
+html[lang="zh-CN"] .page-heading h1 {
+  text-wrap: balance;
+}
+html[lang="zh-CN"] .hero-copy h1 {
+  line-height: 1.22;
+}
+html[lang="zh-CN"] .methodology-copy p,
+html[lang="zh-CN"] .about-grid p {
+  line-height: 1.95;
 }
 * {
   box-sizing: border-box;
@@ -2982,5 +3026,47 @@ input {
   }
   .hero-map-caption {
     max-width: 250px;
+  }
+}
+
+/* Both languages and all primary destinations remain available on narrow screens. */
+@media (max-width: 760px) {
+  :root {
+    --header: 106px;
+  }
+  .header {
+    height: var(--header);
+    padding: 8px 16px 0;
+    gap: 0 12px;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+  .header .brand {
+    min-width: 0;
+    flex: 1;
+  }
+  .header .header-right {
+    display: none;
+  }
+  .header nav {
+    order: 4;
+    flex: 1 0 100%;
+    height: 40px;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .header nav a {
+    font-size: 11px;
+  }
+  .header nav a:nth-child(2),
+  .header nav a:nth-child(3) {
+    display: flex;
+  }
+  .language-switch button {
+    min-height: 40px;
+    min-width: 40px;
+  }
+  html[lang="zh-CN"] .hero-copy h1 {
+    font-size: clamp(44px, 12vw, 62px);
   }
 }

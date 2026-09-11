@@ -1,4 +1,5 @@
 "use client";
+import { useI18n } from "@/lib/i18n";
 import Link from "next/link";
 import { useQuery } from "@tanstack/react-query";
 import {
@@ -22,6 +23,8 @@ import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Skeleton } from "@/components/ui/skeleton";
 export default function ComparePage() {
+  const { t } = useI18n();
+
   const state = usePulseStore(),
     ranking = useRankings(state.business, state.weights);
   const sites =
@@ -52,18 +55,18 @@ export default function ComparePage() {
         .replaceAll('"', '""') +
       '"';
     const rows = [
-      ["Metric", d.sites[0].label, d.sites[1].label],
+      [t("Metric"), d.sites[0].label, d.sites[1].label],
       ["H3", ...d.sites.map((s) => s.h3)],
-      ["Feature version", d.feature_version, d.feature_version],
-      ["Business", state.business, state.business],
-      ["Opportunity", ...d.sites.map((s) => s.score)],
-      ["Confidence quality index", ...d.sites.map((s) => s.confidence)],
+      [t("Feature version"), d.feature_version, d.feature_version],
+      [t("Business"), state.business, state.business],
+      [t("Opportunity"), ...d.sites.map((s) => s.score)],
+      [t("Confidence quality index"), ...d.sites.map((s) => s.confidence)],
       ...componentKeys.map((k) => [
-        labels[k],
+        t(labels[k]),
         ...d.sites.map((s) => s.components[k]),
       ]),
       ...componentKeys.map((k) => [
-        labels[k] + " weight",
+        t(labels[k] + " weight"),
         d.weights[k],
         d.weights[k],
       ]),
@@ -79,30 +82,32 @@ export default function ComparePage() {
       <div className="page-heading">
         <div>
           <div className="eyebrow">
-            <Scale size={13} /> SITE BATTLE
+            <Scale size={13} />
+            {t(" SITE BATTLE")}
           </div>
           <h1>
-            Two places.
+            {t("Two places.")}
             <br />
-            <span>One informed decision.</span>
+            <span>{t("One informed decision.")}</span>
           </h1>
           <p>
-            Compare the signals, understand the tradeoffs, and see what changes
-            under your current business profile.
+            {t(
+              "Compare the signals, understand the tradeoffs, and see what changes under your current business profile.",
+            )}
           </p>
         </div>
         <Button asChild variant="outline">
           <Link href="/explore">
-            Back to London
+            {t("Back to London")}
             <ArrowUpRight data-icon="inline-end" />
           </Link>
         </Button>
       </div>
       <div className="compare-toolbar">
         <label>
-          BUSINESS PROFILE
+          {t("BUSINESS PROFILE")}
           <select
-            aria-label="Comparison business type"
+            aria-label={t("Comparison business type")}
             value={state.business}
             onChange={(e) =>
               state.set({ business: e.target.value as Business, weights: null })
@@ -110,7 +115,7 @@ export default function ComparePage() {
           >
             {businesses.map((b) => (
               <option key={b.id} value={b.id}>
-                {b.name}
+                {t(b.name)}
               </option>
             ))}
           </select>
@@ -118,7 +123,7 @@ export default function ComparePage() {
         <div className="compare-export">
           <Button variant="outline" size="sm" onClick={csv} disabled={!d}>
             <Download data-icon="inline-start" />
-            Export CSV
+            {t("Export CSV")}
           </Button>
           <Button
             variant="outline"
@@ -129,14 +134,14 @@ export default function ComparePage() {
             }
             disabled={!d}
           >
-            Export JSON
+            {t("Export JSON")}
           </Button>
         </div>
       </div>
       {query.error && (
         <Alert variant="destructive">
-          <AlertTitle>Comparison unavailable</AlertTitle>
-          <AlertDescription>{query.error.message}</AlertDescription>
+          <AlertTitle>{t("Comparison unavailable")}</AlertTitle>
+          <AlertDescription>{t(query.error.message)}</AlertDescription>
         </Alert>
       )}
       {!d && !query.error && (
@@ -148,16 +153,17 @@ export default function ComparePage() {
       {d && (
         <>
           <div className="battle-grid">
-            <span className="battle-versus">VS</span>
+            <span className="battle-versus">{t("VS")}</span>
             {d.sites.map((s, i) => (
               <article className="battle-site" key={s.h3}>
                 <div className="site-letter">
                   <span className="status-dot" />
-                  SITE {i ? "B" : "A"}
+                  {t("SITE ")}
+                  {t(i ? "B" : "A")}
                 </div>
                 <div className="site-selector">
                   <select
-                    aria-label={`Choose site ${i ? "B" : "A"}`}
+                    aria-label={t(`Choose site ${i ? "B" : "A"}`)}
                     value={sites[i]}
                     onChange={(e) => {
                       const next = [...sites];
@@ -166,23 +172,28 @@ export default function ComparePage() {
                     }}
                   >
                     {!ranking.data?.sites.some((x) => x.h3 === s.h3) && (
-                      <option value={s.h3}>{s.label}</option>
+                      <option value={s.h3}>{t(s.label)}</option>
                     )}
                     {ranking.data?.sites
                       .filter((c) => c.h3 !== sites[1 - i])
                       .map((c) => (
                         <option key={c.h3} value={c.h3}>
-                          {c.label} · {c.borough}
+                          {t(c.label)} · {c.borough}
                         </option>
                       ))}
                   </select>
                   <ChevronDown size={13} />
                 </div>
-                <h2>{s.label}</h2>
-                <p className="borough-label">{s.borough}, London</p>
+                <h2>{t(s.label)}</h2>
+                <p className="borough-label">
+                  {s.borough}
+                  {t(", London")}
+                </p>
                 <div className="score-hero">
                   <div>
-                    <span className="eyebrow">CURRENT-WEIGHT OPPORTUNITY</span>
+                    <span className="eyebrow">
+                      {t("CURRENT-WEIGHT OPPORTUNITY")}
+                    </span>
                     <strong>
                       {Math.round(s.score)}
                       <small>/100</small>
@@ -191,12 +202,12 @@ export default function ComparePage() {
                   <div className="confidence-pill">
                     <Check size={13} />
                     <b>{Math.round(s.confidence * 100)}%</b>
-                    <span>Data confidence</span>
+                    <span>{t("Data confidence")}</span>
                   </div>
                 </div>
                 <ScoreBars detail={s} />
                 <Link href={`/site/${s.h3}?business=${state.business}`}>
-                  Investigate this location
+                  {t("Investigate this location")}
                   <ArrowUpRight size={14} />
                 </Link>
               </article>
@@ -205,28 +216,30 @@ export default function ComparePage() {
           <div className="tradeoff">
             <Scale size={22} />
             <div>
-              <h3>The tradeoff is the insight.</h3>
-              <p>{d.tradeoff}</p>
+              <h3>{t("The tradeoff is the insight.")}</h3>
+              <p>{t(d.tradeoff)}</p>
               <small>
-                {d.note} Confidence is a data-quality index, not a success
-                probability.
+                {t(d.note)}
+                {t(
+                  " Confidence is a data-quality index, not a success probability.",
+                )}
               </small>
             </div>
           </div>
           <div className="content-topline" style={{ marginTop: 30 }}>
             <span>
-              {state.weights
-                ? "CUSTOM WEIGHTS"
-                : "PULSE DEFAULT BUSINESS PROFILE"}
+              {t(
+                state.weights
+                  ? "CUSTOM WEIGHTS"
+                  : "PULSE DEFAULT BUSINESS PROFILE",
+              )}
             </span>
             <span>{d.feature_version}</span>
           </div>
           <p className="research-note">
-            The initial comparison uses your two selected sites, or the two
-            highest-ranked qualifying areas if you have not selected any. Choose
-            another candidate above or add a site from the map. Population is a
-            residential allocation proxy; commercial suitability requires local
-            investigation.
+            {t(
+              "The initial comparison uses your two selected sites, or the two highest-ranked qualifying areas if you have not selected any. Choose another candidate above or add a site from the map. Population is a residential allocation proxy; commercial suitability requires local investigation.",
+            )}
           </p>
         </>
       )}

@@ -1,5 +1,7 @@
 # Refresh and recovery
 
+For the Docker-only installation, use `./scripts/pulse refresh`, `./scripts/pulse data-status` and `./scripts/pulse validate`. The `make` / `uv` commands below are the equivalent host-development workflow. See [quickstart](quickstart.md).
+
 `make bootstrap` starts local PostGIS/Redis, migrates the schema, registers adapters, acquires due data, builds H3 features and models, validates them, and activates the candidate atomically. The first acquisition requires network access and can take several minutes, particularly the multi-tile Police API. It produces real analysis immediately after completion.
 
 `make refresh` repeats the cadence-aware pipeline. `uv run pulse-data refresh --source osm` checks one source. `--force` requests a rebuild and source checks even before cadence; recently acquired byte-identical downloads may be reused from the checksum-verified asset cache. `make status` and `make validate` report source/model health.

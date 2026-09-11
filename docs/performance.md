@@ -4,17 +4,17 @@ Local loopback into Docker FastAPI, PostGIS + Redis. One cold response cache sam
 
 Measured UTC: 2026-09-11T13:10:17.437832+00:00; macOS-26.5.2-arm64-arm-64bit. Active version: `ldn-20260911T130817-f16e80`.
 
-| API operation | Cold response cache ms | Warm p50 ms | Warm p95 ms | Gzip bytes |
-|---|---:|---:|---:|---:|
-| overview | 193.14 | 26.15 | 28.21 | 152,468 |
-| detail viewport | 21.32 | 4.87 | 5.21 | 14,920 |
-| full res9 | 608.34 | 148.79 | 181.4 | 916,406 |
-| rankings | 47.48 | 2.29 | 2.61 | 2,020 |
-| cell | 63.99 | 3.24 | 3.47 | 6,907 |
-| catchment | 98.77 | 6.57 | 7.55 | 1,033 |
-| pulse | 154.52 | 83.53 | 93.71 | 493,965 |
-| competitive gravity | 1204.36 | 13.32 | 14.25 | 49,806 |
-| custom weights | 185.08 | 26.6 | 28.74 | 152,521 |
+| API operation       | Cold response cache ms | Warm p50 ms | Warm p95 ms | Gzip bytes |
+| ------------------- | ---------------------: | ----------: | ----------: | ---------: |
+| overview            |                 193.14 |       26.15 |       28.21 |    152,468 |
+| detail viewport     |                  21.32 |        4.87 |        5.21 |     14,920 |
+| full res9           |                 608.34 |      148.79 |       181.4 |    916,406 |
+| rankings            |                  47.48 |        2.29 |        2.61 |      2,020 |
+| cell                |                  63.99 |        3.24 |        3.47 |      6,907 |
+| catchment           |                  98.77 |        6.57 |        7.55 |      1,033 |
+| pulse               |                 154.52 |       83.53 |       93.71 |    493,965 |
+| competitive gravity |                1204.36 |       13.32 |       14.25 |     49,806 |
+| custom weights      |                 185.08 |        26.6 |       28.74 |    152,521 |
 
 Eight concurrent ranking clients, 40 requests: p50 17.65ms, p95 240.86ms.
 

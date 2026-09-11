@@ -3,7 +3,7 @@ PULSE local verification, 11 September 2026. Browser smoke and focused About con
 === test-python-final.log ===
 ============================= test session starts ==============================
 platform darwin -- Python 3.12.13, pytest-9.1.1, pluggy-1.6.0
-rootdir: /Users/yk/Desktop/PULSE
+rootdir: <project-root>
 configfile: pyproject.toml
 testpaths: tests
 plugins: cov-7.1.0, anyio-4.15.1, hypothesis-6.168.0
@@ -16,16 +16,16 @@ tests/unit/test_sources.py ......................                        [100%]
 
 =============================== warnings summary ===============================
 .venv/lib/python3.12/site-packages/fastapi/testclient.py:1
-  /Users/yk/Desktop/PULSE/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  <project-root>/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
     from starlette.testclient import TestClient as TestClient  # noqa
 
 .venv/lib/python3.12/site-packages/starlette/testclient.py:53
-  /Users/yk/Desktop/PULSE/.venv/lib/python3.12/site-packages/starlette/testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+  <project-root>/.venv/lib/python3.12/site-packages/starlette/testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
     _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
 
 tests/integration/test_london_api.py::test_real_london_spatial_database_and_version
 tests/integration/test_london_api.py::test_source_health_and_admin_disabled
-  /Users/yk/Desktop/PULSE/.venv/lib/python3.12/site-packages/fastapi/routing.py:144: FastAPIDeprecationWarning: ORJSONResponse is deprecated, FastAPI now serializes data directly to JSON bytes via Pydantic when a return type or response model is set, which is faster and doesn't need a custom response class. Read more in the FastAPI docs: https://fastapi.tiangolo.com/advanced/custom-response/#orjson-or-response-model and https://fastapi.tiangolo.com/tutorial/response-model/
+  <project-root>/.venv/lib/python3.12/site-packages/fastapi/routing.py:144: FastAPIDeprecationWarning: ORJSONResponse is deprecated, FastAPI now serializes data directly to JSON bytes via Pydantic when a return type or response model is set, which is faster and doesn't need a custom response class. Read more in the FastAPI docs: https://fastapi.tiangolo.com/advanced/custom-response/#orjson-or-response-model and https://fastapi.tiangolo.com/tutorial/response-model/
     response = await f(request)
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
@@ -36,7 +36,7 @@ tests/integration/test_london_api.py::test_source_health_and_admin_disabled
 $ pnpm --filter @pulse/web test
 $ vitest run
 
- RUN  v3.2.7 /Users/yk/Desktop/PULSE/apps/web
+ RUN  v3.2.7 <project-root>/apps/web
 
  ✓ src/test/product.test.tsx (7 tests) 263ms
 
