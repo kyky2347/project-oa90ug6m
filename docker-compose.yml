@@ -25,6 +25,7 @@ services:
       timeout: 5s
       retries: 20
   api:
+    user: "${PULSE_UID:-1000}:${PULSE_GID:-1000}"
     profiles: ["app"]
     build:
       context: .
@@ -47,5 +48,21 @@ services:
       API_INTERNAL_URL: http://api:8000
     ports: ["127.0.0.1:3000:3000"]
     depends_on: [api]
+  worker:
+    user: "${PULSE_UID:-1000}:${PULSE_GID:-1000}"
+    profiles: ["refresh"]
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    command: ["/app/.venv/bin/python", "-m", "pipeline.worker"]
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql+psycopg://pulse:${POSTGRES_PASSWORD:-pulse_local_only}@postgres:5432/pulse
+      REDIS_URL: redis://redis:6379/0
+      PULSE_REFRESH_INTERVAL_SECONDS: 86400
+    depends_on:
+      postgres: {condition: service_healthy}
+      redis: {condition: service_healthy}
+    volumes: ["./data:/app/data"]
 volumes:
   postgres_data:

@@ -1,0 +1,52 @@
+name: Verify PULSE
+on:
+  push:
+    paths-ignore: ["docs/**", "README.md", "data/manifests/**", "LICENSE"]
+  pull_request:
+    paths-ignore: ["docs/**", "README.md", "data/manifests/**", "LICENSE"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgis/postgis:16-3.5
+        env:
+          POSTGRES_USER: pulse
+          POSTGRES_PASSWORD: pulse_local_only
+          POSTGRES_DB: pulse
+        ports: ['55433:5432']
+        options: >-
+          --health-cmd "pg_isready -U pulse -d pulse"
+          --health-interval 5s --health-timeout 5s --health-retries 20
+      redis:
+        image: redis:7-alpine
+        ports: ['56380:6379']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv sync --frozen
+      - run: uv run ruff check .
+      - run: uv run pulse-data migrate
+      - run: uv run pytest -m 'not integration'
+      - run: uv run python scripts/check_database.py
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.19.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint && pnpm typecheck && pnpm test && pnpm build
+      - run: pnpm --filter @pulse/web exec playwright install --with-deps chromium
+      - run: pnpm --filter @pulse/web exec playwright test --project=smoke
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: browser-report
+          path: apps/web/playwright-report

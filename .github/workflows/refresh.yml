@@ -1,0 +1,27 @@
+name: Refresh verified London snapshots
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 4 * * *'
+permissions:
+  contents: read
+jobs:
+  refresh:
+    # Opt-in: persistent self-hosted warehouse. Public CI must never run a throwaway city download nightly.
+    if: vars.PULSE_REFRESH_ENABLED == 'true'
+    runs-on: [self-hosted, pulse-data]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          clean: false # Preserve immutable raw snapshots on the persistent runner.
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --frozen
+      - run: uv run pulse-data refresh
+        env:
+          DATABASE_URL: ${{ secrets.PULSE_DATABASE_URL }}
+          REDIS_URL: ${{ secrets.PULSE_REDIS_URL }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: refresh-manifests
+          path: data/manifests/refresh-*.json
