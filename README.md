@@ -8,9 +8,9 @@
 
 London location intelligence, built from real public data and explainable spatial models.
 
-[![Verify PULSE](https://github.com/kyky2347/project-oa90ug6m/actions/workflows/ci.yml/badge.svg)](https://github.com/kyky2347/project-oa90ug6m/actions/workflows/ci.yml)
+[![Verify PULSE](https://github.com/kyky2347/pulse-london/actions/workflows/ci.yml/badge.svg)](https://github.com/kyky2347/pulse-london/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/code-MIT-d8eea0?labelColor=121a1d)](LICENSE)
-[![London edition](https://img.shields.io/badge/edition-London%20%C2%B7%20v0.1.0-d8eea0?labelColor=121a1d)](https://github.com/kyky2347/project-oa90ug6m/releases)
+[![London edition](https://img.shields.io/badge/edition-London%20%C2%B7%20v0.1.0-d8eea0?labelColor=121a1d)](https://github.com/kyky2347/pulse-london/releases)
 
 [Product tour](docs/product-tour.md) 路 [Run locally](#run-locally) 路 [How it works](#from-public-data-to-a-location-hypothesis) 路 [Documentation](docs/README.md) 路 [绠�浣撲腑鏂嘳(README.zh-CN.md)
 
@@ -52,7 +52,7 @@ The interface supports **English and Simplified Chinese**. Switch with **EN / 涓
 Install **Git and Docker with Compose**. On macOS, use OrbStack or Docker Desktop; on Linux, start Docker Engine first. On Windows, use a WSL2 terminal with Docker integration. macOS has been exercised locally and Linux is covered by CI; Windows/WSL2 has not been verified.
 
 ```sh
-git clone https://github.com/kyky2347/project-oa90ug6m.git pulse
+git clone https://github.com/kyky2347/pulse-london.git pulse
 cd pulse
 ./scripts/pulse
 ```
@@ -71,7 +71,7 @@ The first run needs internet access and can take a while, especially for Police 
 ./scripts/pulse --build      # rebuild application images after code changes
 ```
 
-Prefer downloading a ZIP? Use the [versioned release](https://github.com/kyky2347/project-oa90ug6m/releases), extract it and run `bash scripts/pulse` from its root. See [setup, global `pulse` shortcut and troubleshooting](docs/quickstart.md), [development](CONTRIBUTING.md) and [reproduction boundaries](docs/reproducibility.md).
+Prefer downloading a ZIP? Use the [versioned release](https://github.com/kyky2347/pulse-london/releases), extract it and run `bash scripts/pulse` from its root. See [setup, global `pulse` shortcut and troubleshooting](docs/quickstart.md), [development](CONTRIBUTING.md) and [reproduction boundaries](docs/reproducibility.md).
 
 ## The recorded London edition
 
@@ -130,7 +130,7 @@ The model learns patterns in mapped supply. Its validation measures held-out sup
 | Data and models   | Python, GeoPandas, osmium, statsmodels, scikit-learn            |
 | Delivery          | Locked uv/pnpm dependencies, Docker Compose, GitHub Actions     |
 
-The recorded verification includes **56 Python tests** (35 offline and 21 real-warehouse cases), **7 frontend tests**, **4 real-London browser tests** and **1 browser smoke test**, plus lint, type checks and production builds. The bilingual public release adds 7 language tests and Chinese browser coverage; see [public release checks](docs/public-release-checks.md). [Current CI](https://github.com/kyky2347/project-oa90ug6m/actions/workflows/ci.yml) runs from a clean checkout with small fixtures; full London integration remains a separate data-dependent check.
+The recorded verification includes **56 Python tests** (35 offline and 21 real-warehouse cases), **7 frontend tests**, **4 real-London browser tests** and **1 browser smoke test**, plus lint, type checks and production builds. The bilingual public release adds 7 language tests and Chinese browser coverage; see [public release checks](docs/public-release-checks.md). [Current CI](https://github.com/kyky2347/pulse-london/actions/workflows/ci.yml) runs from a clean checkout with small fixtures; full London integration remains a separate data-dependent check.
 
 Measured locally with warm database pages and 15 warm response-cache requests, the city overview had a **28.21ms p95** and site detail **3.47ms p95**. These are development-machine observations. Software WebGL playback averaged 6.12 animation-frame callbacks/second, so this release does not claim smooth 60fps on all hardware. [Measurement conditions and raw results](docs/performance.md).
 

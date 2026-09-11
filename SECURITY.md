@@ -4,7 +4,7 @@ PULSE currently supports the latest v0.1.x code line. This local-first release d
 
 ## Reporting a vulnerability
 
-Use [GitHub private vulnerability reporting](https://github.com/kyky2347/project-oa90ug6m/security/advisories/new) for security-sensitive findings. Include the affected revision, reproduction steps, impact and a minimal example with secrets removed. Avoid publishing exploitable details in a public issue before the finding can be assessed. No response-time commitment is implied.
+Use [GitHub private vulnerability reporting](https://github.com/kyky2347/pulse-london/security/advisories/new) for security-sensitive findings. Include the affected revision, reproduction steps, impact and a minimal example with secrets removed. Avoid publishing exploitable details in a public issue before the finding can be assessed. No response-time commitment is implied.
 
 ## Deployment boundaries
 

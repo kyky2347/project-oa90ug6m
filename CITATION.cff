@@ -7,6 +7,6 @@ authors:
 version: 0.1.0
 date-released: 2026-09-11
 license: MIT
-repository-code: "https://github.com/kyky2347/project-oa90ug6m"
-url: "https://github.com/kyky2347/project-oa90ug6m"
+repository-code: "https://github.com/kyky2347/pulse-london"
+url: "https://github.com/kyky2347/pulse-london"
 abstract: "A reproducible London location-screening application combining public-data provenance, PostGIS/H3 features, spatially validated count models, confidence-adjusted scores and an English/Chinese investigation interface."

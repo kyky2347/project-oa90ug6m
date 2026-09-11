@@ -4,7 +4,7 @@
 
 用真实公开数据与可解释的空间模型，帮助你筛选伦敦值得进一步考察的商业区域。
 
-[English](README.md) · [产品导览](docs/product-tour.md) · [文档目录](docs/README.md) · [版本下载](https://github.com/kyky2347/project-oa90ug6m/releases) · [持续集成](https://github.com/kyky2347/project-oa90ug6m/actions/workflows/ci.yml)
+[English](README.md) · [产品导览](docs/product-tour.md) · [文档目录](docs/README.md) · [版本下载](https://github.com/kyky2347/pulse-london/releases) · [持续集成](https://github.com/kyky2347/pulse-london/actions/workflows/ci.yml)
 
 ![PULSE：由真实 H3 评分构成的伦敦机会地图](docs/screenshots/landing-zh-1440.png)
 
@@ -36,12 +36,12 @@
 需要 Git 与支持 Compose 的 Docker。macOS 可使用 OrbStack 或 Docker Desktop；Linux 先启动 Docker Engine；Windows 可在启用 Docker 集成的 WSL2 终端中尝试。已验证 macOS 本地环境和 Linux CI，尚未验证 Windows/WSL2。
 
 ```sh
-git clone https://github.com/kyky2347/project-oa90ug6m.git pulse
+git clone https://github.com/kyky2347/pulse-london.git pulse
 cd pulse
 ./scripts/pulse
 ```
 
-也可以下载 [Release 源码 ZIP](https://github.com/kyky2347/project-oa90ug6m/releases)，解压后在项目根目录执行 `bash scripts/pulse`。
+也可以下载 [Release 源码 ZIP](https://github.com/kyky2347/pulse-london/releases)，解压后在项目根目录执行 `bash scripts/pulse`。
 
 启动器会构建缺失的镜像，启动 PostGIS 和 Redis，在数据库为空时下载并验证真实公开数据、建立模型，然后启动 API、网页和每日更新服务。健康检查通过后打开 [localhost:3000](http://localhost:3000)；接口文档位于 [localhost:8000/docs](http://localhost:8000/docs)。
 

@@ -1,6 +1,6 @@
 # PULSE completion and verification report
 
-London release, 11 September 2026. The application runs at [localhost:3000](http://localhost:3000) with [FastAPI documentation](http://localhost:8000/docs). Repository: [kyky2347/project-oa90ug6m](https://github.com/kyky2347/project-oa90ug6m), public. No public cloud deployment is claimed.
+London release, 11 September 2026. The application runs at [localhost:3000](http://localhost:3000) with [FastAPI documentation](http://localhost:8000/docs). Repository: [kyky2347/pulse-london](https://github.com/kyky2347/pulse-london), public. No public cloud deployment is claimed.
 
 ## What was built
 
@@ -54,7 +54,7 @@ The detailed coworking model performs worse than its simple baseline. Its sparse
 Fresh checkout:
 
 ```sh
-git clone https://github.com/kyky2347/project-oa90ug6m.git pulse
+git clone https://github.com/kyky2347/pulse-london.git pulse
 cd pulse
 ./scripts/pulse
 ```
@@ -79,7 +79,7 @@ Refresh failure and recovery were exercised during the build: a cancelled slow v
 - **4 real-London browser tests passed** in 2.1 minutes: all seven required journeys and shared-state restoration; mobile filters/comparison; responsive artifacts; map/playback profiling. Journey tests reported no uncaught page errors.
 - **Browser smoke passed** for warehouse-independent Methodology/About pages.
 - Python Ruff, ESLint and TypeScript checks passed. Next.js production build passed. API, web and worker Docker images built; container bootstrap succeeded; API/web health and worker job success were checked.
-- GitHub Actions executes Python checks, small attributed fixtures, PostGIS schema checks, frontend lint/types/tests/build and Chromium smoke. The public repository exposes [current verification runs](https://github.com/kyky2347/project-oa90ug6m/actions/workflows/ci.yml). The test and benchmark counts in this report describe the recorded September edition; subsequent interface changes have their own CI results.
+- GitHub Actions executes Python checks, small attributed fixtures, PostGIS schema checks, frontend lint/types/tests/build and Chromium smoke. The public repository exposes [current verification runs](https://github.com/kyky2347/pulse-london/actions/workflows/ci.yml). The test and benchmark counts in this report describe the recorded September edition; subsequent interface changes have their own CI results.
 
 Tests are source-backed where they exercise the production warehouse. Small fixtures and explicitly labelled test-only values never feed production scores. There is no claim of every possible source change or every target device being tested.
 

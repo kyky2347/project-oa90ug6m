@@ -14,7 +14,7 @@ Allow several GB of free disk space for containers, database and retained downlo
 ## First launch
 
 ```sh
-git clone https://github.com/kyky2347/project-oa90ug6m.git pulse
+git clone https://github.com/kyky2347/pulse-london.git pulse
 cd pulse
 ./scripts/pulse
 ```

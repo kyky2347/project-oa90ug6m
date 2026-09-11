@@ -18,7 +18,7 @@ Language tests also cover blocked local storage, unknown preferences, all busine
 
 The active warehouse remains `ldn-20260911T130817-f16e80`. These publication checks reused the already verified warehouse. They do **not** claim a second download of every publisher's dataset into an empty database or a cross-machine restoration of the recorded historical edition.
 
-The [public CI workflow](https://github.com/kyky2347/project-oa90ug6m/actions/workflows/ci.yml) independently checks the repository from a clean checkout, including offline source/scoring tests, PostGIS schema checks, frontend checks, browser smoke and Linux API native-library imports. Open the run for the revision you intend to download to inspect its outcome.
+The [public CI workflow](https://github.com/kyky2347/pulse-london/actions/workflows/ci.yml) independently checks the repository from a clean checkout, including offline source/scoring tests, PostGIS schema checks, frontend checks, browser smoke and Linux API native-library imports. Open the run for the revision you intend to download to inspect its outcome.
 
 The original performance report retains its original observations. A subsequent browser scheduling sample from this release check is recorded separately in [frontend-performance-public-release.json](frontend-performance-public-release.json); neither sample establishes a production SLA or physical-GPU frame rate. Future browser measurements write an ignored `frontend-performance-latest.json` so a test run does not overwrite the recorded release evidence.
 
