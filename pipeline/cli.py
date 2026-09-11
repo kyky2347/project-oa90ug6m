@@ -57,6 +57,7 @@ def refresh_pipeline(source="all", force=False, job_id=None):
                 if (
                     previous
                     and not force
+                    and previous["parser_version"] == adapter.parser_version
                     and (datetime.now(UTC) - previous["retrieved_at"]).days < adapter.cadence_days
                 ):
                     report["source_updates"][sid] = {"status": "not_due", "snapshot": previous["id"]}
@@ -129,14 +130,14 @@ def discover(source: str = "all"):
 @app.command()
 def bootstrap():
     """Acquire sources, validate, build features/models, activate, and report."""
-    console.print_json(data=refresh_pipeline())
+    console.print_json(json.dumps(refresh_pipeline(), default=float))
 
 
 @app.command()
 def refresh(source: str = "all", force: bool = False):
     if source != "all" and source not in SOURCES:
         raise typer.BadParameter("Unknown source")
-    console.print_json(data=refresh_pipeline(source, force))
+    console.print_json(json.dumps(refresh_pipeline(source, force), default=float))
 
 
 @app.command()
@@ -158,7 +159,7 @@ def status():
 @app.command()
 def validate():
     for r in rows("SELECT id FROM feature_versions WHERE status IN ('validated','active')"):
-        console.print_json(data=validate_version(r["id"]))
+        console.print_json(json.dumps(validate_version(r["id"]), default=float))
 
 
 @app.command("build-features")

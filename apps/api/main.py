@@ -4,6 +4,7 @@ import logging
 import secrets
 import time
 import uuid
+from datetime import UTC, datetime
 from typing import Annotated, Literal
 
 import h3
@@ -227,7 +228,19 @@ def sources():
         )
         successful = next((a for a in attempts if a["status"] == "verified"), None)
         latest = attempts[0] if attempts else None
+        reference = successful.get("published_at") if successful else None
+        age = None
+        if reference:
+            try:
+                date = datetime.fromisoformat(str(reference) + ("-01-01" if len(str(reference)) == 4 else ""))
+                age = max(0, (datetime.now(UTC).date() - date.date()).days)
+            except ValueError:
+                pass
+        # Observation age is separate from retrieval time; structural layers have no expiry.
+        threshold = {"osm": 30, "police": 120, "tfl": 1095, "ons": 1460, "voa": 730}.get(s["id"])
         s.update(
+            reference_age_days=age,
+            reference_stale=age is not None and threshold is not None and age > threshold,
             latest_snapshot=successful,
             latest_attempt=latest,
             status="failed"

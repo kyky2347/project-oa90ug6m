@@ -250,6 +250,11 @@ class Source:
             self.validate_raw(directory, assets)
             log.info("Transforming %s", self.id)
             tables = self.transform(directory, assets)
+            # Parsers can resolve a more precise reference period from the actual workbook.
+            for asset, info in zip(assets, downloaded, strict=True):
+                info["published_at"] = asset.published_at
+                info["extra"] = asset.extra
+                (directory / (asset.filename + ".receipt.json")).write_text(json.dumps(info))
             manifest = {
                 "assets": downloaded,
                 "notes": getattr(self, "notes", []),

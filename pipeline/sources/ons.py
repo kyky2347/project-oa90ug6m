@@ -23,8 +23,17 @@ def parse_population(records):
     return output
 
 
+def population_reference_year(url):
+    # Publication/revision years in parent paths are not observation years.
+    years = re.findall(r"20\d{2}", url.rsplit("/", 1)[-1])
+    if not years:
+        raise ValueError("ONS filename does not identify a population reference year")
+    return max(map(int, years))
+
+
 class ONSSource(Source):
     id = "ons"
+    parser_version = "1.1.0"
     name = "ONS mid-year LSOA population estimates and Census households"
     publisher = "Office for National Statistics / Nomis"
     url = (
@@ -44,7 +53,7 @@ class ONSSource(Source):
         ]
         if not household:
             raise ValueError("No official Census household file discovered")
-        year = max(int(y) for y in re.findall(r"20\d{2}", candidates[0]))
+        year = population_reference_year(candidates[0])
         return [
             Asset(candidates[0], "population.xlsx", f"{year}-06-30", {"year": year}),
             Asset(household[0], "households.zip", "2021-03-21"),
@@ -54,6 +63,8 @@ class ONSSource(Source):
         w = openpyxl.load_workbook(directory / assets[0].filename, read_only=True, data_only=True)
         sheet = sorted(s for s in w.sheetnames if re.match(r"Mid-\d{4} LSOA 2021", s))[-1]
         year = int(sheet[4:8])
+        assets[0].published_at = f"{year}-06-30"
+        assets[0].extra["year"] = year
         ws = w[sheet]
         # Only all-person totals enter the warehouse. Age/sex columns are never used as features.
         it = ws.iter_rows(values_only=True, max_col=5)

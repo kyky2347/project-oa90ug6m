@@ -206,3 +206,16 @@ def test_every_adapter_has_complete_registry_contract(tmp_path):
         assert all(source.metadata()[k] for k in ("id", "name", "publisher", "url", "license"))
         with pytest.raises(ValueError):
             source.validate_raw(tmp_path, [Asset("https://example.org/missing", "missing.zip")])
+
+
+@pytest.mark.parametrize(
+    "url, expected",
+    [
+        ("https://www.ons.gov.uk/mid2022revisednov2025tomid2024/sapelsoasyoa20222024.xlsx", 2024),
+        ("https://www.ons.gov.uk/published2027/population20252026.xlsx", 2026),
+    ],
+)
+def test_population_reference_ignores_publication_year(url, expected):
+    from pipeline.sources.ons import population_reference_year
+
+    assert population_reference_year(url) == expected
