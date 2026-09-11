@@ -1,0 +1,31 @@
+{
+  "assets": [
+    {
+      "url": "https://data.london.gov.uk/download/2rq4w/894c1d85-774b-487e-9c5a-30c71d41a104/GLA_High_Street_boundaries_2.gpkg",
+      "filename": "high-streets.gpkg",
+      "published_at": null,
+      "extra": {},
+      "download": {
+        "sha256": "5ce73f61b1c4ee0093a7c60dc1f3553726d0bd50f9b1185e56709fe62c860dbd",
+        "bytes": 4427776,
+        "resolved_url": "https://data.london.gov.uk/download/2rq4w/894c1d85-774b-487e-9c5a-30c71d41a104/GLA_High_Street_boundaries_2.gpkg",
+        "etag": "\"cdf88e676a539ead0c96d5b7e72da77f\"",
+        "last_modified": "2025-10-21T19:21:50.000Z",
+        "content_type": "application/octet-stream"
+      }
+    }
+  ],
+  "notes": [],
+  "retrieved_at": "2026-09-11T11:48:27.623944+00:00",
+  "snapshot_id": "gla-20260911T114826-861d22",
+  "checksum": "5c941d700ad216762f4871c238f84df39a3c420369da2727c1b3bca18e7c2691",
+  "row_count": 640,
+  "status": "verified",
+  "id": "gla",
+  "name": "GLA High Street boundaries",
+  "publisher": "Greater London Authority",
+  "url": "https://data.london.gov.uk/dataset/gla-high-street-boundaries",
+  "license": "Open Government Licence v3.0",
+  "cadence_days": 90,
+  "critical": false
+}

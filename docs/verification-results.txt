@@ -1,0 +1,97 @@
+PULSE local verification, 11 September 2026. Browser smoke and focused About contrast review also ran after the final stylesheet correction.
+
+=== test-python-final.log ===
+============================= test session starts ==============================
+platform darwin -- Python 3.12.13, pytest-9.1.1, pluggy-1.6.0
+rootdir: /Users/yk/Desktop/PULSE
+configfile: pyproject.toml
+testpaths: tests
+plugins: cov-7.1.0, anyio-4.15.1, hypothesis-6.168.0
+collected 56 items
+
+tests/integration/test_london_api.py .....................               [ 37%]
+tests/unit/test_models_cache.py ....                                     [ 44%]
+tests/unit/test_scoring.py .........                                     [ 60%]
+tests/unit/test_sources.py ......................                        [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.12/site-packages/fastapi/testclient.py:1
+  /Users/yk/Desktop/PULSE/.venv/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+.venv/lib/python3.12/site-packages/starlette/testclient.py:53
+  /Users/yk/Desktop/PULSE/.venv/lib/python3.12/site-packages/starlette/testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+
+tests/integration/test_london_api.py::test_real_london_spatial_database_and_version
+tests/integration/test_london_api.py::test_source_health_and_admin_disabled
+  /Users/yk/Desktop/PULSE/.venv/lib/python3.12/site-packages/fastapi/routing.py:144: FastAPIDeprecationWarning: ORJSONResponse is deprecated, FastAPI now serializes data directly to JSON bytes via Pydantic when a return type or response model is set, which is faster and doesn't need a custom response class. Read more in the FastAPI docs: https://fastapi.tiangolo.com/advanced/custom-response/#orjson-or-response-model and https://fastapi.tiangolo.com/tutorial/response-model/
+    response = await f(request)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 56 passed, 4 warnings in 5.76s ========================
+
+
+=== test-frontend-final.log ===
+$ pnpm --filter @pulse/web test
+$ vitest run
+
+ RUN  v3.2.7 /Users/yk/Desktop/PULSE/apps/web
+
+ ✓ src/test/product.test.tsx (7 tests) 263ms
+
+ Test Files  1 passed (1)
+      Tests  7 passed (7)
+   Start at  09:15:43
+   Duration  1.53s (transform 108ms, setup 91ms, collect 518ms, tests 263ms, environment 306ms, prepare 63ms)
+
+
+
+=== test-e2e-final.log ===
+
+Running 4 tests using 1 worker
+
+(node:24700) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [real-london] › e2e/london.spec.ts:10:5 › all seven real-data journeys, custom weights and shareable site (49.5s)
+  ✓  2 [real-london] › e2e/london.spec.ts:164:5 › mobile filters and comparison fit the viewport (2.0s)
+  ✓  3 [real-london] › e2e/london.spec.ts:188:5 › responsive visual artifacts at 1280 and mobile (50.6s)
+  ✓  4 [real-london] › e2e/london.spec.ts:269:5 › measure map readiness and City Pulse frame scheduling (26.1s)
+
+  4 passed (2.1m)
+
+
+=== test-smoke-final.log ===
+[WebServer] (node:25586) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] $ node scripts/start.mjs
+[WebServer] (node:25599) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:25606) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [smoke] › e2e/smoke.spec.ts:2:5 › methodology and product positioning remain available without a warehouse (321ms)
+
+  1 passed (1.6s)
+
+
+=== lint-final.log ===
+$ pnpm --filter @pulse/web lint
+$ eslint src
+
+
+=== types-final.log ===
+$ pnpm --filter @pulse/web typecheck
+$ next typegen && tsc --noEmit
+Generating route types...
+✓ Types generated successfully
+
+
+=== ruff-final.log ===
+All checks passed!
+
+
+=== ci-final.log ===
+Run Verify PULSE (34603692999) has already completed with 'success'

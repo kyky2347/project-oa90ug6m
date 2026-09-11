@@ -1,0 +1,89 @@
+{
+  "assets": [
+    {
+      "url": "https://crowding.data.tfl.gov.uk/NUMBAT/NUMBAT%202025/NBT25SAT_Outputs.xlsx",
+      "filename": "saturday.xlsx",
+      "published_at": "2025-11-01",
+      "extra": {
+        "year": 2025,
+        "day": "saturday",
+        "released_at": "2026-08-10T10:28:54.000Z"
+      },
+      "download": {
+        "sha256": "64cdfa78f312332740f9a562f81f5dac12114bb439d4a219bcf095ee28ad3821",
+        "bytes": 12391866,
+        "resolved_url": "https://crowding.data.tfl.gov.uk/NUMBAT/NUMBAT%202025/NBT25SAT_Outputs.xlsx",
+        "etag": "\"d8b4ce844787674463984cf06ab2e255-2\"",
+        "last_modified": "Mon, 10 Aug 2026 10:28:54 GMT",
+        "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+      }
+    },
+    {
+      "url": "https://api.tfl.gov.uk/StopPoint/Mode/tube,dlr,overground,elizabeth-line",
+      "filename": "stops.json",
+      "published_at": null,
+      "extra": {},
+      "download": {
+        "sha256": "2d843c93ab6f4565ec5a2a7bc881505fe37807bafe567e310675306acf5d7564",
+        "bytes": 20914947,
+        "resolved_url": "https://api.tfl.gov.uk/StopPoint/Mode/tube,dlr,overground,elizabeth-line",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json; charset=utf-8"
+      }
+    },
+    {
+      "url": "https://crowding.data.tfl.gov.uk/NUMBAT/NUMBAT%202025/NBT25SUN_Outputs.xlsx",
+      "filename": "sunday.xlsx",
+      "published_at": "2025-11-01",
+      "extra": {
+        "year": 2025,
+        "day": "sunday",
+        "released_at": "2026-08-10T10:28:55.000Z"
+      },
+      "download": {
+        "sha256": "c064331e50cf92edd022ef9f1f7efb9c21ca38edabb963a7bf5758682d60bc8c",
+        "bytes": 11625053,
+        "resolved_url": "https://crowding.data.tfl.gov.uk/NUMBAT/NUMBAT%202025/NBT25SUN_Outputs.xlsx",
+        "etag": "\"bc5278fca2366d57e002ff6f4cc9ed63-2\"",
+        "last_modified": "Mon, 10 Aug 2026 10:28:55 GMT",
+        "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+      }
+    },
+    {
+      "url": "https://crowding.data.tfl.gov.uk/NUMBAT/NUMBAT%202025/NBT25TWT_Outputs.xlsx",
+      "filename": "weekday.xlsx",
+      "published_at": "2025-11-01",
+      "extra": {
+        "year": 2025,
+        "day": "weekday",
+        "released_at": "2026-08-10T10:28:55.000Z"
+      },
+      "download": {
+        "sha256": "a10e5f767750538ecac99cf0d2131243672574df88b9c933f03b9357c5f67db2",
+        "bytes": 12185436,
+        "resolved_url": "https://crowding.data.tfl.gov.uk/NUMBAT/NUMBAT%202025/NBT25TWT_Outputs.xlsx",
+        "etag": "\"1450c90ed159976a122de59373a903ab-2\"",
+        "last_modified": "Mon, 10 Aug 2026 10:28:55 GMT",
+        "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+      }
+    }
+  ],
+  "notes": [
+    "Typical autumn station entries + exits; weekday is Tuesday\u2013Thursday. Not live footfall.",
+    "Station locations matched to official TfL StopPoint names; fuzzy matches lower spatial confidence.",
+    "Unmatched/out-of-study-area station names (57): Addington Village, Addiscombe, Ampere Way, Arena, Avenue Road, Bank and Monument, Beckenham Junction Trams, Beckenham Road, Beddington Lane, Belgrave Walk, Bethnal Green LO, Birkbeck Trams, Blackhorse Lane, Burnham, Canary Wharf EL, Centrale, Church Street, Coombe Lane, Custom House EL, Dundonald Road, East Croydon Trams, Edgware Road (Bak), Edgware Road (DIS), Elmers End, Fieldway, George Street, Gravel Hill, Hammersmith (DIS), Hammersmith (H&C), Harrington Road, King Henry's Drive, Langley, Lebanon Road, Lloyd Park, Maidenhead, Merton Park, Mitcham, Mitcham Junction, Morden Road, New Addington, Paddington TfL, Phipps Bridge, Reading, Reeves Corner, Sandilands, Shadwell LO, Taplow, Therapia Lane, Twyford, Waddon Marsh, Wandle Park, Wellesley Road, West Croydon Trams, West Hampstead LO, Wimbledon Trams, Woodside, Woolwich EL"
+  ],
+  "retrieved_at": "2026-09-11T11:49:29.961077+00:00",
+  "snapshot_id": "tfl-20260911T114826-f8995c",
+  "checksum": "5be41bb15123f48be926bad9e0100c0d054551e9d134e16244fc8010c2a26fe3",
+  "row_count": 1656,
+  "status": "verified",
+  "id": "tfl",
+  "name": "NUMBAT typical station entries and exits",
+  "publisher": "Transport for London",
+  "url": "https://tfl.gov.uk/info-for/open-data-users/our-open-data",
+  "license": "TfL transport data terms and conditions (open data)",
+  "cadence_days": 30,
+  "critical": false
+}

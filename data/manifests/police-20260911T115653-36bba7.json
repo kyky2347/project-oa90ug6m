@@ -1,0 +1,2730 @@
+{
+  "assets": [
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.390377%3A51.426760%2C-0.390377%3A51.426760%2C-0.510377%3A51.356760%2C-0.510377&date=2026-07",
+      "filename": "2026-07-0-1.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.51037661291802,
+          51.356760133043814,
+          -0.39037661291801995,
+          51.426760133043814
+        ]
+      },
+      "download": {
+        "sha256": "f71426fc4b43553df414acecba2b9e813a69b10dace1a9744dca6bd2a1605844",
+        "bytes": 345543,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.390377%3A51.426760%2C-0.390377%3A51.426760%2C-0.510377%3A51.356760%2C-0.510377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.390377%3A51.426760%2C-0.390377%3A51.426760%2C-0.510377%3A51.356760%2C-0.510377&date=2026-06",
+      "filename": "2026-06-0-1.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.51037661291802,
+          51.356760133043814,
+          -0.39037661291801995,
+          51.426760133043814
+        ]
+      },
+      "download": {
+        "sha256": "ff7fc9d7e7c99df3222b1c19d82937493a2918293930123c879c38a6156bad3e",
+        "bytes": 357858,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.390377%3A51.426760%2C-0.390377%3A51.426760%2C-0.510377%3A51.356760%2C-0.510377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.390377%3A51.426760%2C-0.390377%3A51.426760%2C-0.510377%3A51.356760%2C-0.510377&date=2026-05",
+      "filename": "2026-05-0-1.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.51037661291802,
+          51.356760133043814,
+          -0.39037661291801995,
+          51.426760133043814
+        ]
+      },
+      "download": {
+        "sha256": "53055dd643fe53a429092d7aaf83250b356e031fa4f662c2dbb596c6ec75fb09",
+        "bytes": 358032,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.390377%3A51.426760%2C-0.390377%3A51.426760%2C-0.510377%3A51.356760%2C-0.510377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.390377%3A51.496760%2C-0.390377%3A51.496760%2C-0.510377%3A51.426760%2C-0.510377&date=2026-07",
+      "filename": "2026-07-0-2.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.51037661291802,
+          51.426760133043814,
+          -0.39037661291801995,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "ef9116c2a78e93f827a093a0f1e3a62329752d0f12323563d51c1472b79cf309",
+        "bytes": 752818,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.390377%3A51.496760%2C-0.390377%3A51.496760%2C-0.510377%3A51.426760%2C-0.510377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.390377%3A51.496760%2C-0.390377%3A51.496760%2C-0.510377%3A51.426760%2C-0.510377&date=2026-06",
+      "filename": "2026-06-0-2.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.51037661291802,
+          51.426760133043814,
+          -0.39037661291801995,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "9ac0d7fe516bf51b7795864a084162e73d168237a054a3f28ad13faa20ea2a9d",
+        "bytes": 693407,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.390377%3A51.496760%2C-0.390377%3A51.496760%2C-0.510377%3A51.426760%2C-0.510377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.390377%3A51.496760%2C-0.390377%3A51.496760%2C-0.510377%3A51.426760%2C-0.510377&date=2026-05",
+      "filename": "2026-05-0-2.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.51037661291802,
+          51.426760133043814,
+          -0.39037661291801995,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "e71b35b27496400447c8030105d034321b061f514118224d44f829875de2694b",
+        "bytes": 731204,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.390377%3A51.496760%2C-0.390377%3A51.496760%2C-0.510377%3A51.426760%2C-0.510377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.390377%3A51.566760%2C-0.390377%3A51.566760%2C-0.510377%3A51.496760%2C-0.510377&date=2026-07",
+      "filename": "2026-07-0-3.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.51037661291802,
+          51.496760133043814,
+          -0.39037661291801995,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "972bf447674652dd9911c6ff7b4257065802ad418f3698ceff44d4ad9482ce4a",
+        "bytes": 868631,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.390377%3A51.566760%2C-0.390377%3A51.566760%2C-0.510377%3A51.496760%2C-0.510377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.390377%3A51.566760%2C-0.390377%3A51.566760%2C-0.510377%3A51.496760%2C-0.510377&date=2026-06",
+      "filename": "2026-06-0-3.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.51037661291802,
+          51.496760133043814,
+          -0.39037661291801995,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "68928e9de5daa45c89bbddd56ee154d30925e4accf0e20df11c6267820f61395",
+        "bytes": 874761,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.390377%3A51.566760%2C-0.390377%3A51.566760%2C-0.510377%3A51.496760%2C-0.510377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.390377%3A51.566760%2C-0.390377%3A51.566760%2C-0.510377%3A51.496760%2C-0.510377&date=2026-05",
+      "filename": "2026-05-0-3.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.51037661291802,
+          51.496760133043814,
+          -0.39037661291801995,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "512ad0701b3ae0873a4102d71e008b2dfdf161fac263fca3427ff59e116e2b49",
+        "bytes": 856800,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.390377%3A51.566760%2C-0.390377%3A51.566760%2C-0.510377%3A51.496760%2C-0.510377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.390377%3A51.636760%2C-0.390377%3A51.636760%2C-0.510377%3A51.566760%2C-0.510377&date=2026-07",
+      "filename": "2026-07-0-4.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.51037661291802,
+          51.566760133043815,
+          -0.39037661291801995,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "c7d48dd6fb11491eb6889e8fce3c24aaca62b1f091a984be0c029387bd7b758f",
+        "bytes": 229291,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.390377%3A51.636760%2C-0.390377%3A51.636760%2C-0.510377%3A51.566760%2C-0.510377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.390377%3A51.636760%2C-0.390377%3A51.636760%2C-0.510377%3A51.566760%2C-0.510377&date=2026-06",
+      "filename": "2026-06-0-4.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.51037661291802,
+          51.566760133043815,
+          -0.39037661291801995,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "9e05c3459ba4fe49666c5c05b78b3ff8ef83ea880a682a061da00ab429925fa3",
+        "bytes": 257997,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.390377%3A51.636760%2C-0.390377%3A51.636760%2C-0.510377%3A51.566760%2C-0.510377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.390377%3A51.636760%2C-0.390377%3A51.636760%2C-0.510377%3A51.566760%2C-0.510377&date=2026-05",
+      "filename": "2026-05-0-4.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.51037661291802,
+          51.566760133043815,
+          -0.39037661291801995,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "6b0dc7532f75ca1b19e570f62aadaa5895699a6b97d5c22dc4f45bf411a5db51",
+        "bytes": 235992,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.390377%3A51.636760%2C-0.390377%3A51.636760%2C-0.510377%3A51.566760%2C-0.510377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C-0.270377%3A51.356760%2C-0.270377%3A51.356760%2C-0.390377%3A51.286760%2C-0.390377&date=2026-07",
+      "filename": "2026-07-1-0.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.39037661291801995,
+          51.28676013304381,
+          -0.27037661291801995,
+          51.356760133043814
+        ]
+      },
+      "download": {
+        "sha256": "4c784800995b42224bbda9bc9ac460731919d05ed199021cefd29f4a33b06bb2",
+        "bytes": 156190,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C-0.270377%3A51.356760%2C-0.270377%3A51.356760%2C-0.390377%3A51.286760%2C-0.390377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C-0.270377%3A51.356760%2C-0.270377%3A51.356760%2C-0.390377%3A51.286760%2C-0.390377&date=2026-06",
+      "filename": "2026-06-1-0.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.39037661291801995,
+          51.28676013304381,
+          -0.27037661291801995,
+          51.356760133043814
+        ]
+      },
+      "download": {
+        "sha256": "72c77b329e705aa0ba00329b3ef7669d1af98ef30e2d9fe88df42777e1018abc",
+        "bytes": 138157,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C-0.270377%3A51.356760%2C-0.270377%3A51.356760%2C-0.390377%3A51.286760%2C-0.390377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C-0.270377%3A51.356760%2C-0.270377%3A51.356760%2C-0.390377%3A51.286760%2C-0.390377&date=2026-05",
+      "filename": "2026-05-1-0.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.39037661291801995,
+          51.28676013304381,
+          -0.27037661291801995,
+          51.356760133043814
+        ]
+      },
+      "download": {
+        "sha256": "eb41acd1992a87e584217e3d979b0858779a669a6cf4fc01c4d815f6a36849c6",
+        "bytes": 141342,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C-0.270377%3A51.356760%2C-0.270377%3A51.356760%2C-0.390377%3A51.286760%2C-0.390377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.270377%3A51.426760%2C-0.270377%3A51.426760%2C-0.390377%3A51.356760%2C-0.390377&date=2026-07",
+      "filename": "2026-07-1-1.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.39037661291801995,
+          51.356760133043814,
+          -0.27037661291801995,
+          51.426760133043814
+        ]
+      },
+      "download": {
+        "sha256": "0f8425d57b5f71f97c8e513a3c53428dbef40b3c9348ae19d2b28c449757b3c4",
+        "bytes": 646276,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.270377%3A51.426760%2C-0.270377%3A51.426760%2C-0.390377%3A51.356760%2C-0.390377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.270377%3A51.426760%2C-0.270377%3A51.426760%2C-0.390377%3A51.356760%2C-0.390377&date=2026-06",
+      "filename": "2026-06-1-1.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.39037661291801995,
+          51.356760133043814,
+          -0.27037661291801995,
+          51.426760133043814
+        ]
+      },
+      "download": {
+        "sha256": "6eb257879f2f1600c2d31ee125e6fdc9c71dabcc9436b58de700cb072180db1d",
+        "bytes": 578288,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.270377%3A51.426760%2C-0.270377%3A51.426760%2C-0.390377%3A51.356760%2C-0.390377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.270377%3A51.426760%2C-0.270377%3A51.426760%2C-0.390377%3A51.356760%2C-0.390377&date=2026-05",
+      "filename": "2026-05-1-1.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.39037661291801995,
+          51.356760133043814,
+          -0.27037661291801995,
+          51.426760133043814
+        ]
+      },
+      "download": {
+        "sha256": "8107943533022735377be017b98724ce25aa7ed7e8e3f3cc5b4bf7742c9262ed",
+        "bytes": 582325,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.270377%3A51.426760%2C-0.270377%3A51.426760%2C-0.390377%3A51.356760%2C-0.390377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.270377%3A51.496760%2C-0.270377%3A51.496760%2C-0.390377%3A51.426760%2C-0.390377&date=2026-07",
+      "filename": "2026-07-1-2.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.39037661291801995,
+          51.426760133043814,
+          -0.27037661291801995,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "441674ebccbb6c6d61268c067715686879273eb498c0c6679d8cda241cacf791",
+        "bytes": 1050755,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.270377%3A51.496760%2C-0.270377%3A51.496760%2C-0.390377%3A51.426760%2C-0.390377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.270377%3A51.496760%2C-0.270377%3A51.496760%2C-0.390377%3A51.426760%2C-0.390377&date=2026-06",
+      "filename": "2026-06-1-2.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.39037661291801995,
+          51.426760133043814,
+          -0.27037661291801995,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "0675b34f550bffccd499c7e0e2df92a082195321e3858c039f9e70292d2cb18f",
+        "bytes": 1040522,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.270377%3A51.496760%2C-0.270377%3A51.496760%2C-0.390377%3A51.426760%2C-0.390377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.270377%3A51.496760%2C-0.270377%3A51.496760%2C-0.390377%3A51.426760%2C-0.390377&date=2026-05",
+      "filename": "2026-05-1-2.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.39037661291801995,
+          51.426760133043814,
+          -0.27037661291801995,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "0e2cc66d66dc3fc7ab4d4243cdefbc75ac1aa033f542e2464145ac5130f81905",
+        "bytes": 985797,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.270377%3A51.496760%2C-0.270377%3A51.496760%2C-0.390377%3A51.426760%2C-0.390377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.270377%3A51.566760%2C-0.270377%3A51.566760%2C-0.390377%3A51.496760%2C-0.390377&date=2026-07",
+      "filename": "2026-07-1-3.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.39037661291801995,
+          51.496760133043814,
+          -0.27037661291801995,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "89932a28fcbc7b8a808021ae6fa87e438366929de9c3c1f2347c2354f1dc59df",
+        "bytes": 1792386,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.270377%3A51.566760%2C-0.270377%3A51.566760%2C-0.390377%3A51.496760%2C-0.390377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.270377%3A51.566760%2C-0.270377%3A51.566760%2C-0.390377%3A51.496760%2C-0.390377&date=2026-06",
+      "filename": "2026-06-1-3.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.39037661291801995,
+          51.496760133043814,
+          -0.27037661291801995,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "2e15ed35ca9270c039eb1af162d605a581cba777480807b939add313165ed521",
+        "bytes": 1638984,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.270377%3A51.566760%2C-0.270377%3A51.566760%2C-0.390377%3A51.496760%2C-0.390377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.270377%3A51.566760%2C-0.270377%3A51.566760%2C-0.390377%3A51.496760%2C-0.390377&date=2026-05",
+      "filename": "2026-05-1-3.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.39037661291801995,
+          51.496760133043814,
+          -0.27037661291801995,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "b51309e6f98c9ecc8d0b72f60536cbb969d7b6a3f9d2df59a0d5e6cdbf9633c4",
+        "bytes": 1662860,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.270377%3A51.566760%2C-0.270377%3A51.566760%2C-0.390377%3A51.496760%2C-0.390377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.270377%3A51.636760%2C-0.270377%3A51.636760%2C-0.390377%3A51.566760%2C-0.390377&date=2026-07",
+      "filename": "2026-07-1-4.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.39037661291801995,
+          51.566760133043815,
+          -0.27037661291801995,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "9b6b9ebffee7473774a5d5c22d2d7c0baa2354b91b2a3e5ef5cd3aed12fc07e3",
+        "bytes": 864730,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.270377%3A51.636760%2C-0.270377%3A51.636760%2C-0.390377%3A51.566760%2C-0.390377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.270377%3A51.636760%2C-0.270377%3A51.636760%2C-0.390377%3A51.566760%2C-0.390377&date=2026-06",
+      "filename": "2026-06-1-4.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.39037661291801995,
+          51.566760133043815,
+          -0.27037661291801995,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "a06f14160802917e0f65d0d6c4752ee27eb973440122a2bfca8f8823aa6c389a",
+        "bytes": 826740,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.270377%3A51.636760%2C-0.270377%3A51.636760%2C-0.390377%3A51.566760%2C-0.390377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.270377%3A51.636760%2C-0.270377%3A51.636760%2C-0.390377%3A51.566760%2C-0.390377&date=2026-05",
+      "filename": "2026-05-1-4.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.39037661291801995,
+          51.566760133043815,
+          -0.27037661291801995,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "7a255a2b2d17bdbe460087e49c2367216d235d1dbd70d2262fa884bb55a89291",
+        "bytes": 897122,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.270377%3A51.636760%2C-0.270377%3A51.636760%2C-0.390377%3A51.566760%2C-0.390377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C-0.270377%3A51.691874%2C-0.270377%3A51.691874%2C-0.390377%3A51.636760%2C-0.390377&date=2026-07",
+      "filename": "2026-07-1-5.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.39037661291801995,
+          51.636760133043815,
+          -0.27037661291801995,
+          51.69187413685326
+        ]
+      },
+      "download": {
+        "sha256": "8cc89e8b3134cdf137f395896ac49f3491a5fa94a880fcb7bc17ef45dfa79bb1",
+        "bytes": 260057,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C-0.270377%3A51.691874%2C-0.270377%3A51.691874%2C-0.390377%3A51.636760%2C-0.390377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C-0.270377%3A51.691874%2C-0.270377%3A51.691874%2C-0.390377%3A51.636760%2C-0.390377&date=2026-06",
+      "filename": "2026-06-1-5.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.39037661291801995,
+          51.636760133043815,
+          -0.27037661291801995,
+          51.69187413685326
+        ]
+      },
+      "download": {
+        "sha256": "cf635b912271d6f39de64ec517079617036671d388402bebe7dd8bcbad2894db",
+        "bytes": 251584,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C-0.270377%3A51.691874%2C-0.270377%3A51.691874%2C-0.390377%3A51.636760%2C-0.390377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C-0.270377%3A51.691874%2C-0.270377%3A51.691874%2C-0.390377%3A51.636760%2C-0.390377&date=2026-05",
+      "filename": "2026-05-1-5.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.39037661291801995,
+          51.636760133043815,
+          -0.27037661291801995,
+          51.69187413685326
+        ]
+      },
+      "download": {
+        "sha256": "57759d6db8a0092007b877b332fa76a0f9220433fd8d2a7eec17e555dccf826c",
+        "bytes": 229923,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C-0.270377%3A51.691874%2C-0.270377%3A51.691874%2C-0.390377%3A51.636760%2C-0.390377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C-0.150377%3A51.356760%2C-0.150377%3A51.356760%2C-0.270377%3A51.286760%2C-0.270377&date=2026-07",
+      "filename": "2026-07-2-0.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.27037661291801995,
+          51.28676013304381,
+          -0.15037661291801996,
+          51.356760133043814
+        ]
+      },
+      "download": {
+        "sha256": "89785e0d3f43e192535f3164158236c263e4ef849cab53be23657b153655ad2b",
+        "bytes": 269972,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C-0.150377%3A51.356760%2C-0.150377%3A51.356760%2C-0.270377%3A51.286760%2C-0.270377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C-0.150377%3A51.356760%2C-0.150377%3A51.356760%2C-0.270377%3A51.286760%2C-0.270377&date=2026-06",
+      "filename": "2026-06-2-0.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.27037661291801995,
+          51.28676013304381,
+          -0.15037661291801996,
+          51.356760133043814
+        ]
+      },
+      "download": {
+        "sha256": "e443ce508f6ec4601400757deff38f5147b343892bd32d4a68cf6083a26d411c",
+        "bytes": 281949,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C-0.150377%3A51.356760%2C-0.150377%3A51.356760%2C-0.270377%3A51.286760%2C-0.270377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C-0.150377%3A51.356760%2C-0.150377%3A51.356760%2C-0.270377%3A51.286760%2C-0.270377&date=2026-05",
+      "filename": "2026-05-2-0.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.27037661291801995,
+          51.28676013304381,
+          -0.15037661291801996,
+          51.356760133043814
+        ]
+      },
+      "download": {
+        "sha256": "a97ff11e3a72711e698ae4f84fb04f424ab2cdfea82d12c6d9a72df69853552a",
+        "bytes": 274532,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C-0.150377%3A51.356760%2C-0.150377%3A51.356760%2C-0.270377%3A51.286760%2C-0.270377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.150377%3A51.426760%2C-0.150377%3A51.426760%2C-0.270377%3A51.356760%2C-0.270377&date=2026-07",
+      "filename": "2026-07-2-1.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.27037661291801995,
+          51.356760133043814,
+          -0.15037661291801996,
+          51.426760133043814
+        ]
+      },
+      "download": {
+        "sha256": "ed63ea72d70d712d6fbe9e8c58708a04ff888f5cc11192a9e963e57e5b84bba7",
+        "bytes": 1031091,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.150377%3A51.426760%2C-0.150377%3A51.426760%2C-0.270377%3A51.356760%2C-0.270377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.150377%3A51.426760%2C-0.150377%3A51.426760%2C-0.270377%3A51.356760%2C-0.270377&date=2026-06",
+      "filename": "2026-06-2-1.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.27037661291801995,
+          51.356760133043814,
+          -0.15037661291801996,
+          51.426760133043814
+        ]
+      },
+      "download": {
+        "sha256": "d2a64932270a4cb89522c761cd68bb6d44a8ef048f284552e40846b357980c88",
+        "bytes": 970704,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.150377%3A51.426760%2C-0.150377%3A51.426760%2C-0.270377%3A51.356760%2C-0.270377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.150377%3A51.426760%2C-0.150377%3A51.426760%2C-0.270377%3A51.356760%2C-0.270377&date=2026-05",
+      "filename": "2026-05-2-1.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.27037661291801995,
+          51.356760133043814,
+          -0.15037661291801996,
+          51.426760133043814
+        ]
+      },
+      "download": {
+        "sha256": "0f929bfcc81f29c2b22690a469df4d500814497b8f72fe848f002ac23174a668",
+        "bytes": 960487,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.150377%3A51.426760%2C-0.150377%3A51.426760%2C-0.270377%3A51.356760%2C-0.270377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.150377%3A51.496760%2C-0.150377%3A51.496760%2C-0.270377%3A51.426760%2C-0.270377&date=2026-07",
+      "filename": "2026-07-2-2.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.27037661291801995,
+          51.426760133043814,
+          -0.15037661291801996,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "d4b4250b20ad139a13d8ae864b4ff1377b87b5efca4a77e696265df2dfe1cfbf",
+        "bytes": 1985176,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.150377%3A51.496760%2C-0.150377%3A51.496760%2C-0.270377%3A51.426760%2C-0.270377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.150377%3A51.496760%2C-0.150377%3A51.496760%2C-0.270377%3A51.426760%2C-0.270377&date=2026-06",
+      "filename": "2026-06-2-2.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.27037661291801995,
+          51.426760133043814,
+          -0.15037661291801996,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "2a5da026419720e96355bcebe2f451c81764d93d54350937880298c4f0941b1d",
+        "bytes": 1844743,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.150377%3A51.496760%2C-0.150377%3A51.496760%2C-0.270377%3A51.426760%2C-0.270377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.150377%3A51.496760%2C-0.150377%3A51.496760%2C-0.270377%3A51.426760%2C-0.270377&date=2026-05",
+      "filename": "2026-05-2-2.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.27037661291801995,
+          51.426760133043814,
+          -0.15037661291801996,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "d31fde3f22ec1d0dddb0d3c48ed962cdc3e76b9f0cfd8ce497cf6d555b7f05ba",
+        "bytes": 1912935,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.150377%3A51.496760%2C-0.150377%3A51.496760%2C-0.270377%3A51.426760%2C-0.270377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.150377%3A51.566760%2C-0.150377%3A51.566760%2C-0.270377%3A51.496760%2C-0.270377&date=2026-07",
+      "filename": "2026-07-2-3.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.27037661291801995,
+          51.496760133043814,
+          -0.15037661291801996,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "22125628f2fdaa2f91436a1669af5717a067d6e4e20b4bc6cac0eecdbb49844c",
+        "bytes": 3492041,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.150377%3A51.566760%2C-0.150377%3A51.566760%2C-0.270377%3A51.496760%2C-0.270377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.150377%3A51.566760%2C-0.150377%3A51.566760%2C-0.270377%3A51.496760%2C-0.270377&date=2026-06",
+      "filename": "2026-06-2-3.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.27037661291801995,
+          51.496760133043814,
+          -0.15037661291801996,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "37e8efe05c7f51c00182e58e83db4fa4b11c724408a73cf8b4fee35d7f1133e9",
+        "bytes": 3346921,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.150377%3A51.566760%2C-0.150377%3A51.566760%2C-0.270377%3A51.496760%2C-0.270377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.150377%3A51.566760%2C-0.150377%3A51.566760%2C-0.270377%3A51.496760%2C-0.270377&date=2026-05",
+      "filename": "2026-05-2-3.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.27037661291801995,
+          51.496760133043814,
+          -0.15037661291801996,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "2d7ec4fe2bca9b9c1733e2cf559ee7b13561d07f6fcdbd3ad7a3789831ebeebe",
+        "bytes": 3319089,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.150377%3A51.566760%2C-0.150377%3A51.566760%2C-0.270377%3A51.496760%2C-0.270377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.150377%3A51.636760%2C-0.150377%3A51.636760%2C-0.270377%3A51.566760%2C-0.270377&date=2026-07",
+      "filename": "2026-07-2-4.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.27037661291801995,
+          51.566760133043815,
+          -0.15037661291801996,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "201696c75c1b0b3e78eab21a48c400faa7ef4c953ca3fba650099cb30bb9d6f4",
+        "bytes": 967810,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.150377%3A51.636760%2C-0.150377%3A51.636760%2C-0.270377%3A51.566760%2C-0.270377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.150377%3A51.636760%2C-0.150377%3A51.636760%2C-0.270377%3A51.566760%2C-0.270377&date=2026-06",
+      "filename": "2026-06-2-4.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.27037661291801995,
+          51.566760133043815,
+          -0.15037661291801996,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "bc9de796b11727981f70123676dd75bf67c6798ba5a58fe3a9769ca9abf232f4",
+        "bytes": 978881,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.150377%3A51.636760%2C-0.150377%3A51.636760%2C-0.270377%3A51.566760%2C-0.270377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.150377%3A51.636760%2C-0.150377%3A51.636760%2C-0.270377%3A51.566760%2C-0.270377&date=2026-05",
+      "filename": "2026-05-2-4.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.27037661291801995,
+          51.566760133043815,
+          -0.15037661291801996,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "6a10760e470cb6ec18ae5b5e73fe08224f16d9034a22922c4d8ab93b98e879ba",
+        "bytes": 995866,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.150377%3A51.636760%2C-0.150377%3A51.636760%2C-0.270377%3A51.566760%2C-0.270377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C-0.150377%3A51.691874%2C-0.150377%3A51.691874%2C-0.270377%3A51.636760%2C-0.270377&date=2026-07",
+      "filename": "2026-07-2-5.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.27037661291801995,
+          51.636760133043815,
+          -0.15037661291801996,
+          51.69187413685326
+        ]
+      },
+      "download": {
+        "sha256": "784e3eae9b394c7b3384650dc41d164d1f5bb84b718b0bbbb2ad218e76308799",
+        "bytes": 220814,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C-0.150377%3A51.691874%2C-0.150377%3A51.691874%2C-0.270377%3A51.636760%2C-0.270377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C-0.150377%3A51.691874%2C-0.150377%3A51.691874%2C-0.270377%3A51.636760%2C-0.270377&date=2026-06",
+      "filename": "2026-06-2-5.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.27037661291801995,
+          51.636760133043815,
+          -0.15037661291801996,
+          51.69187413685326
+        ]
+      },
+      "download": {
+        "sha256": "1ac738d108791b646e992c6e31e0cbac64d3cb403d32c95770862acbcd7a36c9",
+        "bytes": 249932,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C-0.150377%3A51.691874%2C-0.150377%3A51.691874%2C-0.270377%3A51.636760%2C-0.270377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C-0.150377%3A51.691874%2C-0.150377%3A51.691874%2C-0.270377%3A51.636760%2C-0.270377&date=2026-05",
+      "filename": "2026-05-2-5.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.27037661291801995,
+          51.636760133043815,
+          -0.15037661291801996,
+          51.69187413685326
+        ]
+      },
+      "download": {
+        "sha256": "fd18ee7690f8db9d92241f148116fd1dc579e8cbcce6405eca05266583725250",
+        "bytes": 212275,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C-0.150377%3A51.691874%2C-0.150377%3A51.691874%2C-0.270377%3A51.636760%2C-0.270377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C-0.030377%3A51.356760%2C-0.030377%3A51.356760%2C-0.150377%3A51.286760%2C-0.150377&date=2026-07",
+      "filename": "2026-07-3-0.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.15037661291801996,
+          51.28676013304381,
+          -0.030376612918019963,
+          51.356760133043814
+        ]
+      },
+      "download": {
+        "sha256": "ed91ada8fd81585823cd74a32e09ce9fd3a623eb05cf884fc2229122e4fded03",
+        "bytes": 359365,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C-0.030377%3A51.356760%2C-0.030377%3A51.356760%2C-0.150377%3A51.286760%2C-0.150377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C-0.030377%3A51.356760%2C-0.030377%3A51.356760%2C-0.150377%3A51.286760%2C-0.150377&date=2026-06",
+      "filename": "2026-06-3-0.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.15037661291801996,
+          51.28676013304381,
+          -0.030376612918019963,
+          51.356760133043814
+        ]
+      },
+      "download": {
+        "sha256": "c307e6148aede8e0ccf7a2ce8af83c43e4b01692c5b81a970d22ddca2f2da8ec",
+        "bytes": 322593,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C-0.030377%3A51.356760%2C-0.030377%3A51.356760%2C-0.150377%3A51.286760%2C-0.150377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C-0.030377%3A51.356760%2C-0.030377%3A51.356760%2C-0.150377%3A51.286760%2C-0.150377&date=2026-05",
+      "filename": "2026-05-3-0.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.15037661291801996,
+          51.28676013304381,
+          -0.030376612918019963,
+          51.356760133043814
+        ]
+      },
+      "download": {
+        "sha256": "6e5a844cc2aeb737f10563d7bbaad02a41eebf1f9ea7ba235930c5173b11be7b",
+        "bytes": 319868,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C-0.030377%3A51.356760%2C-0.030377%3A51.356760%2C-0.150377%3A51.286760%2C-0.150377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.030377%3A51.426760%2C-0.030377%3A51.426760%2C-0.150377%3A51.356760%2C-0.150377&date=2026-07",
+      "filename": "2026-07-3-1.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.15037661291801996,
+          51.356760133043814,
+          -0.030376612918019963,
+          51.426760133043814
+        ]
+      },
+      "download": {
+        "sha256": "67f9a54b251828d517cb1a4fe8d0c4f8f2a25a2f1b40d2ce6038ec584407a43f",
+        "bytes": 1689696,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.030377%3A51.426760%2C-0.030377%3A51.426760%2C-0.150377%3A51.356760%2C-0.150377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.030377%3A51.426760%2C-0.030377%3A51.426760%2C-0.150377%3A51.356760%2C-0.150377&date=2026-06",
+      "filename": "2026-06-3-1.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.15037661291801996,
+          51.356760133043814,
+          -0.030376612918019963,
+          51.426760133043814
+        ]
+      },
+      "download": {
+        "sha256": "c901e77308ccaefb94472688bcbdb959301a44713c689c4d4c71830b402d652f",
+        "bytes": 1610286,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.030377%3A51.426760%2C-0.030377%3A51.426760%2C-0.150377%3A51.356760%2C-0.150377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.030377%3A51.426760%2C-0.030377%3A51.426760%2C-0.150377%3A51.356760%2C-0.150377&date=2026-05",
+      "filename": "2026-05-3-1.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.15037661291801996,
+          51.356760133043814,
+          -0.030376612918019963,
+          51.426760133043814
+        ]
+      },
+      "download": {
+        "sha256": "ec8cdaeb188aab19dce3f57044960ec600813177b852dcd4dc5275aaed6884f7",
+        "bytes": 1645707,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C-0.030377%3A51.426760%2C-0.030377%3A51.426760%2C-0.150377%3A51.356760%2C-0.150377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.030377%3A51.496760%2C-0.030377%3A51.496760%2C-0.150377%3A51.426760%2C-0.150377&date=2026-07",
+      "filename": "2026-07-3-2.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.15037661291801996,
+          51.426760133043814,
+          -0.030376612918019963,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "96962b872b57a202fb30ee338bed3524f72cad021f9a0e28a3e15252c458a589",
+        "bytes": 3560317,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.030377%3A51.496760%2C-0.030377%3A51.496760%2C-0.150377%3A51.426760%2C-0.150377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.030377%3A51.496760%2C-0.030377%3A51.496760%2C-0.150377%3A51.426760%2C-0.150377&date=2026-06",
+      "filename": "2026-06-3-2.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.15037661291801996,
+          51.426760133043814,
+          -0.030376612918019963,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "8defe7db0daeca0fb73559caec0aa9f928c49cae4358f423139b02885126d72a",
+        "bytes": 3301865,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.030377%3A51.496760%2C-0.030377%3A51.496760%2C-0.150377%3A51.426760%2C-0.150377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.030377%3A51.496760%2C-0.030377%3A51.496760%2C-0.150377%3A51.426760%2C-0.150377&date=2026-05",
+      "filename": "2026-05-3-2.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.15037661291801996,
+          51.426760133043814,
+          -0.030376612918019963,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "df5fd2f8ea6f09968cde5c0df43e72d3c466f4dab11ff59c449d68f68945112b",
+        "bytes": 3181217,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C-0.030377%3A51.496760%2C-0.030377%3A51.496760%2C-0.150377%3A51.426760%2C-0.150377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.030377%3A51.566760%2C-0.030377%3A51.566760%2C-0.150377%3A51.496760%2C-0.150377&date=2026-07",
+      "filename": "2026-07-3-3.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.15037661291801996,
+          51.496760133043814,
+          -0.030376612918019963,
+          51.566760133043815
+        ],
+        "actual_requests": [
+          {
+            "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.090377%3A51.531760%2C-0.090377%3A51.531760%2C-0.150377%3A51.496760%2C-0.150377&date=2026-07",
+            "filename": "2026-07-3-3-split0.json",
+            "published_at": "2026-07-01",
+            "extra": {
+              "month": "2026-07",
+              "tile": [
+                -0.15037661291801996,
+                51.496760133043814,
+                -0.09037661291801996,
+                51.53176013304382
+              ]
+            },
+            "download": {
+              "sha256": "36820f26eb832a13155c9ea66f35d617b132f4c4767f00de0bdf1df5d137b069",
+              "bytes": 2932574,
+              "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.090377%3A51.531760%2C-0.090377%3A51.531760%2C-0.150377%3A51.496760%2C-0.150377&date=2026-07",
+              "etag": null,
+              "last_modified": null,
+              "content_type": "application/json"
+            }
+          },
+          {
+            "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.030377%3A51.531760%2C-0.030377%3A51.531760%2C-0.090377%3A51.496760%2C-0.090377&date=2026-07",
+            "filename": "2026-07-3-3-split1.json",
+            "published_at": "2026-07-01",
+            "extra": {
+              "month": "2026-07",
+              "tile": [
+                -0.09037661291801996,
+                51.496760133043814,
+                -0.030376612918019963,
+                51.53176013304382
+              ]
+            },
+            "download": {
+              "sha256": "aeb454c737d0a6c876067497945dc29a9b1e2d2d07edb7e606146b06baf975a4",
+              "bytes": 1565249,
+              "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.030377%3A51.531760%2C-0.030377%3A51.531760%2C-0.090377%3A51.496760%2C-0.090377&date=2026-07",
+              "etag": null,
+              "last_modified": null,
+              "content_type": "application/json"
+            }
+          },
+          {
+            "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.531760%2C-0.090377%3A51.566760%2C-0.090377%3A51.566760%2C-0.150377%3A51.531760%2C-0.150377&date=2026-07",
+            "filename": "2026-07-3-3-split2.json",
+            "published_at": "2026-07-01",
+            "extra": {
+              "month": "2026-07",
+              "tile": [
+                -0.15037661291801996,
+                51.53176013304382,
+                -0.09037661291801996,
+                51.566760133043815
+              ]
+            },
+            "download": {
+              "sha256": "d1c8ec88d123fc3ec45da7188fb9c359f9904138c4c0dc81d04cb4ca0d2f13a3",
+              "bytes": 1475279,
+              "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.531760%2C-0.090377%3A51.566760%2C-0.090377%3A51.566760%2C-0.150377%3A51.531760%2C-0.150377&date=2026-07",
+              "etag": null,
+              "last_modified": null,
+              "content_type": "application/json"
+            }
+          },
+          {
+            "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.531760%2C-0.030377%3A51.566760%2C-0.030377%3A51.566760%2C-0.090377%3A51.531760%2C-0.090377&date=2026-07",
+            "filename": "2026-07-3-3-split3.json",
+            "published_at": "2026-07-01",
+            "extra": {
+              "month": "2026-07",
+              "tile": [
+                -0.09037661291801996,
+                51.53176013304382,
+                -0.030376612918019963,
+                51.566760133043815
+              ]
+            },
+            "download": {
+              "sha256": "5fc87aa76b7e7947a015207d176b06febdc8a932965b8ee676fadbd2fc25c92b",
+              "bytes": 1102087,
+              "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.531760%2C-0.030377%3A51.566760%2C-0.030377%3A51.566760%2C-0.090377%3A51.531760%2C-0.090377&date=2026-07",
+              "etag": null,
+              "last_modified": null,
+              "content_type": "application/json"
+            }
+          }
+        ]
+      },
+      "download": {
+        "sha256": "652fb58260362bd5f8be2f6c99557f503c0a24d28390bf518316407426d2d36e",
+        "bytes": 7599408,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.030377%3A51.566760%2C-0.030377%3A51.566760%2C-0.150377%3A51.496760%2C-0.150377&date=2026-07",
+        "content_type": "application/json",
+        "note": "Concatenated raw child responses after official API result-size limit"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.030377%3A51.566760%2C-0.030377%3A51.566760%2C-0.150377%3A51.496760%2C-0.150377&date=2026-06",
+      "filename": "2026-06-3-3.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.15037661291801996,
+          51.496760133043814,
+          -0.030376612918019963,
+          51.566760133043815
+        ],
+        "actual_requests": [
+          {
+            "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.090377%3A51.531760%2C-0.090377%3A51.531760%2C-0.150377%3A51.496760%2C-0.150377&date=2026-06",
+            "filename": "2026-06-3-3-split0.json",
+            "published_at": "2026-06-01",
+            "extra": {
+              "month": "2026-06",
+              "tile": [
+                -0.15037661291801996,
+                51.496760133043814,
+                -0.09037661291801996,
+                51.53176013304382
+              ]
+            },
+            "download": {
+              "sha256": "b944d03b75aba7e68124df18eab772b565d8a713c90aed6a8675791ce4f72409",
+              "bytes": 2734680,
+              "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.090377%3A51.531760%2C-0.090377%3A51.531760%2C-0.150377%3A51.496760%2C-0.150377&date=2026-06",
+              "etag": null,
+              "last_modified": null,
+              "content_type": "application/json"
+            }
+          },
+          {
+            "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.030377%3A51.531760%2C-0.030377%3A51.531760%2C-0.090377%3A51.496760%2C-0.090377&date=2026-06",
+            "filename": "2026-06-3-3-split1.json",
+            "published_at": "2026-06-01",
+            "extra": {
+              "month": "2026-06",
+              "tile": [
+                -0.09037661291801996,
+                51.496760133043814,
+                -0.030376612918019963,
+                51.53176013304382
+              ]
+            },
+            "download": {
+              "sha256": "d041c5dcaace61a24a3f88504aaea3db67e9e5f5be8c2ae67aca2a426e79897a",
+              "bytes": 1546706,
+              "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.030377%3A51.531760%2C-0.030377%3A51.531760%2C-0.090377%3A51.496760%2C-0.090377&date=2026-06",
+              "etag": null,
+              "last_modified": null,
+              "content_type": "application/json"
+            }
+          },
+          {
+            "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.531760%2C-0.090377%3A51.566760%2C-0.090377%3A51.566760%2C-0.150377%3A51.531760%2C-0.150377&date=2026-06",
+            "filename": "2026-06-3-3-split2.json",
+            "published_at": "2026-06-01",
+            "extra": {
+              "month": "2026-06",
+              "tile": [
+                -0.15037661291801996,
+                51.53176013304382,
+                -0.09037661291801996,
+                51.566760133043815
+              ]
+            },
+            "download": {
+              "sha256": "0e54200f148ef133505b882824b35f5ad8d3becd92bd27c9a1968496aed071f4",
+              "bytes": 1430099,
+              "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.531760%2C-0.090377%3A51.566760%2C-0.090377%3A51.566760%2C-0.150377%3A51.531760%2C-0.150377&date=2026-06",
+              "etag": null,
+              "last_modified": null,
+              "content_type": "application/json"
+            }
+          },
+          {
+            "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.531760%2C-0.030377%3A51.566760%2C-0.030377%3A51.566760%2C-0.090377%3A51.531760%2C-0.090377&date=2026-06",
+            "filename": "2026-06-3-3-split3.json",
+            "published_at": "2026-06-01",
+            "extra": {
+              "month": "2026-06",
+              "tile": [
+                -0.09037661291801996,
+                51.53176013304382,
+                -0.030376612918019963,
+                51.566760133043815
+              ]
+            },
+            "download": {
+              "sha256": "8edb3f37aca1d34916823340d169f7c446c10bf77335dd1be18e596c8bdff62c",
+              "bytes": 978232,
+              "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.531760%2C-0.030377%3A51.566760%2C-0.030377%3A51.566760%2C-0.090377%3A51.531760%2C-0.090377&date=2026-06",
+              "etag": null,
+              "last_modified": null,
+              "content_type": "application/json"
+            }
+          }
+        ]
+      },
+      "download": {
+        "sha256": "ccf6fee1f96e29c53f7989b21ecc11af2fb0b8a3d24b811d4d56d6b2b9ac74fc",
+        "bytes": 7181064,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.030377%3A51.566760%2C-0.030377%3A51.566760%2C-0.150377%3A51.496760%2C-0.150377&date=2026-06",
+        "content_type": "application/json",
+        "note": "Concatenated raw child responses after official API result-size limit"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.030377%3A51.566760%2C-0.030377%3A51.566760%2C-0.150377%3A51.496760%2C-0.150377&date=2026-05",
+      "filename": "2026-05-3-3.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.15037661291801996,
+          51.496760133043814,
+          -0.030376612918019963,
+          51.566760133043815
+        ],
+        "actual_requests": [
+          {
+            "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.090377%3A51.531760%2C-0.090377%3A51.531760%2C-0.150377%3A51.496760%2C-0.150377&date=2026-05",
+            "filename": "2026-05-3-3-split0.json",
+            "published_at": "2026-05-01",
+            "extra": {
+              "month": "2026-05",
+              "tile": [
+                -0.15037661291801996,
+                51.496760133043814,
+                -0.09037661291801996,
+                51.53176013304382
+              ]
+            },
+            "download": {
+              "sha256": "7ff010f5b9dbc599affab419e7a8633e087c213585a49b43a6530c0ba544290e",
+              "bytes": 2719400,
+              "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.090377%3A51.531760%2C-0.090377%3A51.531760%2C-0.150377%3A51.496760%2C-0.150377&date=2026-05",
+              "etag": null,
+              "last_modified": null,
+              "content_type": "application/json"
+            }
+          },
+          {
+            "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.030377%3A51.531760%2C-0.030377%3A51.531760%2C-0.090377%3A51.496760%2C-0.090377&date=2026-05",
+            "filename": "2026-05-3-3-split1.json",
+            "published_at": "2026-05-01",
+            "extra": {
+              "month": "2026-05",
+              "tile": [
+                -0.09037661291801996,
+                51.496760133043814,
+                -0.030376612918019963,
+                51.53176013304382
+              ]
+            },
+            "download": {
+              "sha256": "2e717421c4a06979ecc63d3c5b842af2c4b28f2314349ed9257a81c6e3594f62",
+              "bytes": 1564051,
+              "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.030377%3A51.531760%2C-0.030377%3A51.531760%2C-0.090377%3A51.496760%2C-0.090377&date=2026-05",
+              "etag": null,
+              "last_modified": null,
+              "content_type": "application/json"
+            }
+          },
+          {
+            "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.531760%2C-0.090377%3A51.566760%2C-0.090377%3A51.566760%2C-0.150377%3A51.531760%2C-0.150377&date=2026-05",
+            "filename": "2026-05-3-3-split2.json",
+            "published_at": "2026-05-01",
+            "extra": {
+              "month": "2026-05",
+              "tile": [
+                -0.15037661291801996,
+                51.53176013304382,
+                -0.09037661291801996,
+                51.566760133043815
+              ]
+            },
+            "download": {
+              "sha256": "28167cd5e5df4dbd88175b102ee50bd432803fa4945074b80dc50da80b8369a1",
+              "bytes": 1483852,
+              "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.531760%2C-0.090377%3A51.566760%2C-0.090377%3A51.566760%2C-0.150377%3A51.531760%2C-0.150377&date=2026-05",
+              "etag": null,
+              "last_modified": null,
+              "content_type": "application/json"
+            }
+          },
+          {
+            "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.531760%2C-0.030377%3A51.566760%2C-0.030377%3A51.566760%2C-0.090377%3A51.531760%2C-0.090377&date=2026-05",
+            "filename": "2026-05-3-3-split3.json",
+            "published_at": "2026-05-01",
+            "extra": {
+              "month": "2026-05",
+              "tile": [
+                -0.09037661291801996,
+                51.53176013304382,
+                -0.030376612918019963,
+                51.566760133043815
+              ]
+            },
+            "download": {
+              "sha256": "e6908eeb5e486fca76cfb786e6573f3bf20f7856d7380a3492ad5eb3d79c73b5",
+              "bytes": 1008542,
+              "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.531760%2C-0.030377%3A51.566760%2C-0.030377%3A51.566760%2C-0.090377%3A51.531760%2C-0.090377&date=2026-05",
+              "etag": null,
+              "last_modified": null,
+              "content_type": "application/json"
+            }
+          }
+        ]
+      },
+      "download": {
+        "sha256": "2db45c25078354bcf92a53f5ade008ddb20a6d5502ae184fdcb816c4a3d1813b",
+        "bytes": 7274557,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C-0.030377%3A51.566760%2C-0.030377%3A51.566760%2C-0.150377%3A51.496760%2C-0.150377&date=2026-05",
+        "content_type": "application/json",
+        "note": "Concatenated raw child responses after official API result-size limit"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.030377%3A51.636760%2C-0.030377%3A51.636760%2C-0.150377%3A51.566760%2C-0.150377&date=2026-07",
+      "filename": "2026-07-3-4.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.15037661291801996,
+          51.566760133043815,
+          -0.030376612918019963,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "25be92bd5c05a3d7ae0f8a28cd191e891e5fa3061015f015fad9095ee86e4370",
+        "bytes": 2182997,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.030377%3A51.636760%2C-0.030377%3A51.636760%2C-0.150377%3A51.566760%2C-0.150377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.030377%3A51.636760%2C-0.030377%3A51.636760%2C-0.150377%3A51.566760%2C-0.150377&date=2026-06",
+      "filename": "2026-06-3-4.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.15037661291801996,
+          51.566760133043815,
+          -0.030376612918019963,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "bbe33784e1881f85666fba2bfbd5ff89000a1678158836b648b79043be4be1a0",
+        "bytes": 2136794,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.030377%3A51.636760%2C-0.030377%3A51.636760%2C-0.150377%3A51.566760%2C-0.150377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.030377%3A51.636760%2C-0.030377%3A51.636760%2C-0.150377%3A51.566760%2C-0.150377&date=2026-05",
+      "filename": "2026-05-3-4.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.15037661291801996,
+          51.566760133043815,
+          -0.030376612918019963,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "e25915bb6478d559f85c15d0b3faecff1abb88964a84eabd7dc62761945de1fa",
+        "bytes": 2121817,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C-0.030377%3A51.636760%2C-0.030377%3A51.636760%2C-0.150377%3A51.566760%2C-0.150377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C-0.030377%3A51.691874%2C-0.030377%3A51.691874%2C-0.150377%3A51.636760%2C-0.150377&date=2026-07",
+      "filename": "2026-07-3-5.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.15037661291801996,
+          51.636760133043815,
+          -0.030376612918019963,
+          51.69187413685326
+        ]
+      },
+      "download": {
+        "sha256": "e8e31e9e6edd5d7ce17bb6212331d40c3e9b05dbdca8c2f1ea6ac4683727c6a8",
+        "bytes": 592840,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C-0.030377%3A51.691874%2C-0.030377%3A51.691874%2C-0.150377%3A51.636760%2C-0.150377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C-0.030377%3A51.691874%2C-0.030377%3A51.691874%2C-0.150377%3A51.636760%2C-0.150377&date=2026-06",
+      "filename": "2026-06-3-5.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.15037661291801996,
+          51.636760133043815,
+          -0.030376612918019963,
+          51.69187413685326
+        ]
+      },
+      "download": {
+        "sha256": "c18ed9e2ec26fbc7aacae74d07010465235a6eb859191a1308b1e40099c50084",
+        "bytes": 594486,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C-0.030377%3A51.691874%2C-0.030377%3A51.691874%2C-0.150377%3A51.636760%2C-0.150377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C-0.030377%3A51.691874%2C-0.030377%3A51.691874%2C-0.150377%3A51.636760%2C-0.150377&date=2026-05",
+      "filename": "2026-05-3-5.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.15037661291801996,
+          51.636760133043815,
+          -0.030376612918019963,
+          51.69187413685326
+        ]
+      },
+      "download": {
+        "sha256": "bc03ad2df97d81fee81f1347293832029721dcd11e1acdd014ce4cd6b38d1338",
+        "bytes": 597521,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C-0.030377%3A51.691874%2C-0.030377%3A51.691874%2C-0.150377%3A51.636760%2C-0.150377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C0.089623%3A51.356760%2C0.089623%3A51.356760%2C-0.030377%3A51.286760%2C-0.030377&date=2026-07",
+      "filename": "2026-07-4-0.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.030376612918019963,
+          51.28676013304381,
+          0.08962338708198003,
+          51.356760133043814
+        ]
+      },
+      "download": {
+        "sha256": "f8586b04ce632848b8683006410aedbcc2478b195f05b6f95f0e8527c09c3fcc",
+        "bytes": 115053,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C0.089623%3A51.356760%2C0.089623%3A51.356760%2C-0.030377%3A51.286760%2C-0.030377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C0.089623%3A51.356760%2C0.089623%3A51.356760%2C-0.030377%3A51.286760%2C-0.030377&date=2026-06",
+      "filename": "2026-06-4-0.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.030376612918019963,
+          51.28676013304381,
+          0.08962338708198003,
+          51.356760133043814
+        ]
+      },
+      "download": {
+        "sha256": "017d010dc41df4571e4253e661f47ed61b034b93df522382a861ab57e862ce5a",
+        "bytes": 103515,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C0.089623%3A51.356760%2C0.089623%3A51.356760%2C-0.030377%3A51.286760%2C-0.030377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C0.089623%3A51.356760%2C0.089623%3A51.356760%2C-0.030377%3A51.286760%2C-0.030377&date=2026-05",
+      "filename": "2026-05-4-0.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.030376612918019963,
+          51.28676013304381,
+          0.08962338708198003,
+          51.356760133043814
+        ]
+      },
+      "download": {
+        "sha256": "9875894b3deefa2ffffe13956fc2fbd3aa3ff82975897be74be1cd2e3ff1ea38",
+        "bytes": 110948,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C0.089623%3A51.356760%2C0.089623%3A51.356760%2C-0.030377%3A51.286760%2C-0.030377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C0.089623%3A51.426760%2C0.089623%3A51.426760%2C-0.030377%3A51.356760%2C-0.030377&date=2026-07",
+      "filename": "2026-07-4-1.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.030376612918019963,
+          51.356760133043814,
+          0.08962338708198003,
+          51.426760133043814
+        ]
+      },
+      "download": {
+        "sha256": "a8c02720e6d6bf3193d584089a6b1da9544414e07266182bb882a63c32508082",
+        "bytes": 563974,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C0.089623%3A51.426760%2C0.089623%3A51.426760%2C-0.030377%3A51.356760%2C-0.030377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C0.089623%3A51.426760%2C0.089623%3A51.426760%2C-0.030377%3A51.356760%2C-0.030377&date=2026-06",
+      "filename": "2026-06-4-1.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.030376612918019963,
+          51.356760133043814,
+          0.08962338708198003,
+          51.426760133043814
+        ]
+      },
+      "download": {
+        "sha256": "e2349df9dfba319d7821383a227862ed1fdf4c7601bbbf618fab4952398d3291",
+        "bytes": 523947,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C0.089623%3A51.426760%2C0.089623%3A51.426760%2C-0.030377%3A51.356760%2C-0.030377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C0.089623%3A51.426760%2C0.089623%3A51.426760%2C-0.030377%3A51.356760%2C-0.030377&date=2026-05",
+      "filename": "2026-05-4-1.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.030376612918019963,
+          51.356760133043814,
+          0.08962338708198003,
+          51.426760133043814
+        ]
+      },
+      "download": {
+        "sha256": "7462292cae005294fa73afccaba666e476f01edcab3a430fa5cd266b368d6945",
+        "bytes": 552334,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C0.089623%3A51.426760%2C0.089623%3A51.426760%2C-0.030377%3A51.356760%2C-0.030377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C0.089623%3A51.496760%2C0.089623%3A51.496760%2C-0.030377%3A51.426760%2C-0.030377&date=2026-07",
+      "filename": "2026-07-4-2.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.030376612918019963,
+          51.426760133043814,
+          0.08962338708198003,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "a04f865693306860124df374d1691bedc6605d123c7299a3db594203ee02e771",
+        "bytes": 1882438,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C0.089623%3A51.496760%2C0.089623%3A51.496760%2C-0.030377%3A51.426760%2C-0.030377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C0.089623%3A51.496760%2C0.089623%3A51.496760%2C-0.030377%3A51.426760%2C-0.030377&date=2026-06",
+      "filename": "2026-06-4-2.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.030376612918019963,
+          51.426760133043814,
+          0.08962338708198003,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "d97dd313baf0be66d35a5cb4163b45391cfdf0ca3d60d035e3ebf05ca3e907fa",
+        "bytes": 1792456,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C0.089623%3A51.496760%2C0.089623%3A51.496760%2C-0.030377%3A51.426760%2C-0.030377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C0.089623%3A51.496760%2C0.089623%3A51.496760%2C-0.030377%3A51.426760%2C-0.030377&date=2026-05",
+      "filename": "2026-05-4-2.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.030376612918019963,
+          51.426760133043814,
+          0.08962338708198003,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "af7b4a11ac6df10dff4869e491c073d4f33af3cb97b851e46a56743cfa3959e8",
+        "bytes": 1702029,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C0.089623%3A51.496760%2C0.089623%3A51.496760%2C-0.030377%3A51.426760%2C-0.030377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.089623%3A51.566760%2C0.089623%3A51.566760%2C-0.030377%3A51.496760%2C-0.030377&date=2026-07",
+      "filename": "2026-07-4-3.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.030376612918019963,
+          51.496760133043814,
+          0.08962338708198003,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "84d631e345d40ea91fbc6c07ce735c63bc97ca45c4f54b0ff0cef926a217d210",
+        "bytes": 3098541,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.089623%3A51.566760%2C0.089623%3A51.566760%2C-0.030377%3A51.496760%2C-0.030377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.089623%3A51.566760%2C0.089623%3A51.566760%2C-0.030377%3A51.496760%2C-0.030377&date=2026-06",
+      "filename": "2026-06-4-3.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.030376612918019963,
+          51.496760133043814,
+          0.08962338708198003,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "745ddf8c8988da0ceb4f27c49301668ebd50e613dd5c5b583c9868fdb584a6e1",
+        "bytes": 2913786,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.089623%3A51.566760%2C0.089623%3A51.566760%2C-0.030377%3A51.496760%2C-0.030377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.089623%3A51.566760%2C0.089623%3A51.566760%2C-0.030377%3A51.496760%2C-0.030377&date=2026-05",
+      "filename": "2026-05-4-3.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.030376612918019963,
+          51.496760133043814,
+          0.08962338708198003,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "d73f701dea04834e723fafbfac8d3c30b7b97e7cd135c203e729fdc01522631d",
+        "bytes": 3137540,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.089623%3A51.566760%2C0.089623%3A51.566760%2C-0.030377%3A51.496760%2C-0.030377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C0.089623%3A51.636760%2C0.089623%3A51.636760%2C-0.030377%3A51.566760%2C-0.030377&date=2026-07",
+      "filename": "2026-07-4-4.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.030376612918019963,
+          51.566760133043815,
+          0.08962338708198003,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "fb16fd148330e2e96c83026e7029a447a348849a78c01efcb5e2b5893adeca6d",
+        "bytes": 1143056,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C0.089623%3A51.636760%2C0.089623%3A51.636760%2C-0.030377%3A51.566760%2C-0.030377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C0.089623%3A51.636760%2C0.089623%3A51.636760%2C-0.030377%3A51.566760%2C-0.030377&date=2026-06",
+      "filename": "2026-06-4-4.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.030376612918019963,
+          51.566760133043815,
+          0.08962338708198003,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "686737035ce075f365e290d960d1462705ddc1746f3f27749b4edb7b9a3ae39d",
+        "bytes": 1069395,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C0.089623%3A51.636760%2C0.089623%3A51.636760%2C-0.030377%3A51.566760%2C-0.030377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C0.089623%3A51.636760%2C0.089623%3A51.636760%2C-0.030377%3A51.566760%2C-0.030377&date=2026-05",
+      "filename": "2026-05-4-4.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.030376612918019963,
+          51.566760133043815,
+          0.08962338708198003,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "518315f810c17993480c384afb40893d70b6cdb01c6c4e5ee3111f3faf79f0fe",
+        "bytes": 1107614,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C0.089623%3A51.636760%2C0.089623%3A51.636760%2C-0.030377%3A51.566760%2C-0.030377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C0.089623%3A51.691874%2C0.089623%3A51.691874%2C-0.030377%3A51.636760%2C-0.030377&date=2026-07",
+      "filename": "2026-07-4-5.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          -0.030376612918019963,
+          51.636760133043815,
+          0.08962338708198003,
+          51.69187413685326
+        ]
+      },
+      "download": {
+        "sha256": "7ae9459ebfa32e940e322eb9e7e721324748075fc04f0b07ce6b7ef0c517d68c",
+        "bytes": 249645,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C0.089623%3A51.691874%2C0.089623%3A51.691874%2C-0.030377%3A51.636760%2C-0.030377&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C0.089623%3A51.691874%2C0.089623%3A51.691874%2C-0.030377%3A51.636760%2C-0.030377&date=2026-06",
+      "filename": "2026-06-4-5.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          -0.030376612918019963,
+          51.636760133043815,
+          0.08962338708198003,
+          51.69187413685326
+        ]
+      },
+      "download": {
+        "sha256": "3743e7628483c6c3ba1aff36d45e997edf3617d9e60afa83aa18fbb6d5ff6a78",
+        "bytes": 272071,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C0.089623%3A51.691874%2C0.089623%3A51.691874%2C-0.030377%3A51.636760%2C-0.030377&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C0.089623%3A51.691874%2C0.089623%3A51.691874%2C-0.030377%3A51.636760%2C-0.030377&date=2026-05",
+      "filename": "2026-05-4-5.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          -0.030376612918019963,
+          51.636760133043815,
+          0.08962338708198003,
+          51.69187413685326
+        ]
+      },
+      "download": {
+        "sha256": "54e6b0f94ec6eecb9fe00ab581a7fda13641625c1acc97d4bb094725d6af4015",
+        "bytes": 235500,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.636760%2C0.089623%3A51.691874%2C0.089623%3A51.691874%2C-0.030377%3A51.636760%2C-0.030377&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C0.209623%3A51.356760%2C0.209623%3A51.356760%2C0.089623%3A51.286760%2C0.089623&date=2026-07",
+      "filename": "2026-07-5-0.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          0.08962338708198003,
+          51.28676013304381,
+          0.20962338708198003,
+          51.356760133043814
+        ]
+      },
+      "download": {
+        "sha256": "643cab9bcfa4db0f792f358cd5275cb94d8dc9e90df7e49a58ade060e3a9b8dc",
+        "bytes": 46432,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C0.209623%3A51.356760%2C0.209623%3A51.356760%2C0.089623%3A51.286760%2C0.089623&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C0.209623%3A51.356760%2C0.209623%3A51.356760%2C0.089623%3A51.286760%2C0.089623&date=2026-06",
+      "filename": "2026-06-5-0.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          0.08962338708198003,
+          51.28676013304381,
+          0.20962338708198003,
+          51.356760133043814
+        ]
+      },
+      "download": {
+        "sha256": "d872a6d169cea89e148f977178fee4285215aa6dbe94e64144f134ddbd806c48",
+        "bytes": 51234,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C0.209623%3A51.356760%2C0.209623%3A51.356760%2C0.089623%3A51.286760%2C0.089623&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C0.209623%3A51.356760%2C0.209623%3A51.356760%2C0.089623%3A51.286760%2C0.089623&date=2026-05",
+      "filename": "2026-05-5-0.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          0.08962338708198003,
+          51.28676013304381,
+          0.20962338708198003,
+          51.356760133043814
+        ]
+      },
+      "download": {
+        "sha256": "b90fb32cf1249e377e9f882bc6dac88d5198878edf535adfca5afd8e2b1a5cb8",
+        "bytes": 44239,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.286760%2C0.209623%3A51.356760%2C0.209623%3A51.356760%2C0.089623%3A51.286760%2C0.089623&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C0.209623%3A51.426760%2C0.209623%3A51.426760%2C0.089623%3A51.356760%2C0.089623&date=2026-07",
+      "filename": "2026-07-5-1.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          0.08962338708198003,
+          51.356760133043814,
+          0.20962338708198003,
+          51.426760133043814
+        ]
+      },
+      "download": {
+        "sha256": "2e7b0d53f954218a1daef61e7aff7370d9402ff73e4ce2a124525ac2b3ba94cc",
+        "bytes": 350022,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C0.209623%3A51.426760%2C0.209623%3A51.426760%2C0.089623%3A51.356760%2C0.089623&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C0.209623%3A51.426760%2C0.209623%3A51.426760%2C0.089623%3A51.356760%2C0.089623&date=2026-06",
+      "filename": "2026-06-5-1.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          0.08962338708198003,
+          51.356760133043814,
+          0.20962338708198003,
+          51.426760133043814
+        ]
+      },
+      "download": {
+        "sha256": "0126ffd4f32a9db1fbb2c858753ab29429a13ff95cc77e778dd2c9aca0eac600",
+        "bytes": 320588,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C0.209623%3A51.426760%2C0.209623%3A51.426760%2C0.089623%3A51.356760%2C0.089623&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C0.209623%3A51.426760%2C0.209623%3A51.426760%2C0.089623%3A51.356760%2C0.089623&date=2026-05",
+      "filename": "2026-05-5-1.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          0.08962338708198003,
+          51.356760133043814,
+          0.20962338708198003,
+          51.426760133043814
+        ]
+      },
+      "download": {
+        "sha256": "638b58b1d3e95bbe9a6896e20211b03a5365d313cf6731682ce0900791eaaa98",
+        "bytes": 325234,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.356760%2C0.209623%3A51.426760%2C0.209623%3A51.426760%2C0.089623%3A51.356760%2C0.089623&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C0.209623%3A51.496760%2C0.209623%3A51.496760%2C0.089623%3A51.426760%2C0.089623&date=2026-07",
+      "filename": "2026-07-5-2.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          0.08962338708198003,
+          51.426760133043814,
+          0.20962338708198003,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "76c5a7e5c8d7e5de9ff491952378e3bb2bb0f6ee594f41c1a5c4d8be0ab1c739",
+        "bytes": 800436,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C0.209623%3A51.496760%2C0.209623%3A51.496760%2C0.089623%3A51.426760%2C0.089623&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C0.209623%3A51.496760%2C0.209623%3A51.496760%2C0.089623%3A51.426760%2C0.089623&date=2026-06",
+      "filename": "2026-06-5-2.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          0.08962338708198003,
+          51.426760133043814,
+          0.20962338708198003,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "7b28f5e8aa799dbea1265688c819c19fc6521549943b2347f26043496378a3b5",
+        "bytes": 757355,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C0.209623%3A51.496760%2C0.209623%3A51.496760%2C0.089623%3A51.426760%2C0.089623&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C0.209623%3A51.496760%2C0.209623%3A51.496760%2C0.089623%3A51.426760%2C0.089623&date=2026-05",
+      "filename": "2026-05-5-2.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          0.08962338708198003,
+          51.426760133043814,
+          0.20962338708198003,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "5cf76498eb29456c260f4dcc84b9a33353c676dcd56438cafa4e61e575ad2484",
+        "bytes": 696160,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C0.209623%3A51.496760%2C0.209623%3A51.496760%2C0.089623%3A51.426760%2C0.089623&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.209623%3A51.566760%2C0.209623%3A51.566760%2C0.089623%3A51.496760%2C0.089623&date=2026-07",
+      "filename": "2026-07-5-3.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          0.08962338708198003,
+          51.496760133043814,
+          0.20962338708198003,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "b475dc0541755c6c3918155ecc31d0694915a9ee2c25ca3fb692955e98daca9e",
+        "bytes": 998917,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.209623%3A51.566760%2C0.209623%3A51.566760%2C0.089623%3A51.496760%2C0.089623&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.209623%3A51.566760%2C0.209623%3A51.566760%2C0.089623%3A51.496760%2C0.089623&date=2026-06",
+      "filename": "2026-06-5-3.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          0.08962338708198003,
+          51.496760133043814,
+          0.20962338708198003,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "7107454ce6b1f94e0e6ca9ce24f14b0c8d1c3b00c93db73eeef0274d12e2f3c3",
+        "bytes": 955185,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.209623%3A51.566760%2C0.209623%3A51.566760%2C0.089623%3A51.496760%2C0.089623&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.209623%3A51.566760%2C0.209623%3A51.566760%2C0.089623%3A51.496760%2C0.089623&date=2026-05",
+      "filename": "2026-05-5-3.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          0.08962338708198003,
+          51.496760133043814,
+          0.20962338708198003,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "e1fba0d419ea37de4ba748d5f7a067e272a311d0ed16516b428c48f81be44ffd",
+        "bytes": 995914,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.209623%3A51.566760%2C0.209623%3A51.566760%2C0.089623%3A51.496760%2C0.089623&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C0.209623%3A51.636760%2C0.209623%3A51.636760%2C0.089623%3A51.566760%2C0.089623&date=2026-07",
+      "filename": "2026-07-5-4.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          0.08962338708198003,
+          51.566760133043815,
+          0.20962338708198003,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "9028636532eeb2646b0b419d5e66bd6fec27a3b8b0968e312173cdc70cdfe63e",
+        "bytes": 596549,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C0.209623%3A51.636760%2C0.209623%3A51.636760%2C0.089623%3A51.566760%2C0.089623&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C0.209623%3A51.636760%2C0.209623%3A51.636760%2C0.089623%3A51.566760%2C0.089623&date=2026-06",
+      "filename": "2026-06-5-4.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          0.08962338708198003,
+          51.566760133043815,
+          0.20962338708198003,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "d8e12cbc08113841b55987b2b8cc5917dd580c854b06e412c4c7a81516beaedb",
+        "bytes": 581586,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C0.209623%3A51.636760%2C0.209623%3A51.636760%2C0.089623%3A51.566760%2C0.089623&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C0.209623%3A51.636760%2C0.209623%3A51.636760%2C0.089623%3A51.566760%2C0.089623&date=2026-05",
+      "filename": "2026-05-5-4.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          0.08962338708198003,
+          51.566760133043815,
+          0.20962338708198003,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "0026fcd26ac9fe83b16706e255dddc371f405b0e4ba0d4e52f40ea63a53c25fc",
+        "bytes": 575147,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C0.209623%3A51.636760%2C0.209623%3A51.636760%2C0.089623%3A51.566760%2C0.089623&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C0.329623%3A51.496760%2C0.329623%3A51.496760%2C0.209623%3A51.426760%2C0.209623&date=2026-07",
+      "filename": "2026-07-6-2.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          0.20962338708198003,
+          51.426760133043814,
+          0.32962338708198,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "4d127ef322c58835b9e7e8adf3585e977ad4d8140037a1dde53eba00e343686b",
+        "bytes": 592175,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C0.329623%3A51.496760%2C0.329623%3A51.496760%2C0.209623%3A51.426760%2C0.209623&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C0.329623%3A51.496760%2C0.329623%3A51.496760%2C0.209623%3A51.426760%2C0.209623&date=2026-06",
+      "filename": "2026-06-6-2.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          0.20962338708198003,
+          51.426760133043814,
+          0.32962338708198,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "d6b283105edc4dfe80bc5471fe8a80e3cf46964d980b576e232f52f7fc321d88",
+        "bytes": 565925,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C0.329623%3A51.496760%2C0.329623%3A51.496760%2C0.209623%3A51.426760%2C0.209623&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C0.329623%3A51.496760%2C0.329623%3A51.496760%2C0.209623%3A51.426760%2C0.209623&date=2026-05",
+      "filename": "2026-05-6-2.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          0.20962338708198003,
+          51.426760133043814,
+          0.32962338708198,
+          51.496760133043814
+        ]
+      },
+      "download": {
+        "sha256": "a40d15cbc0413dc346b362d47c51b8c6b668bd36c8bc051134bb9c7abd6c7a93",
+        "bytes": 601276,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.426760%2C0.329623%3A51.496760%2C0.329623%3A51.496760%2C0.209623%3A51.426760%2C0.209623&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.329623%3A51.566760%2C0.329623%3A51.566760%2C0.209623%3A51.496760%2C0.209623&date=2026-07",
+      "filename": "2026-07-6-3.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          0.20962338708198003,
+          51.496760133043814,
+          0.32962338708198,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "5a106ef8948c168d5a8fc947180c639cedaac23992df2fe6164a5e3d5f187d99",
+        "bytes": 227230,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.329623%3A51.566760%2C0.329623%3A51.566760%2C0.209623%3A51.496760%2C0.209623&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.329623%3A51.566760%2C0.329623%3A51.566760%2C0.209623%3A51.496760%2C0.209623&date=2026-06",
+      "filename": "2026-06-6-3.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          0.20962338708198003,
+          51.496760133043814,
+          0.32962338708198,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "3316f581066be3092fd9a6f382831e12c06131570f9b854c7563406f5bde571f",
+        "bytes": 211213,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.329623%3A51.566760%2C0.329623%3A51.566760%2C0.209623%3A51.496760%2C0.209623&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.329623%3A51.566760%2C0.329623%3A51.566760%2C0.209623%3A51.496760%2C0.209623&date=2026-05",
+      "filename": "2026-05-6-3.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          0.20962338708198003,
+          51.496760133043814,
+          0.32962338708198,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "5759ce318d30f577b589f2aa7dee75d554227409a96adfec6d42973711e57ab0",
+        "bytes": 207403,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.329623%3A51.566760%2C0.329623%3A51.566760%2C0.209623%3A51.496760%2C0.209623&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C0.329623%3A51.636760%2C0.329623%3A51.636760%2C0.209623%3A51.566760%2C0.209623&date=2026-07",
+      "filename": "2026-07-6-4.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          0.20962338708198003,
+          51.566760133043815,
+          0.32962338708198,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "3b68b6d8a8c00f181b18bf0e2d6da9e443268c2addd033c81bef40d882721989",
+        "bytes": 336547,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C0.329623%3A51.636760%2C0.329623%3A51.636760%2C0.209623%3A51.566760%2C0.209623&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C0.329623%3A51.636760%2C0.329623%3A51.636760%2C0.209623%3A51.566760%2C0.209623&date=2026-06",
+      "filename": "2026-06-6-4.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          0.20962338708198003,
+          51.566760133043815,
+          0.32962338708198,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "4647e274d38fc369687f9d1b4603529bcf1657313d4682513883e9244b397380",
+        "bytes": 301824,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C0.329623%3A51.636760%2C0.329623%3A51.636760%2C0.209623%3A51.566760%2C0.209623&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C0.329623%3A51.636760%2C0.329623%3A51.636760%2C0.209623%3A51.566760%2C0.209623&date=2026-05",
+      "filename": "2026-05-6-4.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          0.20962338708198003,
+          51.566760133043815,
+          0.32962338708198,
+          51.636760133043815
+        ]
+      },
+      "download": {
+        "sha256": "fcc69ffb002abe37c5d1417ccb9ed93ac6b378324032e4c68249959bbaca9678",
+        "bytes": 300881,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.566760%2C0.329623%3A51.636760%2C0.329623%3A51.636760%2C0.209623%3A51.566760%2C0.209623&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.334015%3A51.566760%2C0.334015%3A51.566760%2C0.329623%3A51.496760%2C0.329623&date=2026-07",
+      "filename": "2026-07-7-3.json",
+      "published_at": "2026-07-01",
+      "extra": {
+        "month": "2026-07",
+        "tile": [
+          0.32962338708198,
+          51.496760133043814,
+          0.334014637865885,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "5b641b4fa794e3e47ab630ca6a55030ae813884b6f7d608a8dac541a940d7c82",
+        "bytes": 3749,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.334015%3A51.566760%2C0.334015%3A51.566760%2C0.329623%3A51.496760%2C0.329623&date=2026-07",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.334015%3A51.566760%2C0.334015%3A51.566760%2C0.329623%3A51.496760%2C0.329623&date=2026-06",
+      "filename": "2026-06-7-3.json",
+      "published_at": "2026-06-01",
+      "extra": {
+        "month": "2026-06",
+        "tile": [
+          0.32962338708198,
+          51.496760133043814,
+          0.334014637865885,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "5a164af57a5f9a8f4775cf7b7862d802690f7e2049f510df1d94d79230c1cc75",
+        "bytes": 3125,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.334015%3A51.566760%2C0.334015%3A51.566760%2C0.329623%3A51.496760%2C0.329623&date=2026-06",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    },
+    {
+      "url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.334015%3A51.566760%2C0.334015%3A51.566760%2C0.329623%3A51.496760%2C0.329623&date=2026-05",
+      "filename": "2026-05-7-3.json",
+      "published_at": "2026-05-01",
+      "extra": {
+        "month": "2026-05",
+        "tile": [
+          0.32962338708198,
+          51.496760133043814,
+          0.334014637865885,
+          51.566760133043815
+        ]
+      },
+      "download": {
+        "sha256": "6b2a5215de6eb74e0556062a4b204913825245045107c73468db9c2aedfbed04",
+        "bytes": 3218,
+        "resolved_url": "https://data.police.uk/api/crimes-street/all-crime?poly=51.496760%2C0.334015%3A51.566760%2C0.334015%3A51.566760%2C0.329623%3A51.496760%2C0.329623&date=2026-05",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/json"
+      }
+    }
+  ],
+  "notes": [
+    "Complete spatial tile requests for 2026-07, 2026-06, 2026-05. Cross-tile incidents deduplicated by ID + month.",
+    "Coordinates are anonymised approximate locations. Warehouse stores H3 aggregates only.",
+    "Incident intensity uses area and month exposure, not a resident victimisation or safety rate."
+  ],
+  "retrieved_at": "2026-09-11T11:58:57.944502+00:00",
+  "snapshot_id": "police-20260911T115653-36bba7",
+  "checksum": "3739bf8a82f02fba7a0edca3840f9668399a6bb0d015dd49e7ba8ca490eac9c1",
+  "row_count": 46079,
+  "status": "verified",
+  "id": "police",
+  "name": "Street-level reported incidents: rolling three-month window",
+  "publisher": "UK Police / data.police.uk",
+  "url": "https://data.police.uk/docs/method/crime-street/",
+  "license": "Open Government Licence v3.0",
+  "cadence_days": 30,
+  "critical": false
+}

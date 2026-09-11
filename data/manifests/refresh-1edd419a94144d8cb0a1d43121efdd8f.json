@@ -1,0 +1,14 @@
+{
+  "job_id": "1edd419a94144d8cb0a1d43121efdd8f",
+  "source_updates": {
+    "ons": {
+      "status": "verified",
+      "snapshot": "ons-20260911T130505-86d4aa"
+    }
+  },
+  "failures": [],
+  "started_at": "2026-09-11T13:05:05.763003+00:00",
+  "status": "failed",
+  "error": "(psycopg.errors.QueryCanceled) canceling statement due to user request\n[SQL: SELECT c.business_type,f.resolution,count(*) cells,\n        avg(c.confidence) confidence,avg(c.observed_supply) supply,\n        avg(CASE WHEN f.occupancy_cost_pressure IS NULL THEN 1.0 ELSE 0 END) missing_cost,\n        avg(CASE WHEN f.transit_demand IS NULL THEN 1.0 ELSE 0 END) missing_transit\n        FROM h3_component_scores c JOIN h3_features f USING(feature_version,h3_id)\n        WHERE c.feature_version=%(v)s GROUP BY c.business_type,f.resolution]\n[parameters: {'v': 'ldn-20260911T130526-bb5488'}]\n(Background on this error at: https://sqlalche.me/e/20/e3q8)",
+  "finished_at": "2026-09-11T13:08:15.033737+00:00"
+}

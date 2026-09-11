@@ -1,0 +1,95 @@
+{
+  "measured_at": "2026-09-11T13:10:17.437832+00:00",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "processor": "arm64",
+  "feature_version": "ldn-20260911T130817-f16e80",
+  "notes": "Local loopback into Docker FastAPI, PostGIS + Redis. One cold response cache sample per endpoint; DB pages were warm. 15 sequential warm samples. These are development-machine observations, not production SLAs. Gzip requested.",
+  "endpoints": [
+    {
+      "operation": "overview",
+      "cold_cache_ms": 193.14,
+      "warm_p50_ms": 26.15,
+      "warm_p95_ms": 28.21,
+      "decoded_json_bytes": 849171,
+      "wire_bytes": 152468,
+      "warm_samples": 15
+    },
+    {
+      "operation": "detail viewport",
+      "cold_cache_ms": 21.32,
+      "warm_p50_ms": 4.87,
+      "warm_p95_ms": 5.21,
+      "decoded_json_bytes": 86337,
+      "wire_bytes": 14920,
+      "warm_samples": 15
+    },
+    {
+      "operation": "full res9",
+      "cold_cache_ms": 608.34,
+      "warm_p50_ms": 148.79,
+      "warm_p95_ms": 181.4,
+      "decoded_json_bytes": 5693609,
+      "wire_bytes": 916406,
+      "warm_samples": 15
+    },
+    {
+      "operation": "rankings",
+      "cold_cache_ms": 47.48,
+      "warm_p50_ms": 2.29,
+      "warm_p95_ms": 2.61,
+      "decoded_json_bytes": 9212,
+      "wire_bytes": 2020,
+      "warm_samples": 15
+    },
+    {
+      "operation": "cell",
+      "cold_cache_ms": 63.99,
+      "warm_p50_ms": 3.24,
+      "warm_p95_ms": 3.47,
+      "decoded_json_bytes": 22120,
+      "wire_bytes": 6907,
+      "warm_samples": 15
+    },
+    {
+      "operation": "catchment",
+      "cold_cache_ms": 98.77,
+      "warm_p50_ms": 6.57,
+      "warm_p95_ms": 7.55,
+      "decoded_json_bytes": 1904,
+      "wire_bytes": 1033,
+      "warm_samples": 15
+    },
+    {
+      "operation": "pulse",
+      "cold_cache_ms": 154.52,
+      "warm_p50_ms": 83.53,
+      "warm_p95_ms": 93.71,
+      "decoded_json_bytes": 1550070,
+      "wire_bytes": 493965,
+      "warm_samples": 15
+    },
+    {
+      "operation": "competitive gravity",
+      "cold_cache_ms": 1204.36,
+      "warm_p50_ms": 13.32,
+      "warm_p95_ms": 14.25,
+      "decoded_json_bytes": 213898,
+      "wire_bytes": 49806,
+      "warm_samples": 15
+    },
+    {
+      "operation": "custom weights",
+      "cold_cache_ms": 185.08,
+      "warm_p50_ms": 26.6,
+      "warm_p95_ms": 28.74,
+      "decoded_json_bytes": 849169,
+      "wire_bytes": 152521,
+      "warm_samples": 15
+    }
+  ],
+  "ranking_concurrency_8": {
+    "requests": 40,
+    "p50_ms": 17.645666499447543,
+    "p95_ms": 240.85850449955615
+  }
+}

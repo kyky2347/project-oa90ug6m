@@ -1,0 +1,80 @@
+[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Bitmap Heap Scan",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Relation Name": "pois",
+          "Alias": "pois",
+          "Startup Cost": 4.49,
+          "Total Cost": 183.75,
+          "Plan Rows": 11,
+          "Plan Width": 11,
+          "Actual Startup Time": 55.812,
+          "Actual Total Time": 58.627,
+          "Actual Rows": 328,
+          "Actual Loops": 1,
+          "Filter": "st_dwithin((geom)::geography, '0101000020E61000009A9999999999B9BF0000000000C04940'::geography, '600'::double precision, true)",
+          "Rows Removed by Filter": 245,
+          "Exact Heap Blocks": 304,
+          "Lossy Heap Blocks": 0,
+          "Shared Hit Blocks": 446,
+          "Shared Read Blocks": 15,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0,
+          "Plans": [
+            {
+              "Node Type": "Bitmap Index Scan",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Index Name": "pois_geography_idx",
+              "Startup Cost": 0.0,
+              "Total Cost": 4.49,
+              "Plan Rows": 11,
+              "Plan Width": 0,
+              "Actual Startup Time": 1.283,
+              "Actual Total Time": 1.284,
+              "Actual Rows": 573,
+              "Actual Loops": 1,
+              "Index Cond": "((geom)::geography && _st_expand('0101000020E61000009A9999999999B9BF0000000000C04940'::geography, '600'::double precision))",
+              "Shared Hit Blocks": 29,
+              "Shared Read Blocks": 0,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0
+            }
+          ]
+        },
+        "Planning": {
+          "Shared Hit Blocks": 173,
+          "Shared Read Blocks": 0,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0
+        },
+        "Planning Time": 18.567,
+        "Triggers": [],
+        "Execution Time": 59.113
+      }
+    ]
+  }
+]

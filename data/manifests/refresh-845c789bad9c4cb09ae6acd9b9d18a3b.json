@@ -1,0 +1,241 @@
+{
+  "job_id": "845c789bad9c4cb09ae6acd9b9d18a3b",
+  "source_updates": {
+    "geography": {
+      "status": "not_due",
+      "snapshot": "geography-20260911T114826-780394"
+    },
+    "ons": {
+      "status": "not_due",
+      "snapshot": "ons-20260911T115017-508629"
+    },
+    "osm": {
+      "status": "not_due",
+      "snapshot": "osm-20260911T115017-a687db"
+    },
+    "tfl": {
+      "status": "not_due",
+      "snapshot": "tfl-20260911T114826-f8995c"
+    },
+    "police": {
+      "status": "not_due",
+      "snapshot": "police-20260911T115653-36bba7"
+    },
+    "voa": {
+      "status": "not_due",
+      "snapshot": "voa-20260911T114826-1ca71a"
+    },
+    "gla": {
+      "status": "not_due",
+      "snapshot": "gla-20260911T114826-861d22"
+    }
+  },
+  "failures": [],
+  "started_at": "2026-09-11T12:45:33.306905+00:00",
+  "feature_version": "ldn-20260911T124113-2285de",
+  "active_snapshots": {
+    "geography": "geography-20260911T114826-780394",
+    "gla": "gla-20260911T114826-861d22",
+    "ons": "ons-20260911T115017-508629",
+    "osm": "osm-20260911T115017-a687db",
+    "police": "police-20260911T115653-36bba7",
+    "tfl": "tfl-20260911T114826-f8995c",
+    "voa": "voa-20260911T114826-1ca71a"
+  },
+  "status": "success",
+  "models": [
+    {
+      "id": "ldn-20260911T124113-2285de-coffee-r8",
+      "family": "Negative Binomial"
+    },
+    {
+      "id": "ldn-20260911T124113-2285de-bakery-r8",
+      "family": "Poisson"
+    },
+    {
+      "id": "ldn-20260911T124113-2285de-restaurant-r8",
+      "family": "Negative Binomial"
+    },
+    {
+      "id": "ldn-20260911T124113-2285de-gym-r8",
+      "family": "Negative Binomial"
+    },
+    {
+      "id": "ldn-20260911T124113-2285de-convenience-r8",
+      "family": "Poisson"
+    },
+    {
+      "id": "ldn-20260911T124113-2285de-coworking-r8",
+      "family": "Poisson"
+    },
+    {
+      "id": "ldn-20260911T124113-2285de-coffee-r9",
+      "family": "Negative Binomial"
+    },
+    {
+      "id": "ldn-20260911T124113-2285de-bakery-r9",
+      "family": "Poisson"
+    },
+    {
+      "id": "ldn-20260911T124113-2285de-restaurant-r9",
+      "family": "Negative Binomial"
+    },
+    {
+      "id": "ldn-20260911T124113-2285de-gym-r9",
+      "family": "Negative Binomial"
+    },
+    {
+      "id": "ldn-20260911T124113-2285de-convenience-r9",
+      "family": "Negative Binomial"
+    },
+    {
+      "id": "ldn-20260911T124113-2285de-coworking-r9",
+      "family": "Poisson"
+    }
+  ],
+  "qa": {
+    "scores": {
+      "n": 119514,
+      "lo": 20.153138665409628,
+      "hi": 82.95142856450317,
+      "median": 49.72996380596636
+    },
+    "coverage": [
+      {
+        "resolution": 8,
+        "boroughs": 33,
+        "cells": 2579
+      },
+      {
+        "resolution": 9,
+        "boroughs": 33,
+        "cells": 17340
+      }
+    ],
+    "warnings": [
+      {
+        "score_drift": {
+          "shift": 0.0,
+          "retention": "1.00000000000000000000"
+        }
+      }
+    ],
+    "integrity": {
+      "invalid": 0,
+      "profiles": 6,
+      "models": 12
+    },
+    "profiles": [
+      {
+        "business_type": "bakery",
+        "resolution": 8,
+        "cells": 2579,
+        "confidence": 0.7787607747665053,
+        "supply": 0.3098100038774719,
+        "missing_cost": "0E-20",
+        "missing_transit": "0E-20"
+      },
+      {
+        "business_type": "bakery",
+        "resolution": 9,
+        "cells": 17340,
+        "confidence": 0.7514090157161017,
+        "supply": 0.04607843137254902,
+        "missing_cost": "0E-24",
+        "missing_transit": "0E-24"
+      },
+      {
+        "business_type": "coffee",
+        "resolution": 8,
+        "cells": 2579,
+        "confidence": 0.7932392104276057,
+        "supply": 2.6754556029468786,
+        "missing_cost": "0E-20",
+        "missing_transit": "0E-20"
+      },
+      {
+        "business_type": "coffee",
+        "resolution": 9,
+        "cells": 17340,
+        "confidence": 0.7697858153687316,
+        "supply": 0.3978662053056517,
+        "missing_cost": "0E-24",
+        "missing_transit": "0E-24"
+      },
+      {
+        "business_type": "convenience",
+        "resolution": 8,
+        "cells": 2579,
+        "confidence": 0.7908040328727937,
+        "supply": 2.13997673516867,
+        "missing_cost": "0E-20",
+        "missing_transit": "0E-20"
+      },
+      {
+        "business_type": "convenience",
+        "resolution": 9,
+        "cells": 17340,
+        "confidence": 0.7656466593917556,
+        "supply": 0.31828143021914646,
+        "missing_cost": "0E-24",
+        "missing_transit": "0E-24"
+      },
+      {
+        "business_type": "coworking",
+        "resolution": 8,
+        "cells": 2579,
+        "confidence": 0.7622429938304889,
+        "supply": 0.0632027917797596,
+        "missing_cost": "0E-20",
+        "missing_transit": "0E-20"
+      },
+      {
+        "business_type": "coworking",
+        "resolution": 9,
+        "cells": 17340,
+        "confidence": 0.7360748237349592,
+        "supply": 0.009400230680507497,
+        "missing_cost": "0E-24",
+        "missing_transit": "0E-24"
+      },
+      {
+        "business_type": "gym",
+        "resolution": 8,
+        "cells": 2579,
+        "confidence": 0.7598899243868323,
+        "supply": 0.97712291585886,
+        "missing_cost": "0E-20",
+        "missing_transit": "0E-20"
+      },
+      {
+        "business_type": "gym",
+        "resolution": 9,
+        "cells": 17340,
+        "confidence": 0.7456986015310689,
+        "supply": 0.145040369088812,
+        "missing_cost": "0E-24",
+        "missing_transit": "0E-24"
+      },
+      {
+        "business_type": "restaurant",
+        "resolution": 8,
+        "cells": 2579,
+        "confidence": 0.7992219171298938,
+        "supply": 3.5157037611477318,
+        "missing_cost": "0E-20",
+        "missing_transit": "0E-20"
+      },
+      {
+        "business_type": "restaurant",
+        "resolution": 9,
+        "cells": 17340,
+        "confidence": 0.7732255748354723,
+        "supply": 0.5228950403690888,
+        "missing_cost": "0E-24",
+        "missing_transit": "0E-24"
+      }
+    ],
+    "passed": true
+  },
+  "finished_at": "2026-09-11T12:45:33.870037+00:00"
+}

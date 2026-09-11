@@ -1,0 +1,38 @@
+{
+  "assets": [
+    {
+      "url": "https://assets.publishing.service.gov.uk/media/69f9bdf98f3213f7384ecae4/ndr_stock_scat_la_2026.zip",
+      "filename": "bands.zip",
+      "published_at": "2026-03-31",
+      "extra": {
+        "official_page": "https://www.gov.uk/government/statistics/non-domestic-rating-stock-of-properties-march-2026",
+        "year": 2026
+      },
+      "download": {
+        "sha256": "43c6e57fbff90c81aca13e51e8795faa6e22f86be4ff6a07d2425e21dd3fdb34",
+        "bytes": 8462717,
+        "resolved_url": "https://assets.publishing.service.gov.uk/media/69f9bdf98f3213f7384ecae4/ndr_stock_scat_la_2026.zip",
+        "etag": "\"69f9bdf9-81217d\"",
+        "last_modified": "Tue, 05 May 2026 09:52:57 GMT",
+        "content_type": "application/zip"
+      }
+    }
+  ],
+  "notes": [
+    "Occupancy Cost Pressure Proxy: borough-level grouped median rateable value across commercial stock.",
+    "Linear interpolation assumes uniform values within the median band; broad bands create uncertainty.",
+    "Suppressed bands remain unavailable. This is not market rent or a property-level valuation."
+  ],
+  "retrieved_at": "2026-09-11T11:48:27.100678+00:00",
+  "snapshot_id": "voa-20260911T114826-1ca71a",
+  "checksum": "a32a07cc263ef12345fb39bc562ba97dd369b0934fd3aab09571046941bc6913",
+  "row_count": 33,
+  "status": "verified",
+  "id": "voa",
+  "name": "Non-domestic rating stock: rateable value bands",
+  "publisher": "HM Revenue & Customs / Valuation Office Agency",
+  "url": "https://www.gov.uk/government/collections/non-domestic-rating-stock-of-properties-collection",
+  "license": "Open Government Licence v3.0",
+  "cadence_days": 30,
+  "critical": false
+}

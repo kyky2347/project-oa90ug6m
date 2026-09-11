@@ -1,0 +1,37 @@
+{
+  "assets": [
+    {
+      "url": "https://download.geofabrik.de/europe/united-kingdom/england/greater-london-260910.osm.pbf",
+      "filename": "london.osm.pbf",
+      "published_at": "2026-09-10T20:21:06Z",
+      "extra": {
+        "md5": "0a85c69a7a77d82fe50868bd93fbbd49"
+      },
+      "download": {
+        "sha256": "a5a7e5702cd209dab422f45f5de290695b713cfe4ca9b9bbc00ef63f08ad71a1",
+        "bytes": 128718516,
+        "resolved_url": "https://download.geofabrik.de/europe/united-kingdom/england/greater-london-260910.osm.pbf",
+        "etag": "\"7ac16b4-65b29bf3eaa7a\"",
+        "last_modified": "Thu, 10 Sep 2026 23:58:40 GMT",
+        "content_type": "application/octet-stream"
+      }
+    }
+  ],
+  "notes": [
+    "Nodes and polygon representative points; one category per OSM object.",
+    "Same-name/category representations within an H3-12 cell collapsed.",
+    "OSM is incomplete and category coverage varies; counts are mapped supply, not a business census."
+  ],
+  "retrieved_at": "2026-09-11T11:51:08.291020+00:00",
+  "snapshot_id": "osm-20260911T115017-a687db",
+  "checksum": "e41599ce31dec17292ad52f848b96906bc6bc9ffb433d69b297df5ceba8c7b2e",
+  "row_count": 113342,
+  "status": "verified",
+  "id": "osm",
+  "name": "Greater London OpenStreetMap regional extract",
+  "publisher": "OpenStreetMap contributors / Geofabrik",
+  "url": "https://download.geofabrik.de/europe/united-kingdom/england/greater-london.html",
+  "license": "Open Database Licence (ODbL) 1.0; \u00a9 OpenStreetMap contributors",
+  "cadence_days": 7,
+  "critical": true
+}

@@ -1,0 +1,13 @@
+{
+  "measured_at": "2026-09-11T13:13:53.393Z",
+  "feature_version": "ldn-20260911T130817-f16e80",
+  "environment": "Chromium headless, SwiftShader software WebGL, 1440 × 900; Docker API with warm response caches. Not physical-device or GPU throughput.",
+  "overview_cells": 2579,
+  "map_ready_and_two_animation_frames_ms": 6825,
+  "site_detail_and_resolution9_focus_ms": 3949,
+  "city_pulse_animation_frame_samples": 119,
+  "animation_frame_interval_p50_ms": 33.400000000001455,
+  "animation_frame_interval_p95_ms": 983.2999999999993,
+  "mean_animation_frame_callbacks_per_second": 3.665440746148207,
+  "note": "Readiness includes navigation, JS, verified map data and two browser animation frames. Frame callbacks measure scheduling while playback is active, not GPU-completed frames or a production FPS guarantee."
+}

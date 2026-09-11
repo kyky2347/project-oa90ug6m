@@ -1,0 +1,33 @@
+{
+  "assets": [
+    {
+      "url": "https://data.london.gov.uk/download/20od9/2a5e50ac-c22e-4d68-89e2-85f1e0ff9057/LB_LSOA2021_shp.zip",
+      "filename": "lsoa.zip",
+      "published_at": "2021",
+      "extra": {
+        "geography_year": 2021
+      },
+      "download": {
+        "sha256": "8dc38be29e8cec6508a16f5825f8666dde25ae743d73f0acc63630d00ea93c47",
+        "bytes": 19936645,
+        "resolved_url": "https://data.london.gov.uk/download/20od9/2a5e50ac-c22e-4d68-89e2-85f1e0ff9057/LB_LSOA2021_shp.zip",
+        "etag": "\"2ea7ce7b3e5f7918b21e24556fb29e16\"",
+        "last_modified": "2025-10-21T18:41:57.000Z",
+        "content_type": "application/zip"
+      }
+    }
+  ],
+  "notes": [],
+  "retrieved_at": "2026-09-11T11:48:29.612444+00:00",
+  "snapshot_id": "geography-20260911T114826-780394",
+  "checksum": "867bd9d696e5233ef68c0b2e161076e6a5e2a1ecdfc3af51b4a97f852d87d33b",
+  "row_count": 4994,
+  "status": "verified",
+  "id": "geography",
+  "name": "London LSOA 2021 boundaries",
+  "publisher": "ONS / Greater London Authority",
+  "url": "https://data.london.gov.uk/dataset/statistical-gis-boundary-files-london",
+  "license": "Open Government Licence v3.0",
+  "cadence_days": 90,
+  "critical": true
+}

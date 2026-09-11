@@ -1,0 +1,51 @@
+{
+  "assets": [
+    {
+      "url": "https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/lowersuperoutputareamidyearpopulationestimates/mid2022revisednov2025tomid2024/sapelsoasyoa20222024.xlsx",
+      "filename": "population.xlsx",
+      "published_at": "2025-06-30",
+      "extra": {
+        "year": 2025
+      },
+      "download": {
+        "sha256": "2a59e9332112639ff37552641193aedaf14ff10db99d12e034505959eabd8909",
+        "bytes": 87483596,
+        "resolved_url": "https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/lowersuperoutputareamidyearpopulationestimates/mid2022revisednov2025tomid2024/sapelsoasyoa20222024.xlsx",
+        "etag": "\"9b144f7cecb4accf83c897922d3c84e7cd517511--gzip\"",
+        "last_modified": null,
+        "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8"
+      }
+    },
+    {
+      "url": "https://www.nomisweb.co.uk/output/census/2021/census2021-ts041.zip",
+      "filename": "households.zip",
+      "published_at": "2021-03-21",
+      "extra": {},
+      "download": {
+        "sha256": "e4f11fc0ea22393fe3be444027878e67b51d2a44687e122c37439d19a548cb9f",
+        "bytes": 1511641,
+        "resolved_url": "https://www.nomisweb.co.uk/output/census/2021/census2021-ts041.zip",
+        "etag": null,
+        "last_modified": null,
+        "content_type": "application/zip"
+      }
+    }
+  ],
+  "notes": [
+    "All-person population totals: mid-2024. Households: Census 2021.",
+    "H3 population is an area allocation proxy; no protected demographic inputs.",
+    "Displayed population estimates are rounded to the nearest 100 in line with ONS guidance."
+  ],
+  "retrieved_at": "2026-09-11T11:50:54.578270+00:00",
+  "snapshot_id": "ons-20260911T115017-508629",
+  "checksum": "173b82172cd77047ce2f2518c25033fca6e26c402e07a1100f5fff8e1e2e9e3e",
+  "row_count": 4994,
+  "status": "verified",
+  "id": "ons",
+  "name": "ONS mid-year LSOA population estimates and Census households",
+  "publisher": "Office for National Statistics / Nomis",
+  "url": "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/lowersuperoutputareamidyearpopulationestimates",
+  "license": "Open Government Licence v3.0",
+  "cadence_days": 30,
+  "critical": true
+}
