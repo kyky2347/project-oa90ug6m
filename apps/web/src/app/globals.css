@@ -57,6 +57,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
+a[data-slot="button"][data-variant="default"] {
+  color: var(--primary-foreground);
+}
 button,
 select {
   font-family: inherit;
