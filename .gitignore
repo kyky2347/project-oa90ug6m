@@ -1,0 +1,16 @@
+node_modules/
+.next/
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.hypothesis/
+*.pyc
+.env
+data/raw/
+data/processed/
+data/cache/
+*.log
+.DS_Store
+test-results/
+playwright-report/
